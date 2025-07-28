@@ -82,7 +82,7 @@ Per cambiare il colore aziendale in tutto il sito, modificare solo il valore in:
 
 ```js
 export const customColors = {
-  primaryCompany: 'rgb(224, 197, 77)', // Modificare solo questo valore
+  primaryCompany: 'rgb(255, 215, 0)', // Modificare solo questo valore
   // ...
 };
 ```

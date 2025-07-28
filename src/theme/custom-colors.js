@@ -5,7 +5,7 @@
 
 export const customColors = {
   // Colore primario aziendale (oro)
-  primaryCompany: 'rgb(224, 197, 77)',
+  primaryCompany: 'rgb(255, 215, 0)',
   
   // Versione precedente del colore (arancione)
   // Mantenuto per riferimento o eventuali necessità di rollback

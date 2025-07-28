@@ -10,7 +10,7 @@ const StyledCookieButton = styled(Button)(({ theme }) => ({
   bottom: '20px',
   right: '20px',
   zIndex: 99999, // Aumentato lo z-index
-  backgroundColor: 'rgb(224, 197, 77)', // Colore oro per mantenere coerenza con altri pulsanti
+  backgroundColor: 'rgb(255, 215, 0)', // Colore oro per mantenere coerenza con altri pulsanti
   color: '#fff',
   padding: '10px 15px',
   borderRadius: '4px',

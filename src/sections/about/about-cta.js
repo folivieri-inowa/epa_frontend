@@ -44,9 +44,9 @@ export default function AboutCTA() {
             variant="contained"
             startIcon={<Iconify icon="carbon:email" />}
             sx={{
-              bgcolor: 'rgb(224, 197, 77)',
+              bgcolor: 'rgb(255, 215, 0)',
               '&:hover': {
-                bgcolor: alpha('rgb(224, 197, 77)', 0.8),
+                bgcolor: alpha('rgb(255, 215, 0)', 0.8),
               },
             }}
           >
@@ -61,11 +61,11 @@ export default function AboutCTA() {
             variant="outlined"
             startIcon={<Iconify icon="carbon:security" />}
             sx={{
-              color: 'rgb(224, 197, 77)',
-              borderColor: 'rgb(224, 197, 77)',
+              color: 'rgb(255, 215, 0)',
+              borderColor: 'rgb(255, 215, 0)',
               '&:hover': {
-                borderColor: alpha('rgb(224, 197, 77)', 0.8),
-                bgcolor: alpha('rgb(224, 197, 77)', 0.08),
+                borderColor: alpha('rgb(255, 215, 0)', 0.8),
+                bgcolor: alpha('rgb(255, 215, 0)', 0.08),
               },
             }}
           >

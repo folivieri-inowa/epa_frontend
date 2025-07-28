@@ -119,7 +119,7 @@ Preventiva, Predittiva e Multi-difensiva.
                         display: 'flex',
                         flexDirection: 'column',
                         border: '1px solid',
-                        borderColor: alpha('rgb(224, 197, 77)', 0.2), // Bordo leggero per definire meglio i contorni
+                        borderColor: alpha('rgb(255, 215, 0)', 0.2), // Bordo leggero per definire meglio i contorni
                       }}
                     >
                       <CardContent sx={{ 
@@ -143,7 +143,7 @@ Preventiva, Predittiva e Multi-difensiva.
                               justifyContent: 'center',
                               alignItems: 'center',
                               borderRadius: 1,
-                              bgcolor: 'rgb(224, 197, 77)', // Colore oro pieno per l'icona
+                              bgcolor: 'rgb(255, 215, 0)', // Colore oro pieno per l'icona
                               mr: 2,
                             }}
                           >
@@ -156,7 +156,7 @@ Preventiva, Predittiva e Multi-difensiva.
                               }}
                             />
                           </Box>
-                          <Typography variant="h6" sx={{ color: 'rgb(224, 197, 77)' }}>
+                          <Typography variant="h6" sx={{ color: 'rgb(255, 215, 0)' }}>
                             {value.title}
                           </Typography>
                         </Box>
