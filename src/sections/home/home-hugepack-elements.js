@@ -453,7 +453,7 @@ export default function HomeHugePackElements() {
         py: { xs: 10, md: 15 },
       }}
     >
-      <Grid container direction={{ xs: 'column', md: 'row-reverse' }} spacing={5}>
+      <Grid container direction={{ xs: 'column', md: 'row-reverse' }} spacing={10}>
         <Grid xs={12} md={5}>
           {renderDescription}
         </Grid>

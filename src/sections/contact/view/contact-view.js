@@ -1,24 +1,20 @@
 'use client';
 
+import PropTypes from 'prop-types';
+
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 import ContactHero from '../contact-hero';
 import ContactForm from '../contact-form';
-import { useGetStrapiPosts } from '../../../api/strapi';
 
 // ----------------------------------------------------------------------
 
-export default function ContactView({ URL }) {
-  const { post, postLoading } = useGetStrapiPosts(URL);
-
-  if (postLoading && !post.data) {
-    return null
-  }
+export default function ContactView({ data }) {
 
   return (
     <>
-      <ContactHero title={post.data.title} subtitle={post.data.subtitle} />
+      <ContactHero title={data.title} subtitle={data.subtitle} />
 
       <Container sx={{ py: 10 }}>
         <Box
@@ -29,11 +25,18 @@ export default function ContactView({ URL }) {
             md: 'repeat(2, 1fr)',
           }}
         >
-          <ContactForm title={post.data.contact_title} labels={post.data.form} />
-
-          {/* <ContactMap contacts={_mapContact} /> */}
+          <ContactForm title={data.contact_title} labels={data.form} />
         </Box>
       </Container>
     </>
   );
 }
+
+ContactView.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    contact_title: PropTypes.string.isRequired,
+    form: PropTypes.object.isRequired,
+  }).isRequired,
+};

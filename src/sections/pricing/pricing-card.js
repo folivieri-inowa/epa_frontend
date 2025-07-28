@@ -97,7 +97,7 @@ export default function PricingCard({ card, sx, ...other }) {
 
   return (
     <Stack
-      spacing={5}
+      spacing={10}
       sx={{
         p: 5,
         borderRadius: 2,

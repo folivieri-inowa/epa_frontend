@@ -1,3 +1,4 @@
+import useCompanyColors from 'src/hooks/use-company-colors';
 import { MotionViewport, varFade } from '../../components/animate';
 import Container from '@mui/material/Container';
 import { m } from 'framer-motion';
@@ -7,40 +8,36 @@ import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
 export default function HomeRouters() {
+  const companyColors = useCompanyColors();
+  
   const data = [
-    {
-      title: 'Security Management',
-      subtitle: 'Dalla valutazione dei rischi all’implementazione di strategie efficaci',
-      description:
-        'Affidarsi a chi è specializzato nella protezione aziendale è fondamentale per operare in sicurezza e con serenità. Ogni aspetto del nostro approccio alla sicurezza è attentamente studiato per rispondere alle esigenze specifiche della tua azienda e per prevenire ogni potenziale rischio. Grazie al nostro servizio di security management su misura, puoi contare su un supporto che salvaguarda la tua operatività e ti permette di concentrarti sulle tue attività senza preoccupazioni',
-    },
     {
       title: 'Executive Protection',
       subtitle: 'Sicurezza che ti segue ovunque',
       description:
-        'Per chi vive sotto i riflettori, una protezione discreta è fondamentale. Il nostro team\n' +
-        '            di Executive Protection offre un servizio personalizzato, progettato per garantire la\n' +
-        '            massima sicurezza senza compromettere la tua privacy. Siamo al tuo fianco per\n' +
-        '            proteggerti con professionalità e discrezione, preservando il tuo spazio personale e\n' +
-        '            rispettando ogni tua esigenza.',
+        'Per chi vive sotto i riflettori, una protezione discreta è fondamentale. Il nostro team ' +
+        'di Executive Protection offre un servizio personalizzato, progettato per garantire la ' +
+        'massima sicurezza senza compromettere la tua privacy. Siamo al tuo fianco per ' +
+        'proteggerti con professionalità e discrezione, preservando il tuo spazio personale e ' +
+        'rispettando ogni tua esigenza.',
     },
     {
       title: 'Gestione delle Crisi',
       subtitle: 'Risposte rapide per situazioni critiche',
-      description:'Le situazioni critiche richiedono risposte tempestive e decise. Con la nostra esperienza\n' +
-        '            nella gestione delle crisi, siamo pronti a intervenire per garantire la sicurezza tua e\n' +
-        '            del tuo team. In ogni emergenza, il nostro obiettivo prioritario è proteggere persone e\n' +
-        '            beni, assicurando una gestione efficace e puntuale, capace di affrontare qualsiasi tipo\n' +
-        '            di scenario critico.',
+      description:'Le situazioni critiche richiedono risposte tempestive e decise. Con la nostra esperienza ' +
+        'nella gestione delle crisi, siamo pronti a intervenire per garantire la sicurezza tua e ' +
+        'del tuo team. In ogni emergenza, il nostro obiettivo prioritario è proteggere persone e ' +
+        'beni, assicurando una gestione efficace e puntuale, capace di affrontare qualsiasi tipo ' +
+        'di scenario critico.',
     },
     {
       title: 'Risk Assessment',
       subtitle: 'Analisi accurata per un controllo strategico dei rischi',
-      description: 'Conoscere i rischi significa già avere un vantaggio nel controllo degli stessi. Il\n' +
-        '            nostro servizio di Risk Assessment identifica le vulnerabilità e le minacce,\n' +
-        '            consentendoti di prendere decisioni informate e strategiche. Grazie a un’analisi\n' +
-        '            approfondita, creiamo una protezione solida per il tuo business, intervenendo prima che\n' +
-        '            i potenziali pericoli si trasformino in problemi concreti',
+      description: 'Conoscere i rischi significa già avere un vantaggio nel controllo degli stessi. Il ' +
+        'nostro servizio di Risk Assessment identifica le vulnerabilità e le minacce, ' +
+        'consentendoti di prendere decisioni informate e strategiche. Grazie a una analisi ' +
+        'approfondita, creiamo una protezione solida per il tuo business, intervenendo prima che ' +
+        'i potenziali pericoli si trasformino in problemi concreti',
     },
   ];
 
@@ -61,7 +58,7 @@ export default function HomeRouters() {
         {data.map((card, index) => (
           <Box key={index} sx={{my: 5}}>
             <m.div variants={varFade().inDown}>
-              <Typography variant="h3" sx={{ color: 'rgb(246,142,59)' }}>
+              <Typography variant="h3" sx={{ color: 'company.main' }}>
                 {card.title}
               </Typography>
             </m.div>
@@ -71,13 +68,12 @@ export default function HomeRouters() {
             </m.div>
 
             <m.div variants={varFade().inDown}>
-              <Typography variant="h4" sx={{ fontStyle: 'italic' }}>
+              <Typography variant="h4" sx={{ fontStyle: 'italic', color: 'company.main' }}>
                 {card.subtitle}
               </Typography>
             </m.div>
 
             <Box
-
               gap={{ xs: 3, lg: 5 }}
               display="grid"
               alignItems="flex-start"

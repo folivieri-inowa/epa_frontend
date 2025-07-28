@@ -13,28 +13,7 @@ import Button from '@mui/material/Button';
 // ----------------------------------------------------------------------
 
 const CARDS = [
-  {
-    path: '/assets/images/home/foto1.jpg',
-    icon: '/assets/icons/home/ic_airplane.svg',
-    title: 'VIP',
-    description: 'Offriamo servizi di protezione personale dedicati a garantire la sicurezza in ogni situazione.',
-    link: '/vip',
-  },
-  {
-    path: '/assets/images/home/foto2.jpg',
-    icon: '/assets/icons/home/ic_megaphone.svg',
-    title: 'Corporate e Società',
-    description:
-      'Gestiamo e implementiamo strategie di sicurezza complete per aziende e società.',
-    link: '/corporate',
-  },
-  {
-    path: '/assets/images/home/foto3.jpg',
-    icon: '/assets/icons/home/ic_business_man.svg',
-    title: 'Infrastrutture e Siti Sensibili',
-    description: 'Proteggiamo le infrastrutture critiche per garantire continuità operativa e sicurezza.',
-    link: '/infrastructures',
-  },
+  // I contenuti precedenti sono stati rimossi perché le pagine riferite non esistono più
 ];
 
 // ----------------------------------------------------------------------

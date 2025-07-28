@@ -3,6 +3,8 @@ import { m } from 'framer-motion';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+import useCompanyColors from 'src/hooks/use-company-colors';
+
 import { varFade, MotionViewport } from 'src/components/animate';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -38,6 +40,7 @@ export const defaultValues = {
 
 export default function ContactForm({ labels, title }) {
   const { enqueueSnackbar } = useSnackbar();
+  const companyColors = useCompanyColors();
 
   const methods = useForm({
     resolver: yupResolver(FormSchema),
@@ -64,6 +67,15 @@ export default function ContactForm({ labels, title }) {
     }
   });
 
+  // Aggiunta delle label mancanti
+  const updatedLabels = {
+    name: labels?.name || 'Nome',
+    email: labels?.email || 'Email',
+    phone: labels?.phone || 'Telefono',
+    subject: labels?.subject || 'Oggetto',
+    message: labels?.message || 'Messaggio',
+    submit: labels?.submit || 'Invia',
+  };
 
   return (
     <>
@@ -75,29 +87,29 @@ export default function ContactForm({ labels, title }) {
 
       {labels && (
         <FormProvider methods={methods} onSubmit={onSubmit}>
-          <Stack component={MotionViewport} spacing={5}>
+          <Stack component={MotionViewport} spacing={10}>
             <m.div variants={varFade().inUp}>
               <Typography variant="h3">{title}</Typography>
             </m.div>
             <Stack spacing={3}>
               <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="name" label={labels.name} />
+                <RHFTextField fullWidth name="name" label={updatedLabels.name} />
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="email" label={labels.email} />
+                <RHFTextField fullWidth name="email" label={updatedLabels.email} />
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="phone" label={labels.phone} />
+                <RHFTextField fullWidth name="phone" label={updatedLabels.phone} />
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="subject" label={labels.subject} />
+                <RHFTextField fullWidth name="subject" label={updatedLabels.subject} />
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="message" label={labels.message} multiline rows={4} />
+                <RHFTextField fullWidth name="message" label={updatedLabels.message} multiline rows={4} />
               </m.div>
             </Stack>
 
@@ -109,9 +121,9 @@ export default function ContactForm({ labels, title }) {
                 type="submit"
                 variant="soft"
                 loading={isSubmitting}
-                sx={{ bgcolor: 'rgb(246,142,59)', color: 'common.white', width: '100%' }}
+                sx={{ bgcolor: 'company.main', color: 'common.white', width: '100%' }}
               >
-                {labels.submit}
+                {updatedLabels.submit}
               </LoadingButton>
             </m.div>
           </Stack>

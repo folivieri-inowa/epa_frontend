@@ -47,7 +47,7 @@ export default function ImageView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <Card>
             <CardHeader title="List" />
             <Box

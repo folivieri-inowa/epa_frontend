@@ -1,4 +1,6 @@
+// filepath: /Users/francescoolivieri/Desktop/Sviluppo inowa/epa/epa/src/sections/about/about-what.js
 import { m } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -30,118 +32,62 @@ export default function AboutWhat({title, subtitle, images, skills}) {
   )}`;
 
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        bgcolor: 'background.neutral',
-        '&:before': {
-          top: 0,
-          left: 0,
-          width: 1,
-          content: "''",
-          position: 'absolute',
-          bgcolor: 'background.default',
-        },
-      }}
-    >
+    <Box>
       <Container
         component={MotionViewport}
         sx={{
-          py: { xs: 10, md: 15 },
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        <Grid container columnSpacing={{ md: 3 }} alignItems="flex-start">
-          {mdUp && (
-            <Grid container xs={12} md={4} alignItems="center" sx={{ pr: { md: 7 } }}>
+        <Grid container columnSpacing={{ md: 10 }} alignItems="flex-start">
+            <Grid container xs={12} md={5} alignItems="center" sx={{ pr: { md: 7 } }}>
               <Grid xs={12}>
                 <m.div variants={varFade().inUp}>
                   <Image
                     alt="our office 2"
-                    src={process.env.NEXT_PUBLIC_HOST_API+images[0].url}
+                    src={images[0].url}
                     ratio="1/1"
                     sx={{ borderRadius: 3, boxShadow: shadow }}
                   />
                 </m.div>
               </Grid>
             </Grid>
-          )}
 
-          <Grid xs={12} md={8}>
+          <Grid xs={12} md={7}>
             <m.div variants={varFade().inRight}>
-              <Typography variant="h2" sx={{ mb: 2, color: 'primary.main' }}>
+              <Typography variant="h2" sx={{ mb: 3, color: 'primary.main' }}>
                 {title}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <Typography
-                variant="h5"
                 sx={{
-                  color: 'common.white',
+                  fontSize: '1.325rem',
                   textAlign: 'justify'
                 }}
               >
-                è una delle agenzie leader a livello internazionale nel settore della protezione operativa, della gestione della sicurezza e delle soluzioni antiterrorismo.
-                <br />
-                Con un team di esperti altamente qualificati, abbiamo acquisito una reputazione consolidata avendo protetto persone, beni e infrastrutture di massimo valore in contesti di elevato rischio, sia in Italia che all'estero.
-              </Typography>
-            </m.div>
-
-            {/* <Stack spacing={3} sx={{ my: 5 }}>
-              {skills.map((progress, index) => (
-                <Box component={m.div} key={progress.label} variants={varFade().inRight}>
-                  <Stack direction="row" alignItems="center" sx={{ mb: 1 }}>
-                    <Typography variant="subtitle2" sx={{ flexGrow: 1, textAlign: 'left' }}>
-                      {progress.label}
-                    </Typography>
-
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {progress.value}
-                    </Typography>
-                  </Stack>
-
-                  <LinearProgress
-                    color={(index === 0 && 'primary') || (index === 1 && 'warning') || 'error'}
-                    variant="determinate"
-                    value={progress.value}
-                  />
-                </Box>
-              ))}
-            </Stack> */}
-          </Grid>
-        </Grid>
-        <Grid container columnSpacing={{ md: 3 }} alignItems="flex-start">
-          <Grid xs={12} md={8} mt={4}>
-            <m.div variants={varFade().inRight}>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: 'common.white',
-                  textAlign: 'justify',
-                  mt:4
-                }}
-              >
-                Siamo conosciuti per la capacità di affrontare le minacce con discrezione, competenza e precisione, assicurando risultati tangibili e soluzioni su misura per ogni esigenza di protezione.
-                <br />
-                Il nostro approccio si distingue per l’innovazione e l'alta tecnologia impiegata, unita a un'attenzione meticolosa ai dettagli e una solida rete di collaborazioni con enti governativi, forze di polizia e agenzie di intelligence.
-                <br/>
-                La nostra missione è garantire la sicurezza e la tranquillità dei nostri clienti, indipendentemente dalle sfide e dalle minacce che possano presentarsi, sempre con il massimo livello di professionalità e riservatezza
+                Fondata in Italia, Executive Protection Agency è un punto di riferimento globale nella sicurezza d’élite, con un background di oltre 30 anni di esperienza nella protezione di soggetti istituzionali, infrastrutture, aziende multinazionali, hotel di lusso, eventi VIP e dimore private.
+                <br /><br />
+                La nostra missione è garantire la tua sicurezza con discrezione, innovazione e un approccio personalizzato. Operiamo combinando l’expertise di ex funzionari forze dell’ordine, militari e operatori di sicurezza privata con esperienza globale nella Protezione esecutiva e nel Security Management con tecnologie all’avanguardia e standard internazionali come UNI ISO 31000 (Gestione del rischio), ISO/IEC 27002 e 27005 (Sicurezza delle informazioni), ISO 28000 (Sicurezza della supply chain), ISO 22301 (Continuità operativa) e UNI ISO 31030 (Travel Risk Management). Ogni servizio, dal Travel Risk Management all’Anti Terrorismo, è progettato per offrirti tranquillità, ovunque tu sia.
+                La nostra storia è una promessa: trasformare la sicurezza in tranquillità. Ogni missione ci ha resi più forti, aﬃnando la nostra capacità di anticipare le minacce e creare soluzioni su misura che proteggono cio che ami.
               </Typography>
             </m.div>
           </Grid>
-          {mdUp && ( <Grid xs={4}>
-            <m.div variants={varFade().inUp}>
-              <Image
-                alt="our office 1"
-                src={process.env.NEXT_PUBLIC_HOST_API+images[1].url}
-                ratio="3/4"
-                sx={{ borderRadius: 3, boxShadow: shadow }}
-              />
-            </m.div>
-          </Grid>)}
         </Grid>
       </Container>
     </Box>
   );
 }
+
+AboutWhat.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  })).isRequired,
+  skills: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired
+  })),
+};

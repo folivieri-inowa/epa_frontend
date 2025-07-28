@@ -52,51 +52,41 @@ export default function AboutTeam({ title, subtitle, images }) {
   });
 
   return (
-    <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>
+    <Container component={MotionViewport} sx={{ textAlign: 'center' }}>
       <m.div variants={varFade().inUp}>
-        <Typography variant="h2" sx={{ my: 3, color: 'primary.main' }}>
+        <Typography variant="h2" sx={{ mb: 3, color: 'primary.main' }}>
           {title}
         </Typography>
       </m.div>
 
-      <Grid container sx={{ mt: 5}} columnSpacing={{ md: 3 }} alignItems="flex-start">
-        {mdUp && (
-          <Grid container xs={12} md={5} alignItems="center" sx={{ pr: { md: 7 } }}>
+      <Grid container sx={{ mt: 5}} columnSpacing={{ md: 10 }} alignItems="flex-start">
+        <Grid xs={12} md={7}>
+          <m.div variants={varFade().inRight}>
+            <Typography
+              sx={{
+                fontSize: '1.325rem',
+                textAlign: 'justify',
+              }}
+            >
+              Il cuore di Executive Protection Agency è il nostro team, composto da professionisti selezionati con background d’eccellenza, una leadership operativa che garantisce soluzioni rapide ed efficaci, affidabilità come pilastro delle nostre operazioni sul campo con oltre trent’anni di esperienza in operazioni di sicurezza globale, specializzato in protezione fisica e gestione di contesti ad alto rischio, esperti in Counter-Terrorism,  con un impareggiabile sinergia tra certificazioni accademiche prestigiose ed esperienza sul campo, tra intelligence strategica, cybersecurity e protezione di infrastrutture critiche.
+              <br />
+              <br />
+              Ogni membro del nostro team è formato secondo i più alti standard internazionali, assicurando competenza, discrezione e prontezza in ogni situazione.
+            </Typography>
+          </m.div>
+        </Grid>
+        <Grid container xs={12} md={5} alignItems="center" sx={{ pr: { md: 7 } }}>
             <Grid xs={12}>
               <m.div variants={varFade().inUp}>
                 <Image
                   alt="our office 2"
-                  src={process.env.NEXT_PUBLIC_HOST_API + images[2].url}
+                  src={images[1] ? images[1].url : "/assets/images/about/team_1.jpg"}
                   ratio="1/1"
                   sx={{ borderRadius: 3, boxShadow: shadow }}
                 />
               </m.div>
             </Grid>
           </Grid>
-        )}
-        <Grid xs={12} md={7}>
-          <m.div variants={varFade().inRight}>
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'common.white',
-                textAlign: 'justify',
-              }}
-            >
-              Abbiamo dedicato tutta la nostra carriera alla protezione e alla sicurezza di
-              persone, famiglie, aziende, siti sensibili e infrastrutture critiche. Nel corso degli anni,
-              abbiamo acquisito un'esperienza unica nella gestione della protezione, rispondendo con
-              discrezione ed efficacia a ogni tipo di minaccia.
-              <br />
-              Abbiamo formato e addestrato professionisti del settore, specializzandoci nel Security
-              Management, nell’Operative Protection e nell’Antiterrorismo moderno.
-              <br />
-              Ogni incarico che abbiamo acquisito ci ha reso più forti, affinando la nostra capacità di adattarci alle esigenze,
-              garantendo soluzioni su misura per la protezione dei nostri clienti, siano essi individui,
-              aziende o infrastrutture vitali.
-            </Typography>
-          </m.div>
-        </Grid>
       </Grid>
     </Container>
   );

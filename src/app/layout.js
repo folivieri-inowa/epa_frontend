@@ -64,8 +64,8 @@ export default function RootLayout({ children }) {
                       <SettingsDrawer />
                       <ProgressBar />
                       <CookieConsentComponent />
-                      <CookieConsentButton />
                       {children}
+                      <CookieConsentButton />
                     </CheckoutProvider>
                   </SnackbarProvider>
                 </MotionLazy>

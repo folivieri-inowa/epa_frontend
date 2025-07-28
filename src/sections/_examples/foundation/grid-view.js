@@ -70,7 +70,7 @@ export default function GridView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <ComponentBlock title="Spacing">
             <StyledBlockContainer variant="outlined">
               <Typography variant="body2" sx={{ mb: 3, textAlign: 'center' }}>

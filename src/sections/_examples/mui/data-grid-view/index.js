@@ -76,7 +76,7 @@ export default function DataGridView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <Card>
             <CardHeader title="Basic" sx={{ mb: 2 }} />
             <Box sx={{ height: 390 }}>

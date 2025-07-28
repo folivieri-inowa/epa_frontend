@@ -1,0 +1,1 @@
+export { default as HotelSecurityManagementView } from './hotel-security-management-view';

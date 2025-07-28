@@ -1,6 +1,7 @@
 import { alpha } from '@mui/material/styles';
 
 import { grey, primary } from '../palette';
+import { customColors } from '../custom-colors';
 
 // ----------------------------------------------------------------------
 
@@ -44,7 +45,7 @@ const purple = {
 const blue = {
   lighter: '#D1E9FC',
   light: '#76B0F1',
-  main: 'rgb(246,142,59)' ,
+  main: customColors.primaryCompany,
   dark: '#103996',
   darker: '#061B64',
   contrastText: '#FFFFFF',

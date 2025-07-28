@@ -60,7 +60,7 @@ export default function ShadowsView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <ComponentBlock title="System">
             {systemShadows.map((shadow, index) => (
               <ShadowCard key={shadow} title={`z${index + 1}`} sx={{ boxShadow: shadow }} />

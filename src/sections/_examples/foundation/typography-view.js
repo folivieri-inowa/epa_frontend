@@ -75,7 +75,7 @@ export default function TypographyView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Grid container rowSpacing={5}>
+        <Grid container rowspacing={10}>
           <Grid xs={12} md={3}>
             <Typography variant="h6">Default Text</Typography>
           </Grid>

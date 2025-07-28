@@ -102,7 +102,7 @@ export default function UploadView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <Card>
             <CardHeader
               title="Upload Multi File"

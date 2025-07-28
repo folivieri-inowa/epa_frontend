@@ -7,7 +7,21 @@ import {useEffect} from "react";
 
 const CookieConsentComponent = () => {
   useEffect(() => {
+    // Inizializza vanilla-cookieconsent con la configurazione base
     CookieConsent.run({
+      guiOptions: {
+        consentModal: {
+          layout: 'box',
+          position: 'bottom right',
+          equalWeightButtons: true
+        },
+        preferencesModal: {
+          layout: 'box',
+        }
+      },
+      // Configurazione per permettere l'uso del nostro pulsante personalizzato
+      autoShow: true, 
+      hideFromBots: true,
       categories: {
         necessary: {
           enabled: true,
@@ -54,6 +68,9 @@ const CookieConsentComponent = () => {
         }
       }
     });
+    
+    // Non è necessario fare altro, vanilla-cookieconsent gestirà
+    // automaticamente l'interazione con gli attributi data-cc
   }, []);
 
   return null;

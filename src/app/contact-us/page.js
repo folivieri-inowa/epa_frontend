@@ -1,14 +1,18 @@
-import { ContactView } from 'src/sections/contact/view';
-import { endpoints } from '../../utils/axios';
+import { ContactView } from '../../sections/contact/view';
 
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Contattaci',
+  title: 'Contattaci | EPA',
 };
 
 export default function ContactPage() {
-  const URL = endpoints.strapi.contact_us
+  const staticData = {
+    title: 'Come',
+    subtitle: 'Contattarci',
+    contact_title: 'Modulo di Contatto',
+    form: { name: 'Nome', email: 'Email', message: 'Messaggio' },
+  };
 
-  return <ContactView URL={URL} />;
+  return <ContactView data={staticData} />;
 }

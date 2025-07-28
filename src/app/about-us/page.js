@@ -1,5 +1,4 @@
-import { AboutView } from 'src/sections/about/view';
-import { endpoints } from '../../utils/axios';
+import AboutView from 'src/sections/about/view/about-view';
 
 // ----------------------------------------------------------------------
 
@@ -8,7 +7,5 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const URL = endpoints.strapi.about_us
-
-  return <AboutView URL={URL+"?populate=*"} />;
+  return <AboutView />;
 }

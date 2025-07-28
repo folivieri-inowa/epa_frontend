@@ -32,7 +32,8 @@ export const endpoints = {
       vip: '/api/vip',
       corporate: '/api/corporate',
       training: '/api/training',
-      anti_terrorism: 'api/anti-terrorism'
+      anti_terrorism: 'api/anti-terrorism',
+      security_management: '/api/security-management'
     },
     about_us: '/api/about-us',
     contact_us: '/api/contact-us'

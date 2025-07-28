@@ -1,5 +1,7 @@
 import { alpha } from '@mui/material/styles';
 
+import { customColors } from './custom-colors';
+
 // ----------------------------------------------------------------------
 
 // SETUP COLORS
@@ -15,6 +17,16 @@ export const grey = {
   700: '#454F5B',
   800: '#212B36',
   900: '#161C24',
+};
+
+// Colore aziendale personalizzato - disponibile in tutta l'app
+export const company = {
+  lighter: alpha(customColors.primaryCompany, 0.2),
+  light: alpha(customColors.primaryCompany, 0.7),
+  main: customColors.primaryCompany,
+  dark: alpha(customColors.primaryCompany, 1.2), // Versione più scura per hover
+  darker: alpha(customColors.primaryCompany, 1.4),
+  contrastText: '#FFFFFF', // Testo bianco su sfondo colorato
 };
 
 export const primary = {
@@ -95,6 +107,7 @@ const base = {
   error,
   grey,
   common,
+  company,  // Aggiunto il colore aziendale alla palette base
   divider: alpha(grey[500], 0.2),
   action,
 };

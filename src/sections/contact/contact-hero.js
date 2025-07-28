@@ -48,9 +48,9 @@ export default function ContactHero({title, subtitle}) {
       sx={{
         ...bgGradient({
           color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/images/contact/hero.jpg',
+          imgUrl: '/assets/images/image25.jpeg',
         }),
-        height: { md: 560 },
+        height: { xs: '50vh', md: '60vh' }, // Ridotto da mobile/desktop
         py: { xs: 10, md: 0 },
         overflow: 'hidden',
         position: 'relative',
@@ -72,7 +72,7 @@ export default function ContactHero({title, subtitle}) {
           </Stack>
 
           <Stack
-            spacing={5}
+            spacing={10}
             alignItems={{ xs: 'center', md: 'unset' }}
             direction={{ xs: 'column', md: 'row' }}
             sx={{ mt: 5, color: 'common.white' }}

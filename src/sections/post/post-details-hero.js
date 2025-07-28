@@ -57,7 +57,7 @@ export default function PostDetailsHero({ title, subtitle, coverUrl, createdAt }
       <Box
         sx={{
           width: '100%',
-          height: { md: 460 },
+          height: { xs: '50vh', md: '60vh' }, // Ridotto da mobile/desktop
           py: { xs: 10, md: 0 },
           overflow: 'hidden',
           position: 'relative',

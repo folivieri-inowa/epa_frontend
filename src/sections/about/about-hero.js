@@ -14,14 +14,18 @@ export default function AboutHero({title, title2, subtitle, coverUrl}) {
   return (
     <Box
       sx={{
-        height: { md: 560 },
+        height: { xs: '50vh', md: '60vh' }, // Ridotto da mobile/desktop
         py: { xs: 10, md: 0 },
         overflow: 'hidden',
         position: 'relative',
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'center',
         backgroundImage:
-          `url(/assets/background/overlay_1.svg), url(${process.env.NEXT_PUBLIC_HOST_API+coverUrl.url})`,
+          `url(/assets/background/overlay_1.svg), url(${coverUrl.url})`,
+        transition: 'background-position 3s ease',
+        '&:hover': {
+          backgroundPosition: 'center calc(50% + 5px)',
+        },
       }}
     >
       <Container component={MotionContainer}>
@@ -92,4 +96,13 @@ TextAnimate.propTypes = {
   sx: PropTypes.object,
   text: PropTypes.string,
   variants: PropTypes.object,
+};
+
+AboutHero.propTypes = {
+  title: PropTypes.string.isRequired,
+  title2: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  coverUrl: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  }),
 };

@@ -26,7 +26,7 @@ export default function FaqsHero() {
           color: alpha(theme.palette.grey[900], 0.8),
           imgUrl: '/assets/images/faqs/hero.jpg',
         }),
-        height: { md: 560 },
+        height: { xs: '50vh', md: '60vh' }, // Ridotto da mobile/desktop
         py: { xs: 10, md: 0 },
         overflow: 'hidden',
         position: 'relative',

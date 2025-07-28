@@ -1,5 +1,7 @@
 'use client';
 
+import useCompanyColors from 'src/hooks/use-company-colors';
+
 import PropTypes from 'prop-types';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -168,7 +170,7 @@ export default function PostDetailsView({ URL, slug, menu }) {
                         sx={{
                           mt: 2,
                           mb: 1,
-                          color: 'rgb(246,142,59)',
+                          color: 'company.main',
                           lineHeight: '1.2em', // Adjust line height as needed
                           minHeight: '2.4em', // 2 lines * line height
                           maxHeight: '2.4em', // 2 lines * line height

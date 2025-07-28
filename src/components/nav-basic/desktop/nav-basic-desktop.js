@@ -9,7 +9,7 @@ import NavList from './nav-list';
 
 function NavBasicDesktop({ data, slotProps, ...other }) {
   return (
-    <Stack component="nav" id="nav-basic-desktop" spacing={5} direction="row" {...other}>
+    <Stack component="nav" id="nav-basic-desktop" spacing={10} direction="row" {...other}>
       {data.map((list) => (
         <NavList key={list.title} data={list} depth={1} slotProps={slotProps} />
       ))}

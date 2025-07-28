@@ -43,7 +43,7 @@ export default function OrganizationalChartView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <ComponentBlock title="Simple">
             <OrganizationalChart data={SIMPLE_DATA} lineColor={theme.palette.primary.light} />
           </ComponentBlock>

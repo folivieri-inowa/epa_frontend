@@ -29,7 +29,7 @@ export default function PostDetailsHero({ title, author, coverUrl, createdAt }) 
   return (
     <Box
       sx={{
-        height: 480,
+        height: { xs: 240, md: 360 }, // Ridotto da 480px
         overflow: 'hidden',
         ...bgGradient({
           imgUrl: coverUrl,

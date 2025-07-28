@@ -71,7 +71,7 @@ export default function MultiLanguageView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <Card>
             <CardHeader title="Flexible" />
 

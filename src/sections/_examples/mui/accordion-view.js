@@ -62,7 +62,7 @@ export default function AccordionView() {
       </Box>
 
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <ComponentBlock title="Simple" spacing={0}>
             {_accordions.map((accordion, index) => (
               <Accordion key={accordion.value} disabled={index === 3}>

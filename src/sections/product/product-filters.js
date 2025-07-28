@@ -178,7 +178,7 @@ export default function ProductFilters({
         Price
       </Typography>
 
-      <Stack direction="row" spacing={5} sx={{ my: 2 }}>
+      <Stack direction="row" spacing={10} sx={{ my: 2 }}>
         <InputRange type="min" value={filters.priceRange} onFilters={onFilters} />
         <InputRange type="max" value={filters.priceRange} onFilters={onFilters} />
       </Stack>

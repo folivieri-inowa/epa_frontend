@@ -165,7 +165,7 @@ function PlanCard({ plan, sx, ...other }) {
 
   return (
     <Stack
-      spacing={5}
+      spacing={10}
       sx={{
         p: 5,
         pt: 10,

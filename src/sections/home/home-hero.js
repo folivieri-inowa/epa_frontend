@@ -8,6 +8,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { alpha, styled, useTheme } from '@mui/material/styles';
 
+import useCompanyColors from 'src/hooks/use-company-colors';
+
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { HEADER } from 'src/layouts/config-layout';
@@ -24,37 +26,46 @@ const StyledRoot = styled('div')(({ theme }) => ({
     imgUrl: '/assets/background/overlay_3.jpg',
   }),
   width: '100%',
-  height: '100vh',
+  height: '60vh', // Aumentato da 50vh a 60vh su mobile per dare più spazio
   position: 'relative',
+  paddingTop: HEADER.H_MOBILE,
+  zIndex: 0,
+  marginBottom: 0,
   [theme.breakpoints.up('md')]: {
     top: 0,
     left: 0,
-    position: 'fixed',
+    position: 'relative',
+    paddingTop: HEADER.H_DESKTOP,
+    height: '70vh', // Aumentato da 60vh a 70vh per dare più spazio
   },
 }));
 
 const StyledWrapper = styled('div')(({ theme }) => ({
-  height: '100%',
+  height: 'calc(100% - 72px)', // Sottraiamo l'altezza dell'header
   overflow: 'hidden',
   position: 'relative',
+  display: 'flex',
+  alignItems: 'center', // Centrato verticalmente
+  paddingTop: 20, // Aggiunto padding-top per abbassare il contenuto
   [theme.breakpoints.up('md')]: {
-    marginTop: HEADER.H_DESKTOP_OFFSET,
+    height: 'calc(100% - 80px)', // Sottraiamo l'altezza dell'header desktop
+    paddingTop: 30, // Padding più grande su desktop
   },
 }));
 
 const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   padding: 0,
   marginTop: 8,
-  lineHeight: 1,
+  lineHeight: 1.1,
   fontWeight: 900,
-  marginBottom: 24,
+  marginBottom: 16,
   letterSpacing: 8,
   textAlign: 'left',
   backgroundSize: '400%',
-  fontSize: `${64 / 16}rem`,
+  fontSize: `${54 / 16}rem`,
   fontFamily: theme.typography.fontSecondaryFamily,
   [theme.breakpoints.up('md')]: {
-    fontSize: `${96 / 16}rem`,
+    fontSize: `${84 / 16}rem`,
   },
 }));
 
@@ -71,8 +82,8 @@ const StyledEllipseTop = styled('div')(({ theme }) => ({
 }));
 
 const StyledEllipseBottom = styled('div')(({ theme }) => ({
-  height: 400,
-  bottom: -200,
+  height: 300, // Ridotta l'altezza
+  bottom: -100, // Ridotto lo spostamento verso il basso
   left: '10%',
   right: '10%',
   borderRadius: '50%',
@@ -114,6 +125,7 @@ export default function HomeHero() {
   const mdUp = useResponsive('up', 'md');
 
   const theme = useTheme();
+  const companyColors = useCompanyColors();
 
   const heroRef = useRef(null);
 
@@ -159,11 +171,10 @@ export default function HomeHero() {
       sx={{
         height: 1,
         mx: 'auto',
-        maxWidth: 480,
+        maxWidth: { xs: 480, md: 780 },
         opacity: opacity > 0 ? opacity : 0,
-        mt: {
-          md: `-${HEADER.H_DESKTOP + percent * 2.5}px`,
-        },
+        mt: { xs: 0, md: 0 }, // Rimosso margine negativo per evitare sovrapposizioni con l'header
+        px: { xs: 2, md: 0 } // Aggiunto padding orizzontale su mobile
       }}
     >
       <m.div variants={varFade().in}>
@@ -172,8 +183,11 @@ export default function HomeHero() {
           sx={{
             textAlign: 'left',
             textTransform: 'uppercase',
-            color: 'rgb(246,142,59)' ,
+            color: 'company.main', // Utilizzo diretto dal tema
             whiteSpace: 'nowrap',
+            fontSize: { xs: '1.2rem', md: '1.5rem' },
+            mb: 0.5,
+            fontWeight: 600
           }}
         >
           Executive Protection Agency
@@ -189,98 +203,49 @@ export default function HomeHero() {
             duration: 20,
             repeat: Infinity,
           }}
+          sx={{ 
+            overflow: 'visible'
+          }}
         >
-          Nati per Proteggere
+          Nati per<br/>Proteggere
         </StyledTextGradient>
       </m.div>
 
       <m.div variants={varFade().in}>
-        <Typography variant="h3" sx={{ textAlign: 'left', whiteSpace: 'pre-line' }}>
-          Consulenza, Analisi e Formazione nel settore Sicurezza, Difesa e Protezione fisica e tecnologica.
+        <Typography variant="h4" sx={{ 
+          textAlign: 'left', 
+          lineHeight: 1.3,
+          mb: 0,
+          maxWidth: { xs: '100%', md: '100%' }
+        }}>
+          Consulenza, Analisi e
+        </Typography>
+        <Typography variant="h4" sx={{ 
+          textAlign: 'left', 
+          lineHeight: 1.3,
+          mb: 0,
+          maxWidth: { xs: '100%', md: '100%' }
+        }}>
+          Formazione nel settore
+        </Typography>
+        <Typography variant="h4" sx={{ 
+          textAlign: 'left', 
+          lineHeight: 1.3,
+          mb: 0,
+          maxWidth: { xs: '100%', md: '100%' }
+        }}>
+          Sicurezza, Difesa e Protezione
+        </Typography>
+        <Typography variant="h4" sx={{ 
+          textAlign: 'left', 
+          lineHeight: 1.3,
+          mb: 2,
+          maxWidth: { xs: '100%', md: '100%' }
+        }}>
+          fisica e tecnologica.
         </Typography>
       </m.div>
 
-    </Stack>
-  );
-
-  const renderSlides = (
-    <Stack
-      direction="row"
-      alignItems="flex-start"
-      sx={{
-        height: '150%',
-        position: 'absolute',
-        opacity: opacity > 0 ? opacity : 0,
-        transform: `skew(${-16 - percent / 24}deg, ${4 - percent / 16}deg)`,
-        ...(theme.direction === 'rtl' && {
-          transform: `skew(${16 + percent / 24}deg, ${4 + percent / 16}deg)`,
-        }),
-      }}
-    >
-      <Stack
-        component={m.div}
-        variants={varFade().in}
-        sx={{
-          width: 344,
-          position: 'relative',
-        }}
-      >
-        <Box
-          component={m.img}
-          animate={{ y: ['0%', '100%'] }}
-          transition={transition}
-          alt={lightMode ? 'light_1' : 'dark_1'}
-          src={
-            lightMode
-              ? `/assets/images/home/hero/light_1.webp`
-              : `/assets/images/home/hero/dark_1.webp`
-          }
-          sx={{ position: 'absolute', mt: -5 }}
-        />
-        <Box
-          component={m.img}
-          animate={{ y: ['-100%', '0%'] }}
-          transition={transition}
-          alt={lightMode ? 'light_1' : 'dark_1'}
-          src={
-            lightMode
-              ? `/assets/images/home/hero/light_1.webp`
-              : `/assets/images/home/hero/dark_1.webp`
-          }
-          sx={{ position: 'absolute' }}
-        />
-      </Stack>
-
-      <Stack
-        component={m.div}
-        variants={varFade().in}
-        sx={{ width: 720, position: 'relative', ml: -5 }}
-      >
-        <Box
-          component={m.img}
-          animate={{ y: ['100%', '0%'] }}
-          transition={transition}
-          alt={lightMode ? 'light_2' : 'dark_2'}
-          src={
-            lightMode
-              ? `/assets/images/home/hero/light_2.webp`
-              : `/assets/images/home/hero/dark_2.webp`
-          }
-          sx={{ position: 'absolute', mt: -5 }}
-        />
-        <Box
-          component={m.img}
-          animate={{ y: ['0%', '-100%'] }}
-          transition={transition}
-          alt={lightMode ? 'light_2' : 'dark_2'}
-          src={
-            lightMode
-              ? `/assets/images/home/hero/light_2.webp`
-              : `/assets/images/home/hero/dark_2.webp`
-          }
-          sx={{ position: 'absolute' }}
-        />
-      </Stack>
     </Stack>
   );
 
@@ -308,18 +273,17 @@ export default function HomeHero() {
           ...(hide && {
             opacity: 0,
           }),
-          ...(mdUp && {
-            ...bgGradient({
-              color: alpha(theme.palette.background.default, 0.85),
-              imgUrl: '/assets/background/home1.jpg',
-            }),
+          // Applicare l'immagine di background sia su mobile che desktop
+          ...bgGradient({
+            color: alpha(theme.palette.background.default, 0.85),
+            imgUrl: '/assets/background/home1.jpg',
           }),
         }}
       >
         <StyledWrapper>
-          <Container component={MotionContainer} sx={{ height: 1 }}>
-            <Grid container columnSpacing={{ md: 10 }} sx={{ height: 1 }}>
-              <Grid xs={12} md={6}>
+          <Container component={MotionContainer} sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
+            <Grid container columnSpacing={{ md: 10 }} sx={{ height: 'auto' }}> {/* Cambiato da height: 1 a height: 'auto' */}
+              <Grid xs={12} md={12}>
                 {renderDescription}
               </Grid>
             </Grid>
@@ -328,10 +292,6 @@ export default function HomeHero() {
           {renderEllipses}
         </StyledWrapper>
       </StyledRoot>
-
-     {/*  {mdUp && renderPolygons} */}
-
-      <Box sx={{ height: { md: '100vh' } }} />
     </>
   );
 }

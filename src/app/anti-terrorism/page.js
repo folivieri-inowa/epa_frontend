@@ -1,14 +1,11 @@
-import PostDetailsView from '../../sections/post/view/post-view';
-import { endpoints } from '../../utils/axios';
+import AntiTerrorismView from '../../sections/anti-terrorism/view/anti-terrorism-view';
 
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Post: Anti Terrorismo',
+  title: 'Servizio Anti Terrorismo | Executive Protection Agency',
 };
 
-export default function PostListHomePage() {
-  const URL = endpoints.strapi.post.anti_terrorism
-
-  return <PostDetailsView URL={URL+'?populate=coverUrl'} slug='anti-terrorism' />;
+export default function AntiTerrorismPage() {
+  return <AntiTerrorismView />;
 }

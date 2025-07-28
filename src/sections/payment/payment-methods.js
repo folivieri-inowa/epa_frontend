@@ -58,7 +58,7 @@ export default function PaymentMethods() {
 
   return (
     <>
-      <Stack spacing={5}>
+      <Stack spacing={10}>
         <Typography variant="h6">Payment Method</Typography>
 
         <Stack spacing={3}>

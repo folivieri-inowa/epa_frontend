@@ -18,23 +18,14 @@ const ROOTS = {
 
 export const paths = {
   //
-  vip: '/vip',
-  corporate: '/corporate',
-  infrastructures: '/infrastructures',
-  /* security_management: {
-    main: '/security-management',
-    vip: '/security-management/vip',
-    corporate: '/security-management/corporate',
-    infrastructures: '/security-management/infrastructures',
-  },
-  executive_protection: {
-    main: '/executive-protection',
-    vip: '/executive-protection/vip',
-    corporate: '/executive-protection/corporate',
-    infrastructures: '/executive-protection/infrastructures',
-  }, */
+  security_management: '/security-management',
+  hotel_security_management: '/hotel-security-management',
+  risk_travel_management: '/risk-travel-management',
+  eventi_vip: '/eventi-vip',
+  corporate_infrastrutture: '/corporate-infrastrutture',
   training: '/training',
   anti_terrorism: '/anti-terrorism',
+  services: '/security-management', // Link to security management as a general services page
   //
   comingSoon: '/coming-soon',
   maintenance: '/maintenance',

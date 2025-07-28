@@ -86,7 +86,7 @@ export default function ProgressView() {
         </Container>
       </Box>
       <Container sx={{ my: 10 }}>
-        <Stack spacing={5}>
+        <Stack spacing={10}>
           <ComponentBlock title="Circular">
             <ProgressCircular progress={progress} />
           </ComponentBlock>

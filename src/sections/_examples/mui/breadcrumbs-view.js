@@ -92,7 +92,7 @@ export default function BreadcrumbsView() {
             </Breadcrumbs>
           </ComponentBlock>
 
-          <ComponentBlock title="Customized" spacing={5}>
+          <ComponentBlock title="Customized" spacing={10}>
             <CustomBreadcrumbs
               sx={{ width: 1 }}
               links={[

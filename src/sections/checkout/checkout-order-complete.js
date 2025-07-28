@@ -20,7 +20,7 @@ import { varFade } from 'src/components/animate';
 export default function CheckoutOrderComplete({ open, onReset, onDownloadPDF }) {
   const renderContent = (
     <Stack
-      spacing={5}
+      spacing={10}
       sx={{
         m: 'auto',
         maxWidth: 480,

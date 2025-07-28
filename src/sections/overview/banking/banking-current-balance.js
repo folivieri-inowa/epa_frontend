@@ -161,7 +161,7 @@ function CardItem({ card }) {
           {cardNumber}
         </Stack>
 
-        <Stack direction="row" spacing={5}>
+        <Stack direction="row" spacing={10}>
           <Stack spacing={1}>
             <Typography sx={{ typography: 'caption', opacity: 0.48 }}>Card Holder</Typography>
             <Typography sx={{ typography: 'subtitle1' }}>{cardHolder}</Typography>
