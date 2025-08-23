@@ -331,90 +331,61 @@
   },
   "travel_risk": {
     "hero": {
-      "overline": "Travel Risk Management",
-      "title": "Safety Without Borders",
-      "description": "Comprehensive protection for your business and leisure travel. Professional risk assessment, security planning and real-time operational intelligence.",
-      "button": "Request Consultation"
+      "title": "Travel Risk Management",
+      "subtitle": "Oracle Executive Protection represents one of the most important international realities in Travel Risk Management."
     },
-    "intro": {
-      "overline": "Travel Security",
-      "title": "Protection That Travels With You",
-      "description": "In an increasingly connected but complex world, traveling safely requires more than simple precautions. Our travel risk management service offers comprehensive protection that adapts to every destination and situation."
+    "overview": {
+      "title": "Personalized Excellence Service",
+      "description": "We offer an excellent service, highly personalized to ensure that every trip of yours: business or vacation, anywhere in the world, is safe, smooth and worry-free.\n\nOur Travel Risk Management service is based on a structured and personalized process. We evaluate every aspect of the trip: destination, itinerary, client profile, using the highest international standards and protocols."
     },
-    "services": {
-      "overline": "Our Services",
-      "title": "Complete Solutions for Every Journey",
-      "description": "From pre-travel assessment to on-ground support, we offer a complete range of services:",
-      "items": {
-        "assessment": {
-          "title": "Risk Assessment",
-          "description": "Detailed analysis of security threats for each destination, including political, criminal and environmental risks."
-        },
-        "planning": {
-          "title": "Travel Planning",
-          "description": "Development of customized security plans including safe routes, accommodation and local contacts."
-        },
-        "intelligence": {
-          "title": "Operational Intelligence",
-          "description": "Real-time monitoring of security conditions and immediate alerts of changes in the threat scenario."
-        },
-        "support": {
-          "title": "Ground Support",
-          "description": "Local assistance with qualified security personnel and emergency response coordination."
-        }
-      }
+    "expertise": {
+      "title": "Elite Operational Experience",
+      "description": "Specialized in travel risk management, we combine elite operational experience, advanced intelligence and strategic planning to protect you, your collaborators and your interests, in every context.\n\nWe analyze threats, plan safe itineraries and provide real-time support, 24/7."
     },
-    "features": {
-      "overline": "Why Choose Us",
-      "title": "Experience That Makes the Difference",
-      "description": "Our approach to travel risk management is based on:",
-      "items": {
-        "global": {
-          "title": "Global Network",
-          "description": "Presence in over 50 countries with local partners and qualified personnel."
-        },
-        "technology": {
-          "title": "Advanced Technology",
-          "description": "Monitoring platforms and communication systems for real-time security management."
-        },
-        "customization": {
-          "title": "Customized Solutions",
-          "description": "Services tailored to the specific needs of each client and each journey."
-        },
-        "response": {
-          "title": "Rapid Response",
-          "description": "24/7 emergency response capability with immediate intervention protocols."
-        }
-      }
+    "standards": {
+      "title": "International Standards",
+      "description": "Following the highest international standards related to ISO 31030 and 31000. With a discreet but highly effective approach and the use of the most advanced technology and methodologies, our team of experts takes care of every detail: from preventive risk assessment to managing unforeseen events, to physical and technological protection and logistics management.\n\nOur task is to anticipate every possible risk situation and respond to every unforeseen event with unparalleled experience and professionalism. Your peace of mind is our mission."
     },
-    "process": {
-      "overline": "Our Process",
-      "title": "How We Protect Your Journey",
-      "description": "Our travel risk management process consists of four fundamental phases:",
-      "steps": {
-        "analysis": {
-          "title": "Pre-Travel Analysis",
-          "description": "Comprehensive assessment of risks associated with the destination and planned activities."
-        },
-        "planning": {
-          "title": "Security Planning",
-          "description": "Development of detailed security plans and identification of mitigation measures."
-        },
-        "monitoring": {
-          "title": "Active Monitoring",
-          "description": "Continuous monitoring during travel with real-time updates on security conditions."
-        },
-        "support": {
-          "title": "Operational Support",
-          "description": "Local assistance and coordination of any emergency response."
-        }
-      }
+    "team_intro": {
+      "title": "Oracle Specialized Team",
+      "description": "Whether it's a business trip or vacation, an entire specialized Oracle team will manage every detail of your stay."
+    },
+    "security_board": {
+      "title": "Security Board",
+      "description": "Composed of the Chief Security Manager, our Security Managers, Risk Analysts and our anti-terrorism analysts, the Security Board takes care 24/7 of monitoring every detail of the trip, anticipating every possible inconvenience, communicating with our field operators, following our GPS, monitoring Risk Map sites and Osint analyses in real time.\n\nCreate personalized protocols for your trip, the best routes and help you in planning your trip. We monitor in real time and use advanced technologies for tracking, secure communication and threat analysis during the trip."
+    },
+    "travel_risk_officer": {
+      "title": "Travel Risk Officer",
+      "description": "Our field TROs are professionals with the highest level background. An elite team with over 30 years of experience in anti-terrorism, VIP close protection and intelligence, led by 1st class professionals, experience in the most important international contexts who have also passed complex selections and specialization courses to be at your side.\n\nTROs with maximum discretion and education will be alongside your work team or your family constantly ensuring that every detail of the trip is perfect in order to make your trip worry-free, from environmental and physical clearances of Hotels, Restaurants and Meeting rooms, to the execution of your every movement."
+    },
+    "logistics_coordinator": {
+      "title": "Logistics Coordinator",
+      "description": "Our LCs are our field personnel in charge of logistics planning. They take care of all relations with third parties: restaurants, hotels, meeting rooms, personnel of the places where you will go for work or vacation allowing the client to focus exclusively on the trip whether it is for work or pleasure."
+    },
+    "from_abroad": {
+      "title": "From Abroad to Italy",
+      "items": [
+        "We plan all routes",
+        "We perform physical and environmental clearances of hotels, meeting rooms, restaurants and cars",
+        "We pick up our clients at the airport and guarantee them for the entire duration of the trip the best possible Travel Risk Management service in Italy with maximum professionalism, experience and discretion",
+        "We analyze possible scenarios through a deep Risk Assessment and risk management and mitigation through the 4 rules of our Agency: Preventive, Proactive, Predictive and Multi-layer security to allow you a trip in maximum safety",
+        "We help you in planning and preparing the trip in every detail through our specialized personnel"
+      ]
+    },
+    "to_abroad": {
+      "title": "From Italy to Abroad",
+      "items": [
+        "For your business trips anywhere in the world you can count on our services",
+        "We prepare every detail of your trip for maximum security through our team of risk and anti-terrorism analysts interfacing if necessary with embassies, consulates and local law enforcement",
+        "Our operational team can follow you throughout the trip with the collaboration of our local international partners",
+        "We make your work or pleasure trip safe and meticulous in any global scenario",
+        "We operate on every continent, with experience in high-risk destinations and luxury contexts"
+      ]
     },
     "cta": {
-      "overline": "Travel Safe",
-      "title": "Ready for Your Next Journey?",
-      "description": "Contact our travel risk management experts for a personalized consultation and discover how we can make your journey safe and worry-free.",
-      "button": "Request Free Consultation"
+      "overline": "Your peace of mind is our mission",
+      "title": "Contact us for personalized consultation",
+      "description": "Our experts are ready to evaluate your travel security needs and develop a customized protection plan."
     }
   },
   "strategic_protection": {
@@ -507,90 +478,76 @@
   },
   "events": {
     "hero": {
-      "overline": "VIP Events",
-      "title": "Exclusive Events, Maximum Security",
-      "description": "Specialized security services for VIP events, conferences, shows and private gatherings. Comprehensive protection with discretion and professionalism.",
-      "button": "Request Consultation"
+      "title": "VIP Events",
+      "subtitle": "We protect your guests, your event and your reputation with custom security management services for exclusive events.",
+      "cta": "Request Consultation"
     },
-    "intro": {
-      "overline": "Event Security",
-      "title": "Every Event, A Perfect Success",
-      "description": "Organizing a VIP event requires impeccable security management. Our team of experts ensures that every detail is taken care of, allowing you to focus on what really matters: the success of your event."
+    "overview": {
+      "overline": "Our Service",
+      "title": "Security Management for Exclusive Events",
+      "description": "Whether it's a luxury wedding or a meeting with high-profile personalities, our Security Management service is designed to integrate seamlessly with the exclusivity of your event.\n\nWe design customized security protocols, including Risk Assessment and Risk Management, access control, VIP protection, environmental clearances and emergency plans. From physical security to Cybersecurity, we protect every aspect of your event."
     },
-    "services": {
-      "overline": "Our Services",
-      "title": "Complete Solutions for Every Occasion",
-      "description": "We offer specialized security services for different types of events:",
-      "items": {
-        "corporate": {
-          "title": "Corporate Events",
-          "description": "Security for conferences, conventions, product launches and corporate meetings with professional crowd management."
+    "expertise": {
+      "overline": "Our Expertise",
+      "title": "Specialized Team and Advanced Technologies",
+      "description": "Our team of professionals will assess every vulnerability of the structure and organization and every possible threat, external and internal, to the success and security of the event.\n\nOur field team, constantly supported by our Security Board, will ensure discreet and unparalleled protection for your VIP event using cutting-edge technologies, such as drones and encrypted communications, for real-time security."
+    },
+    "standards": {
+      "overline": "Standards of Excellence",
+      "title": "Compliance and Quality",
+      "subtitle": "Each of our security operators is trained to very high standards and accustomed to collaborating with your teams to ensure a smooth experience, keeping security elegant and discreet for guests.",
+      "items": [
+        {
+          "title": "UNI ISO 31000",
+          "description": "Risk management according to international standards for a scientific approach to security."
         },
-        "private": {
-          "title": "Private Events",
-          "description": "Discreet protection for weddings, parties, private celebrations and exclusive gatherings."
+        {
+          "title": "Advanced Training",
+          "description": "Highly specialized team with professional certifications in the security and VIP protection sector."
         },
-        "entertainment": {
-          "title": "Shows and Entertainment",
-          "description": "Specialized security for concerts, shows, theater productions and cultural events."
+        {
+          "title": "Custom Protocols",
+          "description": "We develop tailored procedures for every type of event, from exclusive weddings to corporate summits."
         },
-        "sports": {
-          "title": "Sporting Events",
-          "description": "Crowd management and security for sporting competitions, tournaments and sports presentations."
+        {
+          "title": "Innovative Technologies",
+          "description": "We use drones, encrypted communications and advanced monitoring systems for maximum effectiveness."
         }
-      }
+      ]
     },
-    "features": {
-      "overline": "Our Strengths",
-      "title": "Experience and Professionalism",
-      "description": "What sets us apart in VIP event security:",
-      "items": {
-        "planning": {
-          "title": "Strategic Planning",
-          "description": "Detailed security analysis and risk assessment for every aspect of the event."
+    "vip_protection": {
+      "overline": "Exclusive Service",
+      "title": "Elite VIP Protection",
+      "description": "We can ensure elite protection for VIPs, celebrities and high-profile guests at your event, preserving the exclusive atmosphere of the event.\n\nWe design custom solutions for galas, corporate summits, exclusive weddings and luxury events."
+    },
+    "antiterrorism": {
+      "overline": "Specialized Expertise",
+      "title": "Anti-terrorism Competencies",
+      "subtitle": "Oracle is one of the most recognized agencies in anti-terrorism thanks to the know-how of its analysts and operators. In high-profile events, our team works exclusively for unparalleled global security.",
+      "roles": [
+        {
+          "title": "Security Manager",
+          "description": "Strategic supervision and general coordination of event security operations."
         },
-        "discretion": {
-          "title": "Maximum Discretion",
-          "description": "Our personnel operate with the utmost professionalism and confidentiality."
+        {
+          "title": "Risk Analyst",
+          "description": "In-depth threat analysis and risk assessment specific to each event."
         },
-        "coordination": {
-          "title": "Perfect Coordination",
-          "description": "Seamless integration with organizers, suppliers and local authorities."
+        {
+          "title": "Counter Terrorism Analyst",
+          "description": "Specialists in preventing and managing terrorist threats and critical situations."
         },
-        "flexibility": {
-          "title": "Operational Flexibility",
-          "description": "Ability to adapt quickly to any changes or unforeseen circumstances."
+        {
+          "title": "Field Operators",
+          "description": "Highly trained personnel for direct interventions and discreet physical protection."
         }
-      }
+      ]
     },
-    "process": {
-      "overline": "Our Process",
-      "title": "From Planning to Execution",
-      "description": "Our event security process includes:",
-      "steps": {
-        "assessment": {
-          "title": "Risk Assessment",
-          "description": "Detailed analysis of the venue, participants and potential security threats."
-        },
-        "planning": {
-          "title": "Security Planning",
-          "description": "Development of comprehensive security plans and coordination protocols."
-        },
-        "preparation": {
-          "title": "Preparation",
-          "description": "Personnel briefing, equipment setup and final security checks."
-        },
-        "execution": {
-          "title": "Execution",
-          "description": "Active security management during the event with continuous monitoring."
-        }
-      }
-    },
+    "quote": "Security is not a luxury, it is a necessity. In our VIP events, excellence in protection blends perfectly with the elegance of the experience.",
     "cta": {
-      "overline": "Secure Your Event",
-      "title": "Make Your Event Unforgettable for the Right Reasons",
-      "description": "Contact our VIP event security experts and discover how we can ensure the perfect success of your next event.",
-      "button": "Request Event Consultation"
+      "title": "Protect Your VIP Event",
+      "subtitle": "Contact our experts for personalized consultation on our security management services for exclusive events.",
+      "button": "Contact Us Now"
     }
   },
   "luxury_security": {

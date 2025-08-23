@@ -130,7 +130,7 @@ export default function EventiView() {
       <Container>
         <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
           <Link href="/" component={RouterLink} color="inherit">
-            Home
+            {t('navigation.home')}
           </Link>
           <Typography color="text.primary">{t('events.hero.title')}</Typography>
         </Breadcrumbs>
@@ -165,18 +165,16 @@ export default function EventiView() {
             </m.div>
 
             <m.div variants={varFade().inRight}>
-                            <Typography 
+              <Typography 
                 variant="h2" 
                 sx={{ 
                   mb: 3,
                   fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
                 }}
               >
-                {t('events.intro.title')}
+                {t('events.overview.title')}
               </Typography>
-            </m.div>
-
-            <m.div variants={varFade().inRight}>
+            </m.div>            <m.div variants={varFade().inRight}>
               <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
                 {t('events.overview.description')}
               </HtmlText>
@@ -204,18 +202,16 @@ export default function EventiView() {
               </m.div>
 
               <m.div variants={varFade().inLeft}>
-                                <Typography 
+                <Typography 
                   variant="h2" 
                   sx={{ 
                     mb: 3,
                     fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
                   }}
                 >
-                  {t('events.planning.title')}
+                  {t('events.expertise.title')}
                 </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inLeft}>
+              </m.div>              <m.div variants={varFade().inLeft}>
                 <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
                   {t('events.expertise.description')}
                 </HtmlText>
@@ -473,7 +469,7 @@ export default function EventiView() {
               textAlign: 'center',
               mb: 4,
               fontStyle: 'italic',
-              color: 'text.secondary'
+              color: 'common.white'
             }}
           >
             "{t('events.quote')}"

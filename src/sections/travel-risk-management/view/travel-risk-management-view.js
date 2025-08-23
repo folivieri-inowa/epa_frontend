@@ -128,9 +128,9 @@ export default function TravelRiskManagementView() {
       <Container>
         <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
           <Link href="/" component={RouterLink} color="inherit">
-            Home
+            {t('navigation.home')}
           </Link>
-          <Typography color="text.primary">Travel Risk Management</Typography>
+          <Typography color="text.primary">{t('travel_risk.hero.title')}</Typography>
         </Breadcrumbs>
       </Container>
     </Box>
