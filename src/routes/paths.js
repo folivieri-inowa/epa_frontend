@@ -17,6 +17,8 @@ const ROOTS = {
 // ----------------------------------------------------------------------
 
 export const paths = {
+  // Root paths
+  root: '/',
   //
   security_management: '/security-management',
   hotel_security_management: '/hotel-security-management',

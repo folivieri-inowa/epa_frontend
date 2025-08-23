@@ -37,7 +37,7 @@ export default function TravelRiskManagementView() {
         position: 'relative',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(/assets/images/travel1.jpg)',
+        backgroundImage: 'url(/assets/images/JetOut-CJ4-750.jpg)',
         '&:after': {
           top: 0,
           content: '""',
@@ -109,7 +109,7 @@ export default function TravelRiskManagementView() {
               }}
               startIcon={<Iconify icon="carbon:send" />}
             >
-              {t('contact')}
+              {t('common.cta_consultation')}
             </Button>
           </Stack>
         </Box>
@@ -142,13 +142,14 @@ export default function TravelRiskManagementView() {
       <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
         <Grid xs={12} md={6}>
           <m.div variants={varFade().inLeft}>
-            <Typography variant="h2" sx={{ mb: 3 }}>
+            <Typography variant="h3" sx={{ mb: 3, color: 'common.white' }}>
               {t('travel_risk.overview.title')}
             </Typography>
 
             <Typography
               sx={{
-                color: 'text.secondary',
+                fontSize: { xs: '1.1rem', md: '1.5rem' },
+                color: 'common.white',
                 mb: 3,
                 lineHeight: 1.7,
                 whiteSpace: 'pre-line'
@@ -164,7 +165,7 @@ export default function TravelRiskManagementView() {
             <Box
               component="img"
               alt="Travel Risk Management Overview"
-              src="/assets/images/travel2.jpg"
+              src="/assets/images/depositphotos_75876245-stock-illustration-world-map-with-shining-points.webp"
               sx={{
                 width: 1,
                 height: { xs: 280, md: 360 },
@@ -189,7 +190,7 @@ export default function TravelRiskManagementView() {
               <Box
                 component="img"
                 alt="Elite Operational Experience"
-                src="/assets/images/travel3.jpg"
+                src="/assets/images/aeroplane-aircraft-airplane-1792072.jpg"
                 sx={{
                   width: 1,
                   height: { xs: 280, md: 360 },
@@ -203,13 +204,14 @@ export default function TravelRiskManagementView() {
 
           <Grid xs={12} md={6} order={{ xs: 1, md: 2 }}>
             <m.div variants={varFade().inRight}>
-              <Typography variant="h2" sx={{ mb: 3 }}>
+              <Typography variant="h3" sx={{ mb: 3, color: 'common.white' }}>
                 {t('travel_risk.expertise.title')}
               </Typography>
 
               <Typography
                 sx={{
-                  color: 'text.secondary',
+                  fontSize: { xs: '1.1rem', md: '1.5rem' },
+                  color: 'common.white',
                   lineHeight: 1.7,
                   whiteSpace: 'pre-line'
                 }}
@@ -227,7 +229,7 @@ export default function TravelRiskManagementView() {
   const renderStandards = (
     <Container component={MotionViewport} sx={{ py: { xs: 10, md: 15 } }}>
       <m.div variants={varFade().inUp}>
-        <Typography variant="h2" sx={{ textAlign: 'center', mb: 3 }}>
+        <Typography variant="h3" sx={{ textAlign: 'center', mb: 3, color: 'common.white' }}>
           {t('travel_risk.standards.title')}
         </Typography>
 
@@ -235,7 +237,8 @@ export default function TravelRiskManagementView() {
           sx={{
             mx: 'auto',
             maxWidth: 900,
-            color: 'text.secondary',
+            fontSize: { xs: '1.1rem', md: '1.5rem' },
+            color: 'common.white',
             textAlign: 'center',
             lineHeight: 1.7,
             whiteSpace: 'pre-line'
@@ -252,7 +255,7 @@ export default function TravelRiskManagementView() {
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.neutral' }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
-          <Typography variant="h2" sx={{ textAlign: 'center', mb: 3 }}>
+          <Typography variant="h3" sx={{ textAlign: 'center', mb: 3, color: 'common.white' }}>
             {t('travel_risk.team_intro.title')}
           </Typography>
 
@@ -260,9 +263,9 @@ export default function TravelRiskManagementView() {
             sx={{
               mx: 'auto',
               maxWidth: 700,
-              color: 'text.secondary',
+              color: 'common.white',
               textAlign: 'center',
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              fontSize: { xs: '1.1rem', md: '1.5rem' },
               lineHeight: 1.7
             }}
           >
@@ -276,27 +279,45 @@ export default function TravelRiskManagementView() {
   // Security Board & Travel Risk Officer section
   const renderSecurityBoard = (
     <Container component={MotionViewport} sx={{ py: { xs: 10, md: 15 } }}>
-      <Grid container spacing={{ xs: 3, md: 5 }} alignItems="stretch">
-        <Grid xs={12} md={6}>
-          <m.div variants={varFade().inLeft}>
+      <Grid container spacing={{ xs: 3, md: 5 }} alignItems="stretch" sx={{ minHeight: { md: 400 } }}>
+        <Grid xs={12} md={6} sx={{ display: 'flex' }}>
+          <m.div variants={varFade().inLeft} style={{ width: '100%', display: 'flex' }}>
             <Card
               sx={{
                 p: { xs: 4, md: 6 },
-                bgcolor: 'primary.main',
-                color: 'primary.contrastText',
-                boxShadow: (theme) => theme.customShadows.z24,
+                bgcolor: 'background.paper',
+                border: '2px solid',
+                borderColor: 'primary.main',
+                boxShadow: (theme) => theme.customShadows.z12,
                 height: 1,
+                width: 1,
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              <CardContent sx={{ p: 0 }}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
-                  {t('travel_risk.security_board.title')}
-                </Typography>
+              <CardContent sx={{ p: 0, height: 1, display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                  <Box
+                    sx={{
+                      width: 4,
+                      height: 40,
+                      bgcolor: 'primary.main',
+                      borderRadius: 1,
+                      mr: 2
+                    }}
+                  />
+                  <Typography variant="h3" sx={{ color: 'text.primary' }}>
+                    {t('travel_risk.security_board.title')}
+                  </Typography>
+                </Box>
 
                 <Typography
                   sx={{
+                    fontSize: { xs: '1.1rem', md: '1.5rem' },
                     lineHeight: 1.7,
-                    whiteSpace: 'pre-line'
+                    whiteSpace: 'pre-line',
+                    color: 'common.white',
+                    flex: 1
                   }}
                 >
                   {t('travel_risk.security_board.description')}
@@ -306,26 +327,44 @@ export default function TravelRiskManagementView() {
           </m.div>
         </Grid>
 
-        <Grid xs={12} md={6}>
-          <m.div variants={varFade().inRight}>
+        <Grid xs={12} md={6} sx={{ display: 'flex' }}>
+          <m.div variants={varFade().inRight} style={{ width: '100%', display: 'flex' }}>
             <Card
               sx={{
                 p: { xs: 4, md: 6 },
-                bgcolor: 'grey.900',
-                color: 'common.white',
-                boxShadow: (theme) => theme.customShadows.z24,
+                bgcolor: 'background.paper',
+                border: '2px solid',
+                borderColor: 'grey.300',
+                boxShadow: (theme) => theme.customShadows.z12,
                 height: 1,
+                width: 1,
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              <CardContent sx={{ p: 0 }}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
-                  {t('travel_risk.travel_risk_officer.title')}
-                </Typography>
+              <CardContent sx={{ p: 0, height: 1, display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                  <Box
+                    sx={{
+                      width: 4,
+                      height: 40,
+                      bgcolor: 'grey.400',
+                      borderRadius: 1,
+                      mr: 2
+                    }}
+                  />
+                  <Typography variant="h3" sx={{ color: 'text.primary' }}>
+                    {t('travel_risk.travel_risk_officer.title')}
+                  </Typography>
+                </Box>
 
                 <Typography
                   sx={{
+                    fontSize: { xs: '1.1rem', md: '1.5rem' },
                     lineHeight: 1.7,
-                    whiteSpace: 'pre-line'
+                    whiteSpace: 'pre-line',
+                    color: 'common.white',
+                    flex: 1
                   }}
                 >
                   {t('travel_risk.travel_risk_officer.description')}
@@ -343,7 +382,7 @@ export default function TravelRiskManagementView() {
     <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
-          <Typography variant="h2" sx={{ textAlign: 'center', mb: 3 }}>
+          <Typography variant="h3" sx={{ textAlign: 'center', mb: 3, color: 'common.white' }}>
             {t('travel_risk.logistics_coordinator.title')}
           </Typography>
 
@@ -351,7 +390,8 @@ export default function TravelRiskManagementView() {
             sx={{
               mx: 'auto',
               maxWidth: 800,
-              color: 'text.secondary',
+              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              color: 'common.white',
               textAlign: 'center',
               lineHeight: 1.7
             }}
@@ -366,36 +406,61 @@ export default function TravelRiskManagementView() {
   // Travel Directions section
   const renderTravelDirections = (
     <Container component={MotionViewport} sx={{ py: { xs: 10, md: 15 } }}>
-      <Grid container spacing={{ xs: 5, md: 8 }}>
-        <Grid xs={12} md={6}>
-          <m.div variants={varFade().inLeft}>
+      <Grid container spacing={{ xs: 5, md: 8 }} alignItems="stretch" sx={{ minHeight: { md: 450 } }}>
+        <Grid xs={12} md={6} sx={{ display: 'flex' }}>
+          <m.div variants={varFade().inLeft} style={{ width: '100%', display: 'flex' }}>
             <Card
               sx={{
                 p: { xs: 4, md: 6 },
-                bgcolor: 'company.main',
-                color: 'grey.800',
+                bgcolor: 'background.paper',
+                border: '2px solid',
+                borderColor: 'primary.main',
+                boxShadow: (theme) => theme.customShadows.z12,
                 height: 1,
-                boxShadow: (theme) => theme.customShadows.z16,
+                width: 1,
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              <CardContent sx={{ p: 0 }}>
-                <Typography variant="h3" sx={{ mb: 4 }}>
-                  {t('travel_risk.from_abroad.title')}
-                </Typography>
+              <CardContent sx={{ p: 0, height: 1, display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
+                  <Box
+                    sx={{
+                      width: 4,
+                      height: 40,
+                      bgcolor: 'primary.main',
+                      borderRadius: 1,
+                      mr: 2
+                    }}
+                  />
+                  <Typography variant="h3" sx={{ color: 'text.primary' }}>
+                    {t('travel_risk.from_abroad.title')}
+                  </Typography>
+                </Box>
 
-                <Stack spacing={2}>
-                  {t('travel_risk.from_abroad.items', { returnObjects: true }).map((item, index) => (
+                <Stack spacing={3} sx={{ flex: 1 }}>
+                  {(Array.isArray(t('travel_risk.from_abroad.items', { returnObjects: true })) 
+                    ? t('travel_risk.from_abroad.items', { returnObjects: true }) 
+                    : []
+                  ).map((item, index) => (
                     <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start' }}>
                       <Iconify
-                        icon="carbon:checkmark"
+                        icon="carbon:checkmark-filled"
                         sx={{ 
-                          color: 'success.main',
+                          color: 'primary.main',
                           mt: 0.5,
-                          mr: 2,
-                          flexShrink: 0
+                          mr: 2.5,
+                          flexShrink: 0,
+                          fontSize: 20
                         }}
                       />
-                      <Typography sx={{ lineHeight: 1.6 }}>
+                      <Typography 
+                        sx={{ 
+                          lineHeight: 1.7,
+                          color: 'common.white',
+                          fontSize: { xs: '1rem', md: '1.1rem' }
+                        }}
+                      >
                         {item}
                       </Typography>
                     </Box>
@@ -406,35 +471,60 @@ export default function TravelRiskManagementView() {
           </m.div>
         </Grid>
 
-        <Grid xs={12} md={6}>
-          <m.div variants={varFade().inRight}>
+        <Grid xs={12} md={6} sx={{ display: 'flex' }}>
+          <m.div variants={varFade().inRight} style={{ width: '100%', display: 'flex' }}>
             <Card
               sx={{
                 p: { xs: 4, md: 6 },
-                bgcolor: 'grey.900',
-                color: 'common.white',
+                bgcolor: 'background.paper',
+                border: '2px solid',
+                borderColor: 'grey.300',
+                boxShadow: (theme) => theme.customShadows.z12,
                 height: 1,
-                boxShadow: (theme) => theme.customShadows.z16,
+                width: 1,
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              <CardContent sx={{ p: 0 }}>
-                <Typography variant="h3" sx={{ mb: 4 }}>
-                  {t('travel_risk.to_abroad.title')}
-                </Typography>
+              <CardContent sx={{ p: 0, height: 1, display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
+                  <Box
+                    sx={{
+                      width: 4,
+                      height: 40,
+                      bgcolor: 'grey.400',
+                      borderRadius: 1,
+                      mr: 2
+                    }}
+                  />
+                  <Typography variant="h3" sx={{ color: 'text.primary' }}>
+                    {t('travel_risk.to_abroad.title')}
+                  </Typography>
+                </Box>
 
-                <Stack spacing={2}>
-                  {t('travel_risk.to_abroad.items', { returnObjects: true }).map((item, index) => (
+                <Stack spacing={3} sx={{ flex: 1 }}>
+                  {(Array.isArray(t('travel_risk.to_abroad.items', { returnObjects: true })) 
+                    ? t('travel_risk.to_abroad.items', { returnObjects: true }) 
+                    : []
+                  ).map((item, index) => (
                     <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start' }}>
                       <Iconify
-                        icon="carbon:checkmark"
+                        icon="carbon:checkmark-filled"
                         sx={{ 
-                          color: 'company.main',
+                          color: 'grey.500',
                           mt: 0.5,
-                          mr: 2,
-                          flexShrink: 0
+                          mr: 2.5,
+                          flexShrink: 0,
+                          fontSize: 20
                         }}
                       />
-                      <Typography sx={{ lineHeight: 1.6 }}>
+                      <Typography 
+                        sx={{ 
+                          lineHeight: 1.7,
+                          color: 'common.white',
+                          fontSize: { xs: '1rem', md: '1.1rem' }
+                        }}
+                      >
                         {item}
                       </Typography>
                     </Box>
@@ -454,24 +544,36 @@ export default function TravelRiskManagementView() {
       <m.div variants={varFade().inUp}>
         <Typography
           variant="overline"
-          sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
+          sx={{ 
+            color: 'company.main', 
+            fontWeight: 'fontWeightBold',
+            mb: 2,
+            display: 'block'
+          }}
         >
-          La tua tranquillità è la nostra missione
+          {t('travel_risk.cta.overline')}
         </Typography>
 
-        <Typography variant="h2" sx={{ my: 3 }}>
-          Contattaci per una consulenza personalizzata
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            mb: 3,
+            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+          }}
+        >
+          {t('travel_risk.cta.title')}
         </Typography>
 
         <Typography
           sx={{
             mx: 'auto',
             maxWidth: 640,
-            color: 'text.secondary',
+            fontSize: { xs: '1.1rem', md: '1.5rem' },
+            color: 'common.white',
             mb: 5
           }}
         >
-          I nostri esperti sono pronti a valutare le tue esigenze di sicurezza nei viaggi e sviluppare un piano di protezione su misura.
+          {t('travel_risk.cta.description')}
         </Typography>
 
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
@@ -490,7 +592,7 @@ export default function TravelRiskManagementView() {
             }}
             startIcon={<Iconify icon="carbon:send" />}
           >
-            {t('contact')}
+            {t('common.contact_us')}
           </Button>
         </Box>
       </m.div>

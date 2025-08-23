@@ -94,7 +94,7 @@ export default function HomeSplitSection() {
           <Box
             sx={{
               height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/image1.jpeg)', // Cambia con l'immagine che preferisci
+              backgroundImage: 'url(/assets/images/2023-escalade-pj-01.webp)', // Luxury vehicle
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

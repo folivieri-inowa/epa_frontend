@@ -23,7 +23,7 @@ export default function HomeSeparatorBanner() {
         py: { xs: 6, md: 8 },
         position: 'relative',
         bgcolor: 'rgba(147, 160, 167, 0.8)',
-        backgroundImage: 'url(/assets/images/roadmap1.png)',
+        backgroundImage: 'url(/assets/images/pattern.png)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

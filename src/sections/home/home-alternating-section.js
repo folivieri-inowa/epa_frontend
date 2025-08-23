@@ -1,6 +1,7 @@
 import useCompanyColors from 'src/hooks/use-company-colors';
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -41,7 +42,7 @@ const ITEMS = [
     title: 'Eventi VIP',
     description:
       'Soluzioni di Security Management su misura per garantire eventi esclusivi sicuri e senza intoppi, conformi agli standard internazionali.',
-    image: '/assets/images/home/vip.png',
+    image: '/assets/images/events3.jpg',
     path: paths.eventi_vip,
   },
   {
@@ -63,8 +64,22 @@ const ITEMS = [
 // ----------------------------------------------------------------------
 
 export default function HomeAlternatingSection() {
+  const { t } = useTranslation();
   const theme = useTheme();
   const companyColors = useCompanyColors();
+
+  // Usa le traduzioni invece dell'array statico
+  const items = t('home.alternatingSection.items', { returnObjects: true }) || [];
+  
+  // Mapping per immagini e path (rimangono hardcoded perché sono asset)
+  const assetsMapping = [
+    { image: '/assets/images/home/dimore.png', path: paths.security_management },
+    { image: '/assets/images/home/hotel.png', path: paths.hotel_security_management },
+    { image: '/assets/images/home/travel.png', path: paths.risk_travel_management },
+    { image: '/assets/images/home/eventi.png', path: paths.eventi },
+    { image: '/assets/images/home/corporate.png', path: paths.corporate },
+    { image: '/assets/images/home/antiterrorismo.png', path: paths.antiterrorism },
+  ];
 
   return (
     <Box
@@ -92,7 +107,9 @@ export default function HomeAlternatingSection() {
         </m.div>
         </Container>
       <Container component={MotionViewport} sx={{ position: 'relative' }}>
-        {ITEMS.map((item, index) => {
+        {items.map((item, index) => {
+          // Ottieni asset corrispondente
+          const assets = assetsMapping[index] || {};
           // Alternanza corretta: primo e terzo con immagine a sinistra, secondo con immagine a destra
           const imageFirst = index % 2 === 0;
           
@@ -102,7 +119,7 @@ export default function HomeAlternatingSection() {
               sx={{ 
                 position: 'relative',
                 mb: { xs: 12, md: 20 }, // Aumentato lo spazio tra le sezioni
-                ...(index === ITEMS.length - 1 && { mb: 0 }),
+                ...(index === items.length - 1 && { mb: 0 }),
               }}
             >
               <Grid
@@ -116,7 +133,7 @@ export default function HomeAlternatingSection() {
                   <Box sx={{ width: '100%' }}>
                     <img
                       alt={item.title}
-                      src={item.image}
+                      src={assets.image}
                       style={{
                         width: '100%',
                         height: 'auto',
@@ -153,7 +170,7 @@ export default function HomeAlternatingSection() {
                     <Button
                       variant="contained"
                       component={RouterLink}
-                      href={item.path}
+                      href={assets.path}
                       startIcon={<Iconify icon="carbon:arrow-right" />}
                       sx={{
                         bgcolor: 'company.main',

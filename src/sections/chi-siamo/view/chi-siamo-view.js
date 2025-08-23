@@ -189,9 +189,9 @@ export default function ChiSiamoView() {
     </Container>
   );
 
-  // Expertise section
+  // Expertise section (grigio neutro)
   const renderExpertise = (
-    <Box sx={{ py: { xs: 10, md: 15 }, position: 'relative' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, position: 'relative', bgcolor: 'background.neutral' }}>
       <Container>
         <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
           <Grid xs={12} md={6}>
@@ -202,9 +202,11 @@ export default function ChiSiamoView() {
 
               <Typography
                 sx={{
-                  color: 'text.secondary',
+                  color: alpha(theme.palette.primary.contrastText, 0.8),
                   mb: 3,
-                  lineHeight: 1.7,
+                  lineHeight: 1.6,
+                  fontSize: { xs: '1.1rem', md: '1.5rem' },
+                  whiteSpace: 'pre-line',
                 }}
               >
                 {t('about.page.expertise.description')}
@@ -233,7 +235,7 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Technology section
+  // Technology section (grigio neutro per alternanza)
   const renderTechnology = (
     <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
       <Container component={MotionViewport}>
@@ -275,9 +277,10 @@ export default function ChiSiamoView() {
               <m.div variants={varFade().inUp}>
                 <Typography 
                   sx={{ 
-                    fontSize: { xs: '1rem', md: '1.1rem' },
-                    lineHeight: 1.7,
-                    color: 'text.secondary'
+                    fontSize: { xs: '1.1rem', md: '1.5rem' },
+                    lineHeight: 1.6,
+                    color: alpha(theme.palette.primary.contrastText, 0.8),
+                    whiteSpace: 'pre-line',
                   }}
                 >
                   {t('about.page.technology.description')}
@@ -290,9 +293,9 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Team section
+  // Team section (bianco)
   const renderTeam = (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+    <Box sx={{ py: { xs: 8, md: 12 } }}>
       <Container component={MotionViewport}>
         <Stack spacing={4} alignItems="center" sx={{ textAlign: 'center', mb: 6 }}>
           <m.div variants={varFade().inUp}>
@@ -328,10 +331,11 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Standards section
+  // Standards section (bianco per alternanza) 
   const renderStandards = (
-    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
-      <m.div variants={varFade().inUp}>
+    <Box sx={{ py: { xs: 8, md: 12 } }}>
+      <Container component={MotionViewport}>
+        <m.div variants={varFade().inUp}>
         <Typography
           variant="overline"
           sx={{ 
@@ -373,6 +377,7 @@ export default function ChiSiamoView() {
         </Typography>
       </m.div>
     </Container>
+    </Box>
   );
 
   // Call to action

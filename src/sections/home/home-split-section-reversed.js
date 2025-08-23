@@ -29,7 +29,7 @@ export default function HomeSplitSectionReversed() {
           <Box
             sx={{
               height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/image2.jpeg)', // Cambia con l'immagine che preferisci
+              backgroundImage: 'url(/assets/images/events2.jpg)', // Eventi VIP luxury
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -60,7 +60,7 @@ export default function HomeSplitSectionReversed() {
                     fontWeight: 700,
                   }}
                 >
-                  {t('homeSplitSectionReversed.title', 'Eventi VIP')}
+                  {t('home.split_section_reversed.title')}
                 </Typography>
               </m.div>
 
@@ -73,10 +73,7 @@ export default function HomeSplitSectionReversed() {
                     whiteSpace: 'pre-line',
                   }}
                 >
-                  {t(
-                    'homeSplitSectionReversed.description',
-                    `Proteggiamo i tuoi ospiti, il tuo evento e la tua reputazione.\n\nChe sia un matrimonio di lusso o un meeting con personalità di alto profilo Il nostro servizio di Security Management è progettato per integrarsi perfettamente con l'esclusività del tuo evento`
-                  )}
+                  {t('home.split_section_reversed.description')}
                 </Typography>
               </m.div>
 
@@ -98,7 +95,7 @@ export default function HomeSplitSectionReversed() {
                     },
                   }}
                 >
-                  Scopri di più
+                  {t('home.split_section_reversed.button')}
                 </Button>
               </m.div>
             </Box>

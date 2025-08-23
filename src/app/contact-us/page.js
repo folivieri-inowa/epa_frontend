@@ -9,19 +9,6 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  const staticData = {
-    title: 'Come',
-    subtitle: 'Contattarci',
-    contact_title: 'Richiedi Informazioni',
-    form: { 
-      name: 'Nome e Cognome', 
-      email: 'Email', 
-      phone: 'Telefono',
-      subject: 'Oggetto',
-      message: 'Messaggio',
-      submit: 'Invia Richiesta'
-    },
-  };
-
-  return <ContactView data={staticData} />;
+  // Non passiamo più dati statici, i componenti useranno le traduzioni direttamente
+  return <ContactView />;
 }

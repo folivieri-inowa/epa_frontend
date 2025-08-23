@@ -7,13 +7,14 @@
     "contact": "Contact",
     "menu": "Menu",
     "cookie_preferences": "Cookie Preferences",
-    "read_more": "Read More",
-    "learn_more": "Learn More",
-    "get_quote": "Get Quote",
+    "read_more": "Read more",
+    "learn_more": "Learn more",
+    "get_quote": "Get quote",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "years_experience": "years of experience"
+    "years_experience": "years of experience",
+    "cta_consultation": "Request Consultation"
   },
   "navigation": {
     "menu": "Menu",
@@ -43,7 +44,7 @@
       "description": "Meet our team of security experts: former law enforcement officers, military personnel, risk analysts and private security operators with global experience.",
       "keywords": "oracle Executive Protection team, security experts, executive protection professionals, security management specialists"
     },
-    "travel_risk": {
+    "travel_risk_seo": {
       "title": "Travel Risk Management | Oracle Executive Protection",
       "description": "Professional travel risk management services. Risk assessment, safety planning, operational intelligence and global protection for business and leisure travel.",
       "keywords": "travel risk management, business travel security, executive protection travel, travel safety consulting"
@@ -64,633 +65,710 @@
       "title": "Oracle Executive Protection",
       "subtitle": "See the invisible and do the impossible",
       "description": "Founded on experience, driven by innovation: we protect your world with discretion and professionalism, wherever you are.",
-      "cta_primary": "Our services",
-      "cta_secondary": "Contact us"
+      "button": "Request Consultation"
     },
-    "split_section": {
-      "title": "Travel Risk Management",
-      "description": "Oracle Executive Protection represents one of the most important international realities in Travel Risk Management. <br /><br /> We offer an excellent service, highly personalized to ensure that every trip you take (business or vacation), anywhere in the world, is safe, smooth, worry-free. <br /><br />",
-      "button": "Learn more"
+    "servicesOverview": {
+      "overline": "Our Services",
+      "title": "Comprehensive Protection for Every Need",
+      "description": "From executive protection to risk analysis, from travel security to residential protection: our team of experts offers customized solutions for your safety.",
+      "services": {
+        "executiveProtection": {
+          "title": "Executive Protection",
+          "description": "Specialized protection for executives, entrepreneurs and public figures."
+        },
+        "riskAnalysis": {
+          "title": "Risk Analysis",
+          "description": "Comprehensive assessment of personal and business security threats."
+        },
+        "travelSecurity": {
+          "title": "Travel Security",
+          "description": "Professional protection during business and leisure travel."
+        },
+        "residentialSecurity": {
+          "title": "Residential Security",
+          "description": "Complete security systems for homes and private properties."
+        }
+      }
+    },
+    "stats": {
+      "overline": "Our Numbers",
+      "title": "Experience that Speaks for Itself",
+      "description": "More than 30 years of experience in the security sector with thousands of successful missions worldwide.",
+      "items": {
+        "experience": {
+          "number": "30+",
+          "label": "years of experience"
+        },
+        "missions": {
+          "number": "5,000+",
+          "label": "successful missions"
+        },
+        "countries": {
+          "number": "50+",
+          "label": "countries served"
+        },
+        "satisfaction": {
+          "number": "99%",
+          "label": "customer satisfaction"
+        }
+      }
+    },
+    "about": {
+      "overline": "About Us",
+      "title": "Predictive, Preventive, Proactive and Multi-level Protection",
+      "description": "Oracle Executive Protection was born from the experience of professionals who have worked for over 30 years in the security sector. Our approach is based on four fundamental principles: prediction, prevention, proactivity and multi-level protection.",
+      "features": {
+        "prediction": {
+          "title": "Prediction",
+          "description": "We anticipate threats before they become real dangers."
+        },
+        "prevention": {
+          "title": "Prevention",
+          "description": "We implement security measures to prevent incidents."
+        },
+        "proactivity": {
+          "title": "Proactivity",
+          "description": "We act promptly to neutralize any risk."
+        },
+        "multilevel": {
+          "title": "Multi-level",
+          "description": "We offer protection at different levels of complexity and intensity."
+        }
+      }
+    },
+    "cta": {
+      "overline": "Contact Us",
+      "title": "Ready to Protect Your World?",
+      "description": "Contact our team of experts for a personalized consultation and discover how we can protect what matters most to you.",
+      "button": "Request Free Consultation"
     },
     "pillars": {
-      "title": "The 4 pillars of our philosophy:",
+      "title": "The 4 Pillars of Our Philosophy:",
       "items": [
         {
           "title": "Preventive Security:",
-          "description": "Through meticulous Risk Assessment we analyze risks with a personalized approach, mitigating vulnerabilities by implementing the specific measures necessary before identified risks become reality."
+          "description": "Through meticulous Risk Assessment we analyze risks in a personalized way and mitigate vulnerabilities by implementing the specific measures needed before identified risks become reality."
         },
         {
           "title": "Proactive Security:",
-          "description": "We act to anticipate and manage risks before they manifest. We build resilience based on profiling and experience, in order to anticipate and avoid every possible risk."
+          "description": "We act to anticipate and manage risks before they manifest. We build resilience based on profiling and our experience to anticipate and avoid every possible risk."
         },
         {
           "title": "Predictive Security:",
-          "description": "We use analysis based on advanced technologies and intelligence sources. Our Risk Analysts cross-reference AI information, OSINT, closint, map site Risk and deep web to study possible scenarios, anticipate emerging threats and predict potential risks before they occur."
+          "description": "We use analysis based on advanced technologies and intelligence sources. Our Risk Analysts cross-reference AI, OSINT, closint, risk site mapping and deep web information to study possible scenarios, anticipate emerging threats and predict potential risks before they occur."
         },
         {
           "title": "Deep Security:",
-          "description": "Multi-level security approach to manage every client, their reputation, their assets and proxies by combining physical, IT, organizational security and through constant training. We create a system resilient even to the most complex threats."
+          "description": "We have a multi-level security approach to manage each of our clients, their reputation, their assets and proxies by combining physical, IT, organizational security and through constant training to create a resilient system even against the most complex threats."
         }
       ]
+    },
+    "alternatingSection": {
+      "items": [
+        {
+          "title": "Luxury Villas and Residences",
+          "description": "Custom security management solutions for villas, residences and exclusive homes, compliant with international standards, to guarantee serenity and privacy."
+        },
+        {
+          "title": "Hotels and Hospitality",
+          "description": "Custom Security Management solutions to guarantee protection and serenity to your VIP guests, compliant with international standards."
+        },
+        {
+          "title": "Travel Risk Management",
+          "description": "Personalized protection for business and leisure travel, with global expertise and international standards."
+        },
+        {
+          "title": "VIP Events",
+          "description": "Discreet and coordinated security for elite events with specialized protection for VIPs and celebrities, preserving the exclusive atmosphere of the event."
+        },
+        {
+          "title": "Corporate, Infrastructure and Sensitive Sites",
+          "description": "Integrated security solutions for companies, critical infrastructure and sensitive sites, compliant with the highest international standards."
+        },
+        {
+          "title": "Anti-Terrorism",
+          "description": "Specialized expertise in anti-terrorism with threat analysis, risk assessment and implementation of advanced security measures."
+        }
+      ]
+    },
+    "joinTeam": {
+      "overline": "Careers",
+      "title": "Join the Team",
+      "description": "Contact us to participate in our training courses to join the Oracle - EP Team as Risk Analysts and Mitigators in roles as Security Officers, Protection Security Specialists, Travel Risk Officers or our technical roles",
+      "button": "Discover Opportunities"
+    },
+    "separatorBanner2": {
+      "title": "Security is not a product, but a continuous process of evolution and improvement"
+    },
+    "split_section": {
+      "title": "Travel Risk Management",
+      "description": "Oracle Executive Protection represents one of the most important international realities in Travel Risk Management. <br /><br /> We offer an excellent service, highly personalized to ensure that every trip of yours: business or vacation, anywhere in the world, is safe, smooth and worry-free. <br /><br />",
+      "button": "Learn More"
+    },
+    "split_section_reversed": {
+      "title": "VIP Events and Executive Protection",
+      "description": "We guarantee maximum discretion and security for exclusive events and high-profile executive protection. From planning to execution, every detail is managed with millimetric precision.",
+      "button": "Learn More"
     },
     "separator_banner": {
       "title": "30+ years of excellence in global security",
       "subtitle": "Your security is our mission"
     },
-    "split_section_reversed": {
-      "title": "VIP Events and Executive Protection",
-      "description": "We guarantee maximum discretion and security for exclusive events and high-profile executive protection. From planning to execution, every detail is handled with millimetric precision.",
-      "button": "Learn more"
+    "separator_banner_2": {
+      "title": "Security as art, protection as mission"
+    },
+    "separator_banner_3": {
+      "title": "Security is not a product, but a continuous process of evolution and improvement"
     },
     "strategic_protection_section": {
       "title": "Strategic Protection Against Global Threats",
-      "description": "Advanced Anti-terrorism and Anti-crime security solutions for institutions, companies, corporations, public and private infrastructures and sensitive sites, designed to prevent, protect and respond to threats, complying with the highest international standards",
-      "button": "Learn more"
+      "description": "Advanced anti-terrorism and anti-crime security solutions for institutions, companies, corporations, public and private infrastructure and sensitive sites, designed to prevent, protect and respond to threats, compliant with the highest international standards",
+      "button": "Learn More"
     },
     "luxury_security_section": {
       "title": "Luxury Hotel Security Management and Private Residences",
-      "description": "We protect luxury hotels and private residences through comprehensive vulnerability analysis and implementation of cutting-edge security systems.\n\nWe transform security into a strength for your facility, ensuring discreet and high-level protection for VIP clients, staff and corporate reputation.",
-      "button": "Learn more"
+      "description": "We protect luxury hotels and private residences through comprehensive vulnerability analysis and implementation of cutting-edge security systems.\n\nWe transform security into a strength for your facility, ensuring discreet and high-level protection for VIP guests, staff and corporate reputation.",
+      "button": "Learn More"
     },
-    "about": {
-      "title": "Who we are",
-      "description": "Oracle Executive Protection is a leading company in consulting, analysis and training specialized in the security, defense and physical and technological protection sector. <br /><br /> With over 30 years of experience in the sector, we stand out for the excellence of our services and the innovative approach to risk management.",
-      "button": "Learn more"
+    "aboutSection": {
+      "title": "About Us",
+      "description": "Oracle Executive Protection is a leading company in consulting, analysis and training specialized in the security, defense and physical and technological protection sector. <br /><br /> With over 30 years of experience in the sector, we distinguish ourselves through the excellence of our services and innovative approach to risk management.",
+      "button": "Learn More"
     },
     "contact": {
-      "overline": "Contact us",
+      "overline": "Contact Us",
       "title": "Need a consultation?",
-      "description": "Our team of experts is ready to assess your specific needs and offer you tailored security solutions.",
-      "button": "Request information",
+      "description": "Our team of experts is ready to evaluate your specific needs and offer you customized solutions for your security.",
+      "button": "Request Information",
       "info": [
         {
           "title": "Phone",
-          "value": "+39 02 123 456 789"
+          "value": "+39 392 926 4907"
         },
         {
           "title": "Email",
-          "value": "info@oracleep.com"
+          "value": "info@protectionagency.it"
         },
         {
-          "title": "Address",
-          "value": "Milano, Italy"
+          "title": "Availability",
+          "value": "24/7 Emergency Service"
         }
       ]
     }
   },
   "about": {
-    "home_section": {
-      "title": "Global Security Excellence",
-      "description": "Founded on experience, driven by innovation: we protect your world with discretion and professionalism, wherever you are. <br /><br /> Oracle Executive Protection is a global leader in elite security: a company specialized in Security Management and Executive Protection. <br /><br /> Oracle Executive Protection is one of the first global security agencies in Europe to deal with Travel Risk Management, becoming an absolute leader in the sector also thanks to its prestigious international partnerships and collaborations. <br />",
-      "button": "Learn more about us"
+    "hero": {
+      "overline": "About Us",
+      "title": "Oracle Executive Protection",
+      "description": "More than 30 years of experience in the security sector with a team of highly qualified professionals.",
+      "button": "Request Consultation"
     },
-    "page": {
-      "hero": {
-        "title": "About Us",
-        "subtitle": "Over 30+ years of excellence in global security",
-        "breadcrumb": "About Us",
-        "cta": "Contact us"
-      },
-      "breadcrumbs": {
-        "home": "Home",
-        "about": "About Us"
-      },
-      "content": {
-        "title": "Oracle Executive Protection",
-        "subtitle": "Founded on experience, driven by innovation",
-        "description": "We protect your world with discretion and professionalism, wherever you are.\n\nOracle Executive Protection is a global reference point in the risk analysis and mitigation sector: a company that deals with Risk Analysis, Security Management, VIP Events, Executive Protection and Counter-terrorism.\n\nOracle is one of the first global security agencies in Europe to deal with Travel Risk Management, becoming a leader in the sector also thanks to its prestigious national and international partnerships and collaborations.\n\nWe are part of an international network of security companies that interact with each other, exchanging information, assignments and services in the Executive Protection sector."
-      },
-      "expertise": {
-        "overline": "Our expertise",
-        "title": "Know-how of over 30 years",
-        "description": "A know-how of over 30 years of experience thanks to our team in Security Management, global security operations, Intelligence, Risk Analysis, Executive protection of institutional subjects, infrastructures, sensitive sites, multinational companies, luxury hotels, VIP events and private residences."
-      },
-      "technology": {
-        "overline": "Advanced technology",
-        "title": "At the forefront of security",
-        "description": "Oracle EP is a company that is not limited to physical security analysis, but is technologically cutting-edge.\n\nWe use advanced tools such as OSINT, CLOSINT analysis and artificial intelligence, to monitor and predict threats, ensuring predictive and proactive security, Encrypted Communications, Remote Surveillance and UAVs, Advanced counter-surveillance systems and Risk Analysis.\n\nOur task is to \"Predict the future\"! Solving problems when they manifest is already too late.\n\nFor this reason, the 4 pillars of ORACLE are: Predictive, Preventive, Proactive and Multi-level Security.\n\nOur mission is to ensure the security of our clients with discretion, innovation and a personalized functional approach."
-      },
-      "team": {
-        "overline": "Our team",
-        "title": "Global security professionals",
-        "description": "Our main strength is absolutely the Team.\n\nOur Team is composed of former Law Enforcement and Military Operators and Global Security Operators. We boast Operators and Analysts with over 30 years of experience in global security operations, specialized in physical protection and management of high-risk contexts, experts in Counter-Terrorism and anti-crime.\n\nWe have spent our entire life, our entire career taking care of the security and protection of lives, people, families, companies, sensitive sites, critical infrastructures, borders, states, perimeters that had to be impregnable, places of worship and we have trained some of the best professionals in Security Management, Close Protection and modern Anti-terrorism."
-      },
-      "standards": {
-        "overline": "Our standards",
-        "title": "Professional security system",
-        "description": "Oracle Executive Protection is composed of expert professionals in the key roles of the \"Security System\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Anti-terrorism Analysts, Logistics Coordinators, Drivers, Skippers, Cyber Security Operators, UAV pilots.\n\nA team with an unparalleled synergy between prestigious academic certifications and field experience, strategic Intelligence and Cybersecurity."
-      },
-      "cta": {
-        "title": "Ready to enhance your security?",
-        "description": "Contact us for a personalized consultation and discover how we can protect your world",
-        "button": "Contact us"
+    "story": {
+      "overline": "Our History",
+      "title": "Experience Built in the Field",
+      "description": "Oracle Executive Protection was born from the experience of professionals who have worked for over 30 years in the security sector. Our story is made up of successful missions, continuous innovation and an unwavering commitment to the safety of our clients."
+    },
+    "approach": {
+      "overline": "Our Approach",
+      "title": "Predictive, Preventive, Proactive and Multi-level Protection",
+      "description": "Our security philosophy is based on four fundamental pillars that guide every operation:",
+      "pillars": {
+        "predictive": {
+          "title": "Predictive",
+          "description": "We use advanced analytics and intelligence to anticipate threats before they materialize."
+        },
+        "preventive": {
+          "title": "Preventive",
+          "description": "We implement security measures designed to prevent incidents from occurring."
+        },
+        "proactive": {
+          "title": "Proactive",
+          "description": "We act promptly and decisively to neutralize any risk to our clients' safety."
+        },
+        "multilevel": {
+          "title": "Multi-level",
+          "description": "We offer protection solutions at different levels of complexity and intensity, adapted to specific needs."
+        }
       }
+    },
+    "values": {
+      "overline": "Our Values",
+      "title": "The Principles That Guide Us",
+      "description": "Every operation is guided by fundamental values that define who we are:",
+      "items": {
+        "discretion": {
+          "title": "Discretion",
+          "description": "We operate with maximum confidentiality and professionalism."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We pursue the highest standards in every aspect of our work."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "We adopt the most advanced technologies and methodologies."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "We are a trusted partner you can always count on."
+        }
+      }
+    },
+    "cta": {
+      "overline": "Join Us",
+      "title": "Discover the Oracle Executive Protection Difference",
+      "description": "Contact our team to learn more about our services and how we can protect what matters most to you.",
+      "button": "Request Consultation"
     }
   },
   "team": {
-    "page": {
-      "hero": {
-        "breadcrumb": "Our Team"
-      },
-      "professionals": {
-        "title": "Security Professionals",
-        "description": "Oracle Executive Protection is composed of experienced professionals in the key roles of the \"Security System\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Anti-terrorism Analysts, Logistics Coordinators.<br /><br />Meticulously selected with excellence background and exclusive reliability."
-      },
-      "leadership": {
-        "title": "Operational Leadership", 
-        "description": "An operational leadership that ensures rapid and effective solutions in the field, risk and anti-terrorism analysts.<br /><br />For years we have taken care of the security and protection of people and families, companies, sensitive sites, critical infrastructures, borders, states, perimeters that had to be impregnable, places of worship training some of the best professionals in Security Management, Close Protection and modern Anti-terrorism."
-      },
-      "roles": {
-        "title": "Our Team Roles",
-        "subtitle": "Specialized professionals for every security need",
-        "security_manager": {
-          "title": "Security Manager",
-          "description": "Strategic leadership in security operations and risk management with over 20 years of experience in critical environments."
-        },
-        "risk_analyst": {
-          "title": "Risk Analyst",
-          "description": "Specialized in threat assessment and risk analysis using advanced technologies and intelligence sources for predictive security."
-        },
-        "protective_specialist": {
-          "title": "Protective Security Specialist",
-          "description": "Executive protection experts with military and law enforcement background, trained in the most advanced close protection techniques."
-        },
-        "travel_risk_manager": {
-          "title": "Travel Risk Manager", 
-          "description": "Specialists in travel security management, expert in risk assessment and mitigation for business and leisure travel worldwide."
-        },
-        "intelligence_analyst": {
-          "title": "Intelligence Analyst",
-          "description": "Anti-terrorism and intelligence experts, specialized in threat analysis and prevention of security incidents through OSINT and advanced techniques."
-        },
-        "logistics_coordinator": {
-          "title": "Logistics Coordinator",
-          "description": "Operational coordination specialists who ensure flawless execution of security operations and emergency management."
-        }
-      },
-      "standards": {
-        "title": "Training Standards",
-        "description": "All our professionals follow continuous training programs and maintain the highest industry certifications."
-      },
-      "research": {
-        "title": "Research & Development", 
-        "description": "We constantly invest in research and development of new security methodologies and technologies to stay at the forefront of the industry."
-      },
-      "cta": {
-        "title": "Meet our team",
-        "description": "Contact us to learn more about our professionals",
-        "button": "Contact us"
-      }
+    "hero": {
+      "overline": "Our Team",
+      "title": "Security Professionals",
+      "description": "Meet our team of experts: former law enforcement officers, military personnel and risk analysts with global experience.",
+      "button": "Request Consultation"
     }
   },
   "travel_risk": {
     "hero": {
-      "title": "Travel Risk Management",
-      "subtitle": "Oracle Executive Protection represents one of the most important international realities in Travel Risk Management."
+      "overline": "Travel Risk Management",
+      "title": "Safety Without Borders",
+      "description": "Comprehensive protection for your business and leisure travel. Professional risk assessment, security planning and real-time operational intelligence.",
+      "button": "Request Consultation"
     },
-    "overview": {
-      "title": "Excellence Personalized Service",
-      "description": "We offer an excellent service, highly personalized to ensure that every trip you take: business or vacation, anywhere in the world, is safe, smooth and worry-free.\n\nOur Travel Risk Management service is based on a structured and personalized process. We evaluate every aspect of the trip: destination, itinerary, customer profile, using the highest international standards and protocols."
+    "intro": {
+      "overline": "Travel Security",
+      "title": "Protection That Travels With You",
+      "description": "In an increasingly connected but complex world, traveling safely requires more than simple precautions. Our travel risk management service offers comprehensive protection that adapts to every destination and situation."
     },
-    "expertise": {
-      "title": "Elite Operational Experience",
-      "description": "Specialized in travel risk management, we combine elite operational experience, advanced intelligence and strategic planning to protect you, your collaborators and your interests, in every context.\n\nWe analyze threats, plan safe itineraries and provide real-time support, 24/7."
-    },
-    "standards": {
-      "title": "International Standards",
-      "description": "Following the highest international standards related to ISO 31030 and 31000. With a discreet but highly effective approach and the use of the most advanced technology and methodologies, our team of experts takes care of every detail: from preventive risk assessment to incident management, to physical and technological protection and logistics management.\n\nOur task is to anticipate every possible risk situation and respond to every emergency with unparalleled experience and professionalism. Your peace of mind is our mission."
-    },
-    "team_intro": {
-      "title": "Oracle Specialized Team",
-      "description": "Whether it's a business trip or vacation, an entire specialized Oracle Team will manage every detail of your stay."
-    },
-    "security_board": {
-      "title": "Security Board",
-      "description": "Composed of the Chief Security Manager, our Security Managers, Risk Analysts and our anti-terrorism analysts, the Security Board takes care of monitoring every detail of the trip 24/7, anticipating every possible inconvenience, communicating with our field operators, following our GPS, monitoring Risk Map sites and Osint analyses in real time.\n\nCreating personalized protocols for your trip, the best routes and helping you plan your trip. We monitor in real time and use advanced technologies for tracking, secure communication and threat analysis during the trip."
-    },
-    "travel_risk_officer": {
-      "title": "Travel Risk Officer",
-      "description": "Our TROs in the field are professionals with a very high level background, an elite team with over 30 years of experience in anti-terrorism, VIP close protection and intelligence, led by first-class professionals, experience in the most important international contexts who have also passed complex selections and specialization courses to be by your side.\n\nThe TROs with maximum discretion and education will be alongside your work team or your family, constantly ensuring that every detail of the trip is perfect in order to make your trip worry-free, from environmental and physical inspections of Hotels, Restaurants and Meeting rooms, to the execution of your every movement."
-    },
-    "logistics_coordinator": {
-      "title": "Logistics Coordinator",
-      "description": "Our LCs are our personnel dedicated to logistics planning in the field. They take care of all relationships with third parties: restaurants, hotels, meeting rooms, staff of the places where you will go for work or vacation, allowing the client to focus exclusively on the trip, whether for work or pleasure."
-    },
-    "from_abroad": {
-      "title": "From Abroad to Italy",
-      "items": [
-        "We plan all routes",
-        "We carry out physical and environmental inspections of hotels, meeting rooms, restaurants and cars",
-        "We pick up our clients at the airport and guarantee them for the entire duration of the trip the best Travel Risk Management service possible in Italy with maximum professionalism, experience and discretion",
-        "We analyze possible scenarios through a deep Risk Assessment and risk management and mitigation through the 4 rules of our Agency: Preventive, Proactive, Predictive and Multi-layer security to allow you to travel in maximum safety",
-        "We help you in planning and preparing the trip in every detail through our specialized personnel"
-      ]
-    },
-    "to_abroad": {
-      "title": "From Italy to Abroad",
-      "items": [
-        "For your business trips anywhere in the world you can count on our services",
-        "We prepare every detail of your trip for maximum security through our team of risk and anti-terrorism analysts, interfacing if necessary with embassies, consulates and local law enforcement",
-        "Our operational team can follow you throughout the trip with the collaboration of our local international partners",
-        "We make your work or pleasure trip safe and meticulous in every global scenario",
-        "We operate on every continent, with experience in high-risk destinations and luxury contexts"
-      ]
-    }
-  },
-  "about": "About Us",
-  "services": "Services",
-  "contact": "Contact",
-  "menu": "Menu",
-  "cookie_preferences": "Cookie Preferences",
-  "read_more": "Read more",
-  "learn_more": "Learn more",
-  "get_quote": "Get quote",
-  "hero": {
-    "title": "Professional Security Services",
-    "subtitle": "Leader in global security management",
-    "description": "Oracle Executive Protection: leadership in elite security with over 30 years of experience. Executive protection, travel risk management, security management and global security services.",
-    "cta": "Discover our services",
-    "image_alt": "Professional security services"
-  },
-  "page": {
-    "team": {
-        "overline": "Our team",
-        "title": "Specialized team",
-        "subtitle": "Our expert team consists of highly qualified professionals with international experience.",
-        "security_board": {
-          "title": "Security Board",
-          "description": "Security committee dedicated to strategic oversight of all Travel Risk Management aspects."
-        },
-        "travel_risk_officer": {
-          "title": "Travel Risk Officer",
-          "description": "Specialist dedicated to assessing and managing specific risks for each trip and destination."
-        },
-        "logistics_coordinator": {
-          "title": "Logistics Coordinator",
-          "description": "Responsible for operational coordination and continuous assistance during travel."
-        }
-      },
-      "standards": {
-        "overline": "International standards",
-        "title": "Regulatory compliance",
-        "description": "Our services comply with the highest international security standards and industry best practices. We follow ISO 31000 guidelines for risk management and maintain internationally recognized quality certifications."
-      },
-      "services": {
-        "overline": "Our services",
-        "title": "Specialized services",
-        "subtitle": "We offer complete protection for inbound and outbound travel from Italy.",
-        "from_abroad": {
-          "title": "From abroad to Italy",
-          "item1": "Safe reception and transfers from airports",
-          "item2": "Protection during stays and business meetings",
-          "item3": "Escort for events and conferences",
-          "item4": "Local intelligence services",
-          "item5": "Coordination with Italian authorities"
-        },
-        "to_abroad": {
-          "title": "From Italy to abroad",
-          "item1": "Pre-travel assessment of destinations",
-          "item2": "Personalized security briefings",
-          "item3": "Assistance during international transport",
-          "item4": "Local support in destination countries",
-          "item5": "Continuous monitoring and emergency communications"
-        }
-      },
-      "mission": {
-        "quote": "Our mission is to ensure that every business trip takes place in complete safety, allowing our clients to focus on their professional objectives."
-      },
-      "cta": {
-        "title": "Need protection for your travels?",
-        "description": "Contact us for a personalized risk assessment and to discover how we can protect your business travel.",
-        "button": "Request a consultation"
-      }
-    }
-  },
-  "eventi": {
-    "page": {
-      "hero": {
-        "breadcrumb": "Events",
-        "title": "VIP Event Security",
-        "subtitle": "Professional security for exclusive events"
-      },
-      "services": {
-        "title": "Event Security Services",
-        "subtitle": "Comprehensive protection for every type of event",
-        "conference": {
-          "title": "Business Conferences",
-          "description": "Complete security for business conferences, meetings and corporate events with VIP participant protection."
-        },
-        "private": {
-          "title": "Private Events",
-          "description": "Discreet and professional security for private parties, celebrations and exclusive gatherings."
-        },
-        "public": {
-          "title": "Public Events",
-          "description": "Security management for public events, shows, exhibitions and large gatherings with crowd control."
-        },
-        "vip": {
-          "title": "VIP Events",
-          "description": "Specialized protection for high-profile events with celebrities, politicians and prominent personalities."
-        }
-      },
-      "protection": {
-        "title": "Advanced Protection",
-        "subtitle": "Multi-level security for every event",
+    "services": {
+      "overline": "Our Services",
+      "title": "Complete Solutions for Every Journey",
+      "description": "From pre-travel assessment to on-ground support, we offer a complete range of services:",
+      "items": {
         "assessment": {
           "title": "Risk Assessment",
-          "description": "Detailed analysis of potential threats and vulnerabilities specific to each event and location."
+          "description": "Detailed analysis of security threats for each destination, including political, criminal and environmental risks."
         },
         "planning": {
-          "title": "Security Planning",
-          "description": "Development of comprehensive security plans tailored to the specific needs of each event."
+          "title": "Travel Planning",
+          "description": "Development of customized security plans including safe routes, accommodation and local contacts."
         },
-        "personnel": {
-          "title": "Specialized Personnel",
-          "description": "Team of qualified security professionals with experience in VIP protection and event management."
+        "intelligence": {
+          "title": "Operational Intelligence",
+          "description": "Real-time monitoring of security conditions and immediate alerts of changes in the threat scenario."
+        },
+        "support": {
+          "title": "Ground Support",
+          "description": "Local assistance with qualified security personnel and emergency response coordination."
+        }
+      }
+    },
+    "features": {
+      "overline": "Why Choose Us",
+      "title": "Experience That Makes the Difference",
+      "description": "Our approach to travel risk management is based on:",
+      "items": {
+        "global": {
+          "title": "Global Network",
+          "description": "Presence in over 50 countries with local partners and qualified personnel."
         },
         "technology": {
           "title": "Advanced Technology",
-          "description": "Use of cutting-edge security technologies for monitoring, communication and incident management."
-        }
-      },
-      "team": {
-        "title": "Specialized Team",
-        "subtitle": "Event security professionals",
-        "event_manager": {
-          "title": "Event Security Manager",
-          "description": "Coordination and supervision of all security aspects during events with experience in high-profile events."
+          "description": "Monitoring platforms and communication systems for real-time security management."
         },
-        "close_protection": {
-          "title": "Close Protection Officer",
-          "description": "Personal protection specialists for VIPs and prominent personalities participating in events."
+        "customization": {
+          "title": "Customized Solutions",
+          "description": "Services tailored to the specific needs of each client and each journey."
         },
-        "crowd_control": {
-          "title": "Crowd Control Specialist", 
-          "description": "Experts in crowd management and public order during large events and gatherings."
-        },
-        "technical_security": {
-          "title": "Technical Security Officer",
-          "description": "Specialists in security technology, surveillance systems and technical security measures."
+        "response": {
+          "title": "Rapid Response",
+          "description": "24/7 emergency response capability with immediate intervention protocols."
         }
       }
+    },
+    "process": {
+      "overline": "Our Process",
+      "title": "How We Protect Your Journey",
+      "description": "Our travel risk management process consists of four fundamental phases:",
+      "steps": {
+        "analysis": {
+          "title": "Pre-Travel Analysis",
+          "description": "Comprehensive assessment of risks associated with the destination and planned activities."
+        },
+        "planning": {
+          "title": "Security Planning",
+          "description": "Development of detailed security plans and identification of mitigation measures."
+        },
+        "monitoring": {
+          "title": "Active Monitoring",
+          "description": "Continuous monitoring during travel with real-time updates on security conditions."
+        },
+        "support": {
+          "title": "Operational Support",
+          "description": "Local assistance and coordination of any emergency response."
+        }
+      }
+    },
+    "cta": {
+      "overline": "Travel Safe",
+      "title": "Ready for Your Next Journey?",
+      "description": "Contact our travel risk management experts for a personalized consultation and discover how we can make your journey safe and worry-free.",
+      "button": "Request Free Consultation"
+    }
+  },
+  "strategic_protection": {
+    "hero": {
+      "overline": "Strategic Protection",
+      "title": "Elite Security for Leaders",
+      "description": "Comprehensive protection for executives, entrepreneurs and public figures. Discreet, professional and highly effective security solutions.",
+      "button": "Request Consultation"
+    },
+    "intro": {
+      "overline": "Executive Protection",
+      "title": "Protection at the Highest Levels",
+      "description": "Strategic protection goes beyond simple personal security: it's a comprehensive approach that protects people, information and assets through advanced methodologies and cutting-edge technologies."
+    },
+    "services": {
+      "overline": "Our Services",
+      "title": "Complete Protection Solutions",
+      "description": "We offer a full range of strategic protection services:",
+      "items": {
+        "executive": {
+          "title": "Executive Protection",
+          "description": "Personal protection for executives and public figures with highly qualified personnel and advanced security protocols."
+        },
+        "residential": {
+          "title": "Residential Security",
+          "description": "Complete security systems for private residences including access control, surveillance and emergency response."
+        },
+        "corporate": {
+          "title": "Corporate Security",
+          "description": "Protection of company assets, information security and risk management for business environments."
+        },
+        "event": {
+          "title": "Event Security",
+          "description": "Specialized security for corporate events, conferences and private gatherings with comprehensive crowd management."
+        }
+      }
+    },
+    "approach": {
+      "overline": "Our Methodology",
+      "title": "The 4P Approach",
+      "description": "Our strategic protection is based on four fundamental principles:",
+      "principles": {
+        "predictive": {
+          "title": "Predictive",
+          "description": "We use advanced analytics and intelligence to anticipate potential threats."
+        },
+        "preventive": {
+          "title": "Preventive", 
+          "description": "We implement preventive measures to eliminate risks before they become real threats."
+        },
+        "proactive": {
+          "title": "Proactive",
+          "description": "We act quickly and decisively to neutralize any security threat."
+        },
+        "multilevel": {
+          "title": "Multi-level",
+          "description": "We provide protection at multiple levels of security and complexity."
+        }
+      }
+    },
+    "technology": {
+      "overline": "Advanced Technology",
+      "title": "Innovation at the Service of Security",
+      "description": "We use the most advanced technologies to ensure maximum protection:",
+      "features": {
+        "surveillance": {
+          "title": "Advanced Surveillance",
+          "description": "High-definition monitoring systems with facial recognition and behavioral analysis."
+        },
+        "communication": {
+          "title": "Secure Communications",
+          "description": "Encrypted communication systems for coordination and emergency response."
+        },
+        "intelligence": {
+          "title": "Operational Intelligence",
+          "description": "Real-time information gathering and threat analysis platforms."
+        },
+        "integration": {
+          "title": "Systems Integration",
+          "description": "Integration of all security systems into a single centralized control platform."
+        }
+      }
+    },
+    "cta": {
+      "overline": "Elite Protection",
+      "title": "Protect What Matters Most",
+      "description": "Contact our strategic protection experts for a confidential consultation and discover how we can ensure your safety at the highest levels.",
+      "button": "Request Confidential Consultation"
+    }
+  },
+  "events": {
+    "hero": {
+      "overline": "VIP Events",
+      "title": "Exclusive Events, Maximum Security",
+      "description": "Specialized security services for VIP events, conferences, shows and private gatherings. Comprehensive protection with discretion and professionalism.",
+      "button": "Request Consultation"
+    },
+    "intro": {
+      "overline": "Event Security",
+      "title": "Every Event, A Perfect Success",
+      "description": "Organizing a VIP event requires impeccable security management. Our team of experts ensures that every detail is taken care of, allowing you to focus on what really matters: the success of your event."
+    },
+    "services": {
+      "overline": "Our Services",
+      "title": "Complete Solutions for Every Occasion",
+      "description": "We offer specialized security services for different types of events:",
+      "items": {
+        "corporate": {
+          "title": "Corporate Events",
+          "description": "Security for conferences, conventions, product launches and corporate meetings with professional crowd management."
+        },
+        "private": {
+          "title": "Private Events",
+          "description": "Discreet protection for weddings, parties, private celebrations and exclusive gatherings."
+        },
+        "entertainment": {
+          "title": "Shows and Entertainment",
+          "description": "Specialized security for concerts, shows, theater productions and cultural events."
+        },
+        "sports": {
+          "title": "Sporting Events",
+          "description": "Crowd management and security for sporting competitions, tournaments and sports presentations."
+        }
+      }
+    },
+    "features": {
+      "overline": "Our Strengths",
+      "title": "Experience and Professionalism",
+      "description": "What sets us apart in VIP event security:",
+      "items": {
+        "planning": {
+          "title": "Strategic Planning",
+          "description": "Detailed security analysis and risk assessment for every aspect of the event."
+        },
+        "discretion": {
+          "title": "Maximum Discretion",
+          "description": "Our personnel operate with the utmost professionalism and confidentiality."
+        },
+        "coordination": {
+          "title": "Perfect Coordination",
+          "description": "Seamless integration with organizers, suppliers and local authorities."
+        },
+        "flexibility": {
+          "title": "Operational Flexibility",
+          "description": "Ability to adapt quickly to any changes or unforeseen circumstances."
+        }
+      }
+    },
+    "process": {
+      "overline": "Our Process",
+      "title": "From Planning to Execution",
+      "description": "Our event security process includes:",
+      "steps": {
+        "assessment": {
+          "title": "Risk Assessment",
+          "description": "Detailed analysis of the venue, participants and potential security threats."
+        },
+        "planning": {
+          "title": "Security Planning",
+          "description": "Development of comprehensive security plans and coordination protocols."
+        },
+        "preparation": {
+          "title": "Preparation",
+          "description": "Personnel briefing, equipment setup and final security checks."
+        },
+        "execution": {
+          "title": "Execution",
+          "description": "Active security management during the event with continuous monitoring."
+        }
+      }
+    },
+    "cta": {
+      "overline": "Secure Your Event",
+      "title": "Make Your Event Unforgettable for the Right Reasons",
+      "description": "Contact our VIP event security experts and discover how we can ensure the perfect success of your next event.",
+      "button": "Request Event Consultation"
+    }
+  },
+  "luxury_security": {
+    "hero": {
+      "overline": "Luxury Security",
+      "title": "Protecting Excellence",
+      "description": "Oracle Executive Protection specializes in securing luxury facilities with the highest standards of discretion and professionalism. Our elite team protects what matters most to you.",
+      "button": "Request Consultation"
+    },
+    "intro": {
+      "overline": "Elite Protection",
+      "title": "Where Luxury Meets Security",
+      "description": "In the world of luxury, security cannot be left to chance. Our bespoke protection solutions are designed specifically for high-end facilities, combining cutting-edge technology with unparalleled expertise."
+    },
+    "expertise": {
+      "overline": "Our Expertise",
+      "title": "30 Years of Excellence in Luxury Protection",
+      "description": "With over three decades of experience in executive protection and luxury security, Oracle Executive Protection has become the trusted partner for discerning clients worldwide. Our proven track record speaks to our commitment to excellence.",
+      "stats": {
+        "experience": "30+ Years Experience",
+        "facilities": "500+ Luxury Facilities Protected", 
+        "satisfaction": "100% Client Satisfaction",
+        "coverage": "Global Coverage"
+      }
+    },
+    "services": {
+      "overline": "Our Services",
+      "title": "Comprehensive Luxury Security Solutions",
+      "description": "We offer a complete range of services tailored specifically for luxury facilities:",
+      "residentialAssessment": {
+        "overline": "Residential Assessment",
+        "title": "Complete Analysis of Your Residence",
+        "description": "Our team of professionals will assess the structural vulnerabilities of your residence, environmental risks, external threats and the current state of your active and passive defensive systems."
+      },
+      "customSecurity": {
+        "overline": "Custom Security",
+        "title": "Systems Tailored for You", 
+        "description": "We design your new anti-intrusion system in your home and personalized security protocols, including the most modern security technologies, protection and emergency management. We will deliver written protocols and personalized assets."
+      },
+      "familyTraining": {
+        "overline": "Family Training",
+        "title": "Our Added Value",
+        "description": "We bring you, through our consolidated field experience, the most important thing of all, our added value to everything you could find on the market today: our professionals will work with the family on specific technical training on security protocols to be carried out.\n\nWrite to us and request our concierge services and GpG art 133 training."
+      }
+    },
+    "cta": {
+      "title": "Protect Your Luxury Facility",
+      "description": "Contact our experts for a free risk assessment and discover how we can elevate the security level of your facility.",
+      "button": "Request Free Assessment"
     }
   },
   "contact": {
+    "hero": {
+      "overline": "Contact Us",
+      "title": "Ready to Protect Your World?",
+      "description": "Contact our team of experts for a personalized consultation and discover how we can protect what matters most to you.",
+      "button": "Request Consultation"
+    },
     "page": {
-      "hero": {
-        "breadcrumb": "Contact Us"
-      },
-      "form": {
-        "title": "Request Information",
-        "description": "Contact us for a personalized security consultation",
-        "name": "Full Name",
-        "email": "Email",
-        "phone": "Phone",
-        "subject": "Subject", 
-        "message": "Message",
-        "submit": "Send Request",
-        "success": "Request sent successfully!",
-        "error": "Error sending request. Please try again."
+      "breadcrumbs": {
+        "home": "Home",
+        "current": "Contact"
       },
       "info": {
+        "overline": "How to Reach Us",
+        "title": "Contact Information",
         "phone": {
-          "title": "Phone",
-          "value": "+39 392 926 4907"
+          "title": "Phone"
         },
         "email": {
-          "title": "Email",
-          "value": "info@protectionagency.it"
+          "title": "Email"
         },
-        "address": {
-          "title": "Address",
-          "value": "Via delle Aziende, 12\n00015 Monterotondo (RM)\nItaly"
+        "availability": {
+          "title": "Availability",
+          "value": "24/7 Emergency Service"
         }
       },
       "why": {
-        "title": "Why Choose Us",
-        "experience": {
-          "title": "30+ Years Experience",
-          "description": "Over three decades of excellence in security and executive protection"
-        },
-        "response": {
-          "title": "24/7 Response",
-          "description": "Always available for emergency situations and urgent consultations"
-        },
-        "solutions": {
-          "title": "Custom Solutions",
-          "description": "Personalized security solutions tailored to your specific needs"
-        }
-      }
-    }
-  },
-  "footer": {
-    "description": "Consulting, analysis and training company in the security, defense and physical and technological protection sector.",
-    "certifications_title": "Our Certifications",
-    "contact": {
-      "headline": "Contact",
-      "email": "Email: info@protectionagency.it", 
-      "phone": "Phone: +39 392 926 4907"
-    },
-    "copyright": "© 2025 Oracle Executive Protection. All rights reserved.",
-    "privacyPolicy": "Privacy Policy",
-    "company_description": "Oracle Executive Protection: your trusted partner for global security. Over 30 years of experience in protecting executives, VIPs and companies worldwide.",
-    "quick_links": {
-      "title": "Quick Links",
-      "home": "Home",
-      "about": "About Us",
-      "services": "Services",
-      "contact": "Contact"
-    },
-    "services": {
-      "title": "Services",
-      "executive_protection": "Executive Protection",
-      "travel_risk": "Travel Risk Management",
-      "security_consulting": "Security Consulting",
-      "event_security": "Event Security"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy"
-    },
-    "social": {
-      "follow": "Follow Us",
-      "linkedin": "LinkedIn",
-      "twitter": "Twitter",
-      "facebook": "Facebook"
-    },
-    "certifications": {
-      "certificate": "Certification",
-      "iso31000": "ISO 31000",
-      "iso27001": "ISO 27001", 
-      "iso28000": "ISO 28000"
-    }
-  },
-  "cookies": {
-    "title": "Cookie Usage",
-    "description": "This site uses only technical cookies necessary for operation. We do not use profiling or third-party cookies. For more information, see our <a href=\"/privacy\">Privacy Policy</a>.",
-    "accept": "I understand",
-    "moreInfo": "More information",
-    "modal": {
-      "title": "Cookie Information",
-      "close": "Close",
-      "sections": {
-        "necessary": {
-          "title": "Necessary Cookies",
-          "description": "These cookies are essential for the proper functioning of the site and cannot be disabled. They include session cookies, maintaining user status during navigation, etc."
-        }
+        "overline": "Why Choose Us",
+        "title": "The Right Partner for Your Security",
+        "subtitle": "With over 30 years of experience in the security sector, Oracle Executive Protection is the ideal partner to protect what matters most to you."
       },
-      "buttons": {
-        "acceptAll": "Accept All",
-        "rejectAll": "Reject All",
-        "savePreferences": "Save Preferences"
-      }
-    }
-  },
-  "strategicProtection": {
-    "hero": {
-      "title": "Strategic protection against global threats",
-      "subtitle": "Advanced Anti-terrorism and Anti-crime security solutions for institutions, companies, corporations, public and private infrastructures and sensitive sites, designed to prevent, protect and respond to threats, complying with the highest international standards.",
-      "cta": "Request a consultation"
-    },
-    "breadcrumb": "Strategic Protection",
-    "content": {
-      "mainTitle": "Strategic protection against global threats",
-      "description1": "ORACLE or EPA is the trusted partner for institutional subjects, international organizations and companies that require advanced protection against threats of political, social or religious terrorism and criminal threats.",
-      "description2": "With teams of experts with over 30 years of experience in global security operations, specialized in physical protection, high-risk context management, crisis management and experts in Counter-Terrorism and anti-crime, with an unparalleled synergy between prestigious academic certifications and field experience, and an important strategic intelligence structure, cybersecurity.",
-      "description3": "We offer integrated security solutions combining our personal experience with the highest international standards in security and anti-terrorism and ensuring global protection and resilience."
-    },
-    "services": {
-      "title": "Our specialized services",
-      "items": {
-        "riskAnalysis": {
-          "title": "Risk Analysis and Management",
-          "description": "Comprehensive threat assessment and implementation of personalized mitigation strategies"
-        },
-        "physicalProtection": {
-          "title": "Physical Protection",
-          "description": "Advanced physical protection services for people, structures and critical infrastructures"
-        },
-        "intelligence": {
-          "title": "Intelligence and Advanced Security Technology",
-          "description": "Strategic intelligence gathering and analysis with cutting-edge technologies"
-        },
-        "cybersecurity": {
-          "title": "Cybersecurity",
-          "description": "Complete protection against digital threats and cyber-attacks"
-        },
-        "training": {
-          "title": "Specialized Excellence Training",
-          "description": "Advanced training programs for preparation against global threats"
+      "form": {
+        "overline": "Request Information",
+        "title": "How Can We Help You?",
+        "description": "Fill out the form below to receive a personalized consultation. Our team of experts will contact you within 24 hours to discuss your security needs.",
+        "call_preference": "Prefer an immediate call?",
+        "labels": {
+          "name": "Full Name",
+          "email": "Email",
+          "phone": "Phone",
+          "subject": "Subject",
+          "message": "Message",
+          "submit": "Send Request"
         }
       }
-    },
-    "certifications": {
-      "overline": "International standards",
-      "title": "Certifications and security protocols",
-      "subtitle": "In collaboration with prestigious international partners, we operate in compliance with the most rigorous security and protection protocols, conforming to the highest international standards:",
-      "items": [
-        {
-          "code": "ACTS",
-          "title": "Advanced Certificate in Terrorism Studies",
-          "description": "The Handa Centre for the Study of Terrorism and Political Violence and University of St Andrews: the most important certification on the study and protocols of security, defense and anti-terrorism protection."
-        },
-        {
-          "code": "ISO 31000",
-          "title": "Risk Management",
-          "description": "International standard for risk management, provides principles and guidelines to identify, assess and manage risks systematically on a global level."
-        },
-        {
-          "code": "UNI ISO 31030",
-          "title": "Business Travel Risks",
-          "description": "Guidelines for managing risks related to business travel, focused on the safety and well-being of traveling employees."
-        },
-        {
-          "code": "HSG",
-          "title": "Hospitality Security Guidelines",
-          "description": "Security guidelines for the hospitality sector, aimed at protecting guests, staff and facilities through preventive and management measures."
-        },
-        {
-          "code": "ISO 27002",
-          "title": "Information Security",
-          "description": "Guidelines for information security management, with recommended practices to protect business data and systems."
-        },
-        {
-          "code": "ISO 27005",
-          "title": "IT Risk Management",
-          "description": "Standard for risk management in information security, provides a structured approach to identify, assess and mitigate risks."
-        },
-        {
-          "code": "ISO 22301",
-          "title": "Business Continuity",
-          "description": "Standard for business continuity management, defines requirements to plan, implement and maintain an emergency response system."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Protect your organization",
-      "description": "Contact us for a personalized assessment of your strategic security needs",
-      "button": "Request a consultation"
     }
   },
   "luxurySecurity": {
     "hero": {
-      "title": "Luxury Hotel Security Management",
-      "subtitle": "We transform your Hotel into an environment where the security and protection of your clients, your staff and your reputation become a strength and attraction for VIP clientele, leaving unchanged the class, elegance and discretion due to your architecture and the luxury world.",
-      "cta": "Request a consultation"
+      "title": "Luxury Security Management",
+      "subtitle": "Elite security for luxury hotels and private residences. We transform your hotel and protect your family with custom security management services, where security and protection become an attractive strength for VIP clientele, preserving class, elegance and discretion.",
+      "cta": "Request Consultation"
     },
     "breadcrumbs": {
       "home": "Home",
       "current": "Luxury Security"
     },
-    "hotelSecurity": {
-      "overline": "Luxury hotels",
-      "title": "Security Management for Luxury Hotels",
-      "description": "Through an in-depth Risk Assessment we evaluate all physical, structural and technological vulnerabilities of your Hotel, risks for guests, external and internal threats aimed at ruining your Hotel's reputation and the safety of clients and staff in line with the most important international standards such as UNI ISO 31000, UNI ISO 31030 and Hospitality Security Guidelines.<br /><br />From active and passive physical security to cybersecurity we make your structure more resilient and safer. We design customized security protocols and assets and train your staff with certified courses to be ready to respond to any emergency with determination, legal security and experience."
+    "introduction": {
+      "overline": "Luxury Hotels & Private Residences",
+      "title": "A Single Standard of Excellence",
+      "description": "Oracle Executive Protection combines experience in protecting prestigious hotel facilities with dedicated care for the most exclusive private residences. From invisible security for your VIP guests to total protection of your family: an integrated approach that guarantees the highest security standards in every luxury context."
     },
-    "hotelServices": {
-      "overline": "Our services",
-      "title": "Specialized services for luxury hotels",
-      "items": [
-        {
-          "title": "Risk Assessment",
-          "description": "Complete evaluation of physical, structural and technological vulnerabilities",
-          "icon": "mdi:shield-search"
-        },
-        {
-          "title": "Travel Risk Management",
-          "description": "Risk management for VIP guests and prestigious clients",
-          "icon": "mdi:airplane-takeoff"
-        },
-        {
-          "title": "Staff Training",
-          "description": "Certified courses to prepare staff for emergencies",
-          "icon": "mdi:school"
-        },
-        {
-          "title": "Cybersecurity",
-          "description": "Complete protection of IT systems and guest data",
-          "icon": "mdi:security-network"
-        }
-      ]
+    "riskAssessment": {
+      "overline": "Risk Assessment",
+      "title": "Complete Vulnerability Analysis",
+      "description": "Through an in-depth Risk Assessment we evaluate all physical, structural and technological vulnerabilities of your hotel, risks for guests, external and internal threats capable of ruining your hotel's reputation and the safety of customers and staff in line with the most important international standards such as UNI ISO 31000, UNI ISO 31030 and Hospitality Security Guidelines."
+    },
+    "securitySystems": {
+      "overline": "Security Systems",
+      "title": "Physical and Digital Protection",
+      "description": "From active and passive physical security to cybersecurity, we make your facility more resilient and safer. We design customized security protocols and assets and train your staff with certified courses to be ready to respond to any emergency with determination, legal security and experience."
+    },
+    "expertTeam": {
+      "overline": "Our Team",
+      "title": "Experts at Your Disposal",
+      "description": "We put our experts at your disposal: including Travel Risk Managers and Travel Risk Officers, Protective Security Specialists, analysts and cybersecurity specialists who ensure discreet and continuous protection to provide you with protection and Travel Risk Management for your most prestigious clients and our exclusive security services for your VIP events."
     },
     "privateResidences": {
-      "overline": "Private residences",
-      "title": "Private Residences",
-      "quote": "There will never be anything more important than the safety of those you love.",
-      "description": "Make your nest the truly safe place for your family.<br /><br />Our team of professionals will assess the structural vulnerabilities of your residence, environmental risks, external threats and the current state of your active and passive defensive systems.<br /><br />We design your new anti-intrusion system in your home and personalized security protocols, including the most modern security, protection and emergency management technologies. We will deliver written protocols and personalized assets.<br /><br />We bring you, through our consolidated field experience, the most important thing of all, our added value to everything you could find on the market today: Our professionals will work with the family on specific technical training on security protocols to be implemented.<br /><br />Write to us and request our concierge services and GPG art 133 training."
+      "overline": "Private Residences",
+      "title": "Your Family's Security",
+      "quote": "There will never be anything more important than the safety of those you love. Make your nest the truly safe place for your family."
     },
-    "teamRecruitment": {
-      "overline": "Careers",
-      "title": "Join the Team",
-      "description": "Contact us to participate in our training courses to join the Oracle - EP Team as Risk Analysts and Mitigators in the roles of Security Officer, Protection Security Specialist, Travel Risk Officer or our technical roles.",
-      "button": "Apply now"
+    "residenceAssessment": {
+      "overline": "Residential Assessment",
+      "title": "Complete Analysis of Your Residence",
+      "description": "Our team of professionals will assess the structural vulnerabilities of your residence, environmental risks, external threats and the current state of your active and passive defensive systems."
+    },
+    "customSecurity": {
+      "overline": "Custom Security",
+      "title": "Systems Tailored for You",
+      "description": "We design your new anti-intrusion system in your home and personalized security protocols, including the most modern security technologies, protection and emergency management. We will deliver written protocols and personalized assets."
+    },
+    "familyTraining": {
+      "overline": "Family Training",
+      "title": "Our Added Value",
+      "description": "We bring you, through our consolidated field experience, the most important thing of all, our added value to everything you could find on the market today: our professionals will work with the family on specific technical training on security protocols to be carried out.\n\nWrite to us and request our concierge services and GpG art 133 training."
     },
     "cta": {
-      "title": "Protect your luxury facility",
-      "description": "Contact us for a personalized assessment of your security needs for luxury hotels or private residences.",
-      "button": "Request a consultation"
+      "title": "Protect Your Luxury Facility",
+      "description": "Contact our experts for a free risk assessment and discover how we can elevate the security level of your facility.",
+      "button": "Request Free Assessment"
+    }
+  },
+  "cookies": {
+    "title": "We use cookies to improve your experience",
+    "message": "This site uses technical and analytical cookies to provide a better browsing experience. By continuing to browse you accept the use of cookies.",
+    "acceptAll": "Accept all",
+    "acceptSelection": "Accept selection", 
+    "rejectAll": "Reject all",
+    "moreInfo": "Manage preferences",
+    "preferences": {
+      "title": "Cookie Preferences",
+      "description": "You can customize your cookie preferences below. Enable or disable the following categories and save your selection.",
+      "necessary": {
+        "title": "Necessary cookies",
+        "description": "These cookies are essential for the website to function and cannot be disabled."
+      },
+      "analytics": {
+        "title": "Analytics cookies", 
+        "description": "These cookies help us understand how visitors interact with the website by collecting and providing information anonymously."
+      },
+      "marketing": {
+        "title": "Marketing cookies",
+        "description": "These cookies are used to track visitors across websites to display relevant and engaging ads."
+      },
+      "save": "Save preferences",
+      "close": "Close"
     }
   }
 }

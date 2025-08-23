@@ -43,7 +43,7 @@ export default function LuxurySecurityView() {
         position: 'relative',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(/assets/images/luxury1.jpg)',
+        backgroundImage: 'url(/assets/images/Kestrel-Aviation-Management-BBJ-Living.jpg)',
         '&:after': {
           top: 0,
           content: '""',
@@ -142,15 +142,58 @@ export default function LuxurySecurityView() {
     </Box>
   );
 
-  // Hotel Security section
-  const renderHotelSecurity = (
+  // Introduction section (unified hotel + residences)
+  const renderIntroduction = (
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+      <Container component={MotionViewport}>
+        <m.div variants={varFade().inUp}>
+          <Box sx={{ textAlign: 'center', maxWidth: '900px', mx: 'auto' }}>
+            <Typography
+              variant="overline"
+              sx={{ 
+                color: 'company.main', 
+                fontWeight: 'fontWeightBold', 
+                mb: 2, 
+                display: 'block' 
+              }}
+            >
+              {t('luxurySecurity.introduction.overline')}
+            </Typography>
+            
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                mb: 4,
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+              }}
+            >
+              {t('luxurySecurity.introduction.title')}
+            </Typography>
+            
+            <Typography 
+              sx={{ 
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                lineHeight: 1.8,
+                color: 'common.white'
+              }}
+            >
+              {t('luxurySecurity.introduction.description')}
+            </Typography>
+          </Box>
+        </m.div>
+      </Container>
+    </Box>
+  );
+
+  // Risk Assessment section
+  const renderRiskAssessment = (
     <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
       <Grid container spacing={5} alignItems="center">
         <Grid xs={12} md={6}>
           <m.div variants={varFade().inLeft}>
             <Image
-              alt="Luxury Hotel Security"
-              src="/assets/images/luxury2.jpg"
+              alt="Risk Assessment"
+              src="/assets/images/83WklLpbXcHLuOKL_sPAXRApn3fWJeNmz.jpg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -162,23 +205,33 @@ export default function LuxurySecurityView() {
             <m.div variants={varFade().inRight}>
               <Typography
                 variant="overline"
-                sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
+                sx={{ 
+                  color: 'company.main', 
+                  fontWeight: 'fontWeightBold',
+                  mb: 2,
+                  display: 'block'
+                }}
               >
-                {t('luxurySecurity.hotelSecurity.overline')}
+                {t('luxurySecurity.riskAssessment.overline')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
-                {t('luxurySecurity.hotelSecurity.title')}
+              <Typography 
+                variant="h2" 
+                sx={{ 
+                  mb: 3,
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+                }}
+              >
+                {t('luxurySecurity.riskAssessment.title')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <HtmlText 
-                text={t('luxurySecurity.hotelSecurity.description')}
-                sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}
-              />
+              <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+                {t('luxurySecurity.riskAssessment.description')}
+              </Typography>
             </m.div>
           </Stack>
         </Grid>
@@ -186,85 +239,125 @@ export default function LuxurySecurityView() {
     </Container>
   );
 
-  // Hotel Services section
-  const renderHotelServices = (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+  // Security Systems section (removed image - text only)
+  const renderSecuritySystems = (
+    <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: theme.palette.background.neutral }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
-          <Typography
-            variant="overline"
-            sx={{ 
-              color: 'company.main', 
-              fontWeight: 'fontWeightBold',
-              textAlign: 'center',
-              display: 'block',
-              mb: 2
-            }}
-          >
-            {t('luxurySecurity.hotelServices.overline')}
-          </Typography>
-        </m.div>
+          <Box sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto' }}>
+            <Typography
+              variant="overline"
+              sx={{ 
+                color: 'company.main', 
+                fontWeight: 'fontWeightBold', 
+                mb: 2, 
+                display: 'block' 
+              }}
+            >
+              {t('luxurySecurity.securitySystems.overline')}
+            </Typography>
 
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            variant="h3" 
-            sx={{ 
-              textAlign: 'center',
-              mb: 6
-            }}
-          >
-            {t('luxurySecurity.hotelServices.title')}
-          </Typography>
-        </m.div>
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                mb: 4,
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+              }}
+            >
+              {t('luxurySecurity.securitySystems.title')}
+            </Typography>
 
-        <Grid container spacing={4}>
-          {t('luxurySecurity.hotelServices.items', { returnObjects: true }).map((service, index) => (
-            <Grid key={service.title} xs={12} md={6} lg={3}>
-              <m.div variants={varFade().inUp}>
-                <Card 
-                  sx={{ 
-                    p: 3, 
-                    height: '100%',
-                    minHeight: 300,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    textAlign: 'center',
-                    '&:hover': {
-                      boxShadow: theme.customShadows.z24,
-                      transform: 'translateY(-4px)',
-                      transition: 'all 0.3s ease'
-                    }
-                  }}
-                >
-                  <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', p: 0 }}>
-                    <Iconify 
-                      icon={service.icon} 
-                      sx={{ 
-                        width: 64, 
-                        height: 64, 
-                        color: 'company.main',
-                        mx: 'auto',
-                        mb: 2
-                      }} 
-                    />
-                    <Typography variant="h6" sx={{ mb: 2 }}>
-                      {service.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', flexGrow: 1 }}>
-                      {service.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </m.div>
-            </Grid>
-          ))}
-        </Grid>
+            <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+              {t('luxurySecurity.securitySystems.description')}
+            </Typography>
+          </Box>
+        </m.div>
       </Container>
     </Box>
   );
 
-  // Private Residences section
-  const renderPrivateResidences = (
+  // Expert Team section (removed image - text only)
+  const renderExpertTeam = (
+    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
+      <m.div variants={varFade().inUp}>
+        <Box sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto' }}>
+          <Typography
+            variant="overline"
+            sx={{ 
+              color: 'company.main', 
+              fontWeight: 'fontWeightBold', 
+              mb: 2, 
+              display: 'block' 
+            }}
+          >
+            {t('luxurySecurity.expertTeam.overline')}
+          </Typography>
+
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 4,
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+            }}
+          >
+            {t('luxurySecurity.expertTeam.title')}
+          </Typography>
+
+          <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+            {t('luxurySecurity.expertTeam.description')}
+          </Typography>
+        </Box>
+      </m.div>
+    </Container>
+  );
+
+  // Private Residences intro section
+  const renderPrivateResidencesIntro = (
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+      <Container component={MotionViewport}>
+        <m.div variants={varFade().inUp}>
+          <Box sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto' }}>
+            <Typography
+              variant="overline"
+              sx={{ 
+                color: 'company.main', 
+                fontWeight: 'fontWeightBold', 
+                mb: 2, 
+                display: 'block' 
+              }}
+            >
+              {t('luxurySecurity.privateResidences.overline')}
+            </Typography>
+            
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                mb: 4,
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+              }}
+            >
+              {t('luxurySecurity.privateResidences.title')}
+            </Typography>
+            
+            <Typography 
+              variant="h5"
+              sx={{ 
+                fontStyle: 'italic',
+                color: 'primary.main',
+                fontSize: { xs: '1.25rem', md: '1.5rem' },
+                lineHeight: 1.6
+              }}
+            >
+              {t('luxurySecurity.privateResidences.quote')}
+            </Typography>
+          </Box>
+        </m.div>
+      </Container>
+    </Box>
+  );
+
+  // Residence Assessment section
+  const renderResidenceAssessment = (
     <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
       <Grid container spacing={5} alignItems="center">
         <Grid xs={12} md={6}>
@@ -272,36 +365,31 @@ export default function LuxurySecurityView() {
             <m.div variants={varFade().inLeft}>
               <Typography
                 variant="overline"
-                sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
+                sx={{ 
+                  color: 'company.main', 
+                  fontWeight: 'fontWeightBold',
+                  mb: 2,
+                  display: 'block'
+                }}
               >
-                {t('luxurySecurity.privateResidences.overline')}
-              </Typography>
-            </m.div>
-
-            <m.div variants={varFade().inLeft}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
-                {t('luxurySecurity.privateResidences.title')}
+                {t('luxurySecurity.residenceAssessment.overline')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inLeft}>
               <Typography 
-                variant="h5"
+                variant="h2" 
                 sx={{ 
                   mb: 3,
-                  fontStyle: 'italic',
-                  color: 'primary.main'
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
                 }}
               >
-                {t('luxurySecurity.privateResidences.quote')}
+                {t('luxurySecurity.residenceAssessment.title')}
               </Typography>
-            </m.div>
-
-            <m.div variants={varFade().inLeft}>
-              <HtmlText 
-                text={t('luxurySecurity.privateResidences.description')}
-                sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}
-              />
+            </m.div>            <m.div variants={varFade().inLeft}>
+              <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+                {t('luxurySecurity.residenceAssessment.description')}
+              </Typography>
             </m.div>
           </Stack>
         </Grid>
@@ -309,8 +397,8 @@ export default function LuxurySecurityView() {
         <Grid xs={12} md={6}>
           <m.div variants={varFade().inRight}>
             <Image
-              alt="Private Residences Security"
-              src="/assets/images/luxury3.jpg"
+              alt="Residence Assessment"
+              src="/assets/images/Y1SJAsVYAXrWc2wH_iRrkzF5MD3YeyMLN.jpg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -320,76 +408,71 @@ export default function LuxurySecurityView() {
     </Container>
   );
 
-  // Team Recruitment section
-  const renderTeamRecruitment = (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+  // Custom Security section (removed image - text only)
+  const renderCustomSecurity = (
+    <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: theme.palette.background.neutral }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
-          <Typography
-            variant="overline"
-            sx={{ 
-              color: 'company.main', 
-              fontWeight: 'fontWeightBold',
-              textAlign: 'center',
-              display: 'block',
-              mb: 2
-            }}
-          >
-            {t('luxurySecurity.teamRecruitment.overline')}
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            variant="h3" 
-            sx={{ 
-              textAlign: 'center',
-              mb: 3
-            }}
-          >
-            {t('luxurySecurity.teamRecruitment.title')}
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            sx={{ 
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
-              textAlign: 'center',
-              maxWidth: '800px',
-              mx: 'auto',
-              mb: 6,
-              lineHeight: 1.8
-            }}
-          >
-            {t('luxurySecurity.teamRecruitment.description')}
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Button
-              size="large"
-              variant="outlined"
-              color="primary"
-              component={RouterLink}
-              href={paths.contact}
-              sx={{
-                borderColor: 'company.main',
-                color: 'company.main',
-                '&:hover': {
-                  borderColor: 'company.main',
-                  bgcolor: alpha(theme.palette.company.main, 0.08),
-                },
+          <Box sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto' }}>
+            <Typography
+              variant="overline"
+              sx={{ 
+                color: 'company.main', 
+                fontWeight: 'fontWeightBold', 
+                mb: 2, 
+                display: 'block' 
               }}
-              startIcon={<Iconify icon="mdi:account-plus" />}
             >
-              {t('luxurySecurity.teamRecruitment.button')}
-            </Button>
+              {t('luxurySecurity.customSecurity.overline')}
+            </Typography>
+
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                mb: 4,
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+              }}
+            >
+              {t('luxurySecurity.customSecurity.title')}
+            </Typography>
+
+            <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+              {t('luxurySecurity.customSecurity.description')}
+            </Typography>
           </Box>
         </m.div>
       </Container>
     </Box>
+  );
+
+  // Family Training section (removed image - text only)
+  const renderFamilyTraining = (
+    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
+      <m.div variants={varFade().inUp}>
+        <Box sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto' }}>
+          <Typography
+            variant="overline"
+            sx={{ color: 'company.main', fontWeight: 'fontWeightBold', mb: 2, display: 'block' }}
+          >
+            {t('luxurySecurity.familyTraining.overline')}
+          </Typography>
+
+                    <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 4,
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+            }}
+          >
+            {t('luxurySecurity.familyTraining.title')}
+          </Typography>
+
+          <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+            {t('luxurySecurity.familyTraining.description')}
+          </HtmlText>
+        </Box>
+      </m.div>
+    </Container>
   );
 
   // Call to action
@@ -404,7 +487,14 @@ export default function LuxurySecurityView() {
             backgroundColor: alpha(theme.palette.company.main, 0.08),
           }}
         >
-          <Typography variant="h3" sx={{ mb: 3, color: 'primary.main' }}>
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 3, 
+              color: 'primary.main',
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+            }}
+          >
             {t('luxurySecurity.cta.title')}
           </Typography>
           
@@ -439,10 +529,14 @@ export default function LuxurySecurityView() {
     <MainLayout>
       {renderHero}
       {renderBreadcrumbs}
-      {renderHotelSecurity}
-      {renderHotelServices}
-      {renderPrivateResidences}
-      {renderTeamRecruitment}
+      {renderIntroduction}
+      {renderRiskAssessment}
+      {renderSecuritySystems}
+      {renderExpertTeam}
+      {renderPrivateResidencesIntro}
+      {renderResidenceAssessment}
+      {renderCustomSecurity}
+      {renderFamilyTraining}
       {renderCTA}
     </MainLayout>
   );

@@ -99,7 +99,7 @@ export default function HomeLuxurySecuritySection() {
           <Box
             sx={{
               height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/image4.jpeg)',
+              backgroundImage: 'url(/assets/images/ab5b15_d2c841fdde8743b3b4eff80254c92661~mv2.avif)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

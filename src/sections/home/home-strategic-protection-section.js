@@ -24,20 +24,7 @@ export default function HomeStrategicProtectionSection() {
   return (
     <Box component={MotionViewport} sx={{ width: '100%' }}>
       <Grid container sx={{ minHeight: { xs: 'auto', md: '70vh' } }}>
-        {/* Box con immagine - Prima posizione */}
-        <Grid item xs={12} md={6}>
-          <Box
-            sx={{
-              height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/image3.jpeg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
-        </Grid>
-
-        {/* Box con testo e sfondo colorato - Seconda posizione */}
+        {/* Box con testo e sfondo colorato - Prima posizione */}
         <Grid item xs={12} md={6}>
           <Box
             sx={{
@@ -100,6 +87,19 @@ export default function HomeStrategicProtectionSection() {
               </m.div>
             </Box>
           </Box>
+        </Grid>
+
+        {/* Box con immagine - Seconda posizione */}
+        <Grid item xs={12} md={6}>
+          <Box
+            sx={{
+              height: { xs: 300, md: '100%' },
+              backgroundImage: 'url(/assets/images/us-army-blackhawk-middle-east-web.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
         </Grid>
       </Grid>
     </Box>

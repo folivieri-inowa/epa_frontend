@@ -59,13 +59,13 @@ export default function HomeAbout() {
           <Stack spacing={3}>
             <m.div variants={varFade().inRight}>
               <Typography variant="h3" sx={{ mb: 3 }}>
-                {t('about.home_section.title')}              
+                {t('home.aboutSection.title')}              
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                {t('about.home_section.description')}
+                {t('home.aboutSection.description')}
               </HtmlText>
             </m.div>
 
@@ -87,7 +87,7 @@ export default function HomeAbout() {
                   },
                 }}
               >
-                {t('about.home_section.button')}
+                {t('home.aboutSection.button')}
               </Button>
             </m.div>
           </Stack>

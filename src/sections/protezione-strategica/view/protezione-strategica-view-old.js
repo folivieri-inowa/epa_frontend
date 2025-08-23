@@ -206,14 +206,13 @@ export default function ProtezioneStrategicaView() {
               {t('strategicProtection.services.title')}
             </Typography>
 
-            <Grid container spacing={4} alignItems="stretch" sx={{ minHeight: { md: 350 } }}>
+            <Grid container spacing={4}>
               {t('strategicProtection.services.items', { returnObjects: true })?.map((service, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
+                <Grid item xs={12} sm={6} md={4} key={index}>
                   <Card
                     sx={{
                       p: 4,
                       height: '100%',
-                      width: '100%',
                       backgroundColor: 'rgba(0, 0, 0, 0.6)',
                       backdropFilter: 'blur(10px)',
                       border: '2px solid #FFD700',
@@ -387,18 +386,17 @@ export default function ProtezioneStrategicaView() {
           </Typography>
         </m.div>
 
-        <Grid container spacing={3} alignItems="stretch" sx={{ minHeight: { md: 250 } }}>
+        <Grid container spacing={3}>
           {(Array.isArray(t('strategicProtection.certifications.items', { returnObjects: true })) 
             ? t('strategicProtection.certifications.items', { returnObjects: true }) 
             : []
           ).map((certification, index) => (
-            <Grid key={certification.title} xs={12} sm={6} md={4} lg={3} sx={{ display: 'flex' }}>
-              <m.div variants={varFade().inUp} style={{ width: '100%', display: 'flex' }}>
+            <Grid key={certification.title} xs={12} sm={6} md={4} lg={3}>
+              <m.div variants={varFade().inUp}>
                 <Card 
                   sx={{ 
                     p: 3, 
                     height: 1,
-                    width: 1,
                     minHeight: 180,
                     bgcolor: 'background.paper',
                     border: '2px solid',

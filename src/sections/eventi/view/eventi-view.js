@@ -73,7 +73,7 @@ export default function EventiView() {
               lineHeight: { xs: 1.2, md: 1.1 }
             }}
           >
-            {t('eventi.page.hero.title')}
+            {t('events.hero.title')}
           </Typography>
 
           <Typography
@@ -86,7 +86,7 @@ export default function EventiView() {
               maxWidth: { xs: '100%', md: '80%' }
             }}
           >
-            {t('eventi.page.hero.subtitle')}
+            {t('events.hero.subtitle')}
           </Typography>
 
           <Stack
@@ -111,7 +111,7 @@ export default function EventiView() {
               }}
               startIcon={<Iconify icon="carbon:send" />}
             >
-              {t('eventi.page.hero.cta')}
+              {t('events.hero.cta')}
             </Button>
           </Stack>
         </Box>
@@ -130,23 +130,23 @@ export default function EventiView() {
       <Container>
         <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
           <Link href="/" component={RouterLink} color="inherit">
-            {t('eventi.page.breadcrumbs.home')}
+            Home
           </Link>
-          <Typography color="text.primary">{t('eventi.page.breadcrumbs.current')}</Typography>
+          <Typography color="text.primary">{t('events.hero.title')}</Typography>
         </Breadcrumbs>
       </Container>
     </Box>
   );
 
-  // Servizio section
-  const renderServizio = (
+  // Overview section
+  const renderOverview = (
     <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
       <Grid container spacing={5} alignItems="center">
         <Grid xs={12} md={6}>
           <m.div variants={varFade().inLeft}>
             <Image
               alt="Eventi di lusso"
-              src="/assets/images/events2.jpg"
+              src="/assets/images/Dining-in-the-Clouds.jpg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -160,19 +160,25 @@ export default function EventiView() {
                 variant="overline"
                 sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
               >
-                {t('eventi.page.service.overline')}
+                {t('events.overview.overline')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
-                {t('eventi.page.service.title')}
+                            <Typography 
+                variant="h2" 
+                sx={{ 
+                  mb: 3,
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+                }}
+              >
+                {t('events.intro.title')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                {t('eventi.page.service.description')}
+                {t('events.overview.description')}
               </HtmlText>
             </m.div>
           </Stack>
@@ -181,8 +187,8 @@ export default function EventiView() {
     </Container>
   );
 
-  // Protezione section
-  const renderProtezione = (
+  // Expertise section
+  const renderExpertise = (
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
       <Container component={MotionViewport}>
         <Grid container spacing={5} alignItems="center">
@@ -193,19 +199,25 @@ export default function EventiView() {
                   variant="overline"
                   sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
                 >
-                  {t('eventi.page.protection.overline')}
+                  {t('events.expertise.overline')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inLeft}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
-                  {t('eventi.page.protection.title')}
+                                <Typography 
+                  variant="h2" 
+                  sx={{ 
+                    mb: 3,
+                    fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+                  }}
+                >
+                  {t('events.planning.title')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inLeft}>
                 <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                  {t('eventi.page.protection.description')}
+                  {t('events.expertise.description')}
                 </HtmlText>
               </m.div>
             </Stack>
@@ -214,8 +226,8 @@ export default function EventiView() {
           <Grid xs={12} md={6}>
             <m.div variants={varFade().inRight}>
               <Image
-                alt="Protezione eventi"
-                src="/assets/images/events3.jpg"
+                alt="Expertise eventi"
+                src="/assets/images/events1.jpeg"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
               />
@@ -226,8 +238,8 @@ export default function EventiView() {
     </Box>
   );
 
-  // Servizi section
-  const renderServizi = (
+  // Standards section
+  const renderStandards = (
     <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
       <m.div variants={varFade().inUp}>
         <Typography
@@ -240,19 +252,20 @@ export default function EventiView() {
             mb: 2
           }}
         >
-          {t('eventi.page.services.overline')}
+          {t('events.standards.overline')}
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
         <Typography 
-          variant="h3" 
+          variant="h2" 
           sx={{ 
             textAlign: 'center',
-            mb: 3
+            mb: 3,
+            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
           }}
         >
-          {t('eventi.page.services.title')}
+          {t('events.standards.title')}
         </Typography>
       </m.div>
 
@@ -266,43 +279,24 @@ export default function EventiView() {
             mb: 6
           }}
         >
-          {t('eventi.page.services.subtitle')}
+          {t('events.standards.subtitle')}
         </Typography>
       </m.div>
 
-      <Grid container spacing={3}>
-        {[
-          {
-            title: t('eventi.page.services.vip_protection.title'),
-            description: t('eventi.page.services.vip_protection.description'),
-            icon: 'mdi:shield-crown'
-          },
-          {
-            title: t('eventi.page.services.risk_assessment.title'), 
-            description: t('eventi.page.services.risk_assessment.description'),
-            icon: 'mdi:clipboard-check'
-          },
-          {
-            title: t('eventi.page.services.advanced_tech.title'),
-            description: t('eventi.page.services.advanced_tech.description'),
-            icon: 'mdi:drone'
-          },
-          {
-            title: t('eventi.page.services.iso_standards.title'),
-            description: t('eventi.page.services.iso_standards.description'),
-            icon: 'mdi:certificate'
-          }
-        ].map((servizio, index) => (
-          <Grid key={servizio.title} xs={12} sm={6} md={3}>
-            <m.div variants={varFade().inUp}>
+      <Grid container spacing={3} alignItems="stretch" sx={{ minHeight: { md: 280 } }}>
+        {t('events.standards.items', { returnObjects: true }).map((standard, index) => (
+          <Grid key={standard.title} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+            <m.div variants={varFade().inUp} style={{ width: '100%', display: 'flex' }}>
               <Card 
                 sx={{ 
                   p: 3, 
                   height: '100%',
-                  minHeight: 290, // Altezza minima garantita
+                  width: '100%',
+                  minHeight: 200,
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'center',
+                  border: `2px solid ${theme.palette.company.main}`,
                   '&:hover': {
                     boxShadow: theme.customShadows.z24,
                     transform: 'translateY(-4px)',
@@ -311,18 +305,8 @@ export default function EventiView() {
                 }}
               >
                 <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', p: 0 }}>
-                  <Iconify 
-                    icon={servizio.icon} 
-                    sx={{ 
-                      width: 64, 
-                      height: 64, 
-                      color: 'company.main',
-                      mx: 'auto',
-                      mb: 2
-                    }} 
-                  />
                   <Typography variant="h6" sx={{ mb: 2, minHeight: 32 }}>
-                    {servizio.title}
+                    {standard.title}
                   </Typography>
                   <Typography 
                     variant="body2" 
@@ -333,7 +317,7 @@ export default function EventiView() {
                       alignItems: 'flex-start'
                     }}
                   >
-                    {servizio.description}
+                    {standard.description}
                   </Typography>
                 </CardContent>
               </Card>
@@ -344,15 +328,15 @@ export default function EventiView() {
     </Container>
   );
 
-  // Team section
-  const renderTeam = (
+  // VIP Protection section
+  const renderVipProtection = (
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
       <Container component={MotionViewport}>
         <Grid container spacing={5} alignItems="center">
           <Grid xs={12} md={6}>
             <m.div variants={varFade().inLeft}>
               <Image
-                alt="Team professionale"
+                alt="VIP Protection"
                 src="/assets/images/events4.png"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
@@ -367,19 +351,19 @@ export default function EventiView() {
                   variant="overline"
                   sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
                 >
-                  {t('eventi.page.team.overline')}
+                  {t('events.vip_protection.overline')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inRight}>
                 <Typography variant="h3" sx={{ mb: 3 }}>
-                  {t('eventi.page.team.title')}
+                  {t('events.vip_protection.title')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inRight}>
                 <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                  {t('eventi.page.team.description')}
+                  {t('events.vip_protection.description')}
                 </HtmlText>
               </m.div>
             </Stack>
@@ -403,7 +387,7 @@ export default function EventiView() {
             mb: 2
           }}
         >
-          {t('eventi.page.antiterrorism.overline')}
+          {t('events.antiterrorism.overline')}
         </Typography>
       </m.div>
 
@@ -415,7 +399,7 @@ export default function EventiView() {
             mb: 3
           }}
         >
-          {t('eventi.page.antiterrorism.title')}
+          {t('events.antiterrorism.title')}
         </Typography>
       </m.div>
 
@@ -429,24 +413,20 @@ export default function EventiView() {
             mb: 6
           }}
         >
-          {t('eventi.page.antiterrorism.description')}
+          {t('events.antiterrorism.subtitle')}
         </Typography>
       </m.div>
 
-      <Grid container spacing={3} justifyContent="center">
-        {[
-          { title: t('eventi.page.antiterrorism.roles.security_manager.title'), description: t('eventi.page.antiterrorism.roles.security_manager.description') },
-          { title: t('eventi.page.antiterrorism.roles.risk_analyst.title'), description: t('eventi.page.antiterrorism.roles.risk_analyst.description') },
-          { title: t('eventi.page.antiterrorism.roles.counter_terrorism.title'), description: t('eventi.page.antiterrorism.roles.counter_terrorism.description') },
-          { title: t('eventi.page.antiterrorism.roles.field_operators.title'), description: t('eventi.page.antiterrorism.roles.field_operators.description') }
-        ].map((ruolo, index) => (
-          <Grid key={ruolo.title} xs={12} sm={6} md={3}>
-            <m.div variants={varFade().inUp}>
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch" sx={{ minHeight: { md: 220 } }}>
+        {t('events.antiterrorism.roles', { returnObjects: true }).map((ruolo, index) => (
+          <Grid key={ruolo.title} xs={12} sm={6} md={3} sx={{ display: 'flex' }}>
+            <m.div variants={varFade().inUp} style={{ width: '100%', display: 'flex' }}>
               <Card 
                 sx={{ 
                   p: 3, 
                   height: '100%',
-                  minHeight: 160, // Altezza minima garantita
+                  width: '100%',
+                  minHeight: 160,
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'center',
@@ -492,10 +472,11 @@ export default function EventiView() {
               fontSize: { xs: '1.1rem', md: '1.5rem' },
               textAlign: 'center',
               mb: 4,
-              fontStyle: 'italic'
+              fontStyle: 'italic',
+              color: 'text.secondary'
             }}
           >
-            {t('eventi.page.quote')}
+            "{t('events.quote')}"
           </Typography>
         </m.div>
       </Container>
@@ -515,11 +496,11 @@ export default function EventiView() {
           }}
         >
           <Typography variant="h3" sx={{ mb: 3 }}>
-            {t('eventi.page.cta.title')}
+            {t('events.cta.title')}
           </Typography>
           
           <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' }, mb: 4, maxWidth: '600px', mx: 'auto' }}>
-            {t('eventi.page.cta.description')}
+            {t('events.cta.subtitle')}
           </Typography>
           
           <Button
@@ -538,7 +519,7 @@ export default function EventiView() {
             }}
             startIcon={<Iconify icon="carbon:send" />}
           >
-            {t('eventi.page.cta.button')}
+            {t('events.cta.button')}
           </Button>
         </Box>
       </m.div>
@@ -549,10 +530,10 @@ export default function EventiView() {
     <MainLayout>
       {renderHero}
       {renderBreadcrumbs}
-      {renderServizio}
-      {renderProtezione}
-      {renderServizi}
-      {renderTeam}
+      {renderOverview}
+      {renderExpertise}
+      {renderStandards}
+      {renderVipProtection}
       {renderAntiterrorismo}
       {renderCitazione}
       {renderCTA}

@@ -20,7 +20,7 @@ export default function ContactHero({title, subtitle}) {
         position: 'relative',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(/assets/images/contact1.jpg)',
+        backgroundImage: 'url(/assets/images/contact/hero2.jpg)',
         '&:after': {
           top: 0,
           content: '""',
@@ -53,7 +53,7 @@ export default function ContactHero({title, subtitle}) {
               lineHeight: { xs: 1.2, md: 1.1 }
             }}
           >
-            {t('contact.page.hero.title')}
+            {t('contact.hero.title')}
           </Typography>
 
           <Typography
@@ -66,7 +66,7 @@ export default function ContactHero({title, subtitle}) {
               maxWidth: { xs: '100%', md: '80%' }
             }}
           >
-            {t('contact.page.hero.subtitle')}
+            {t('contact.hero.description')}
           </Typography>
         </Box>
       </Container>

@@ -1,4 +1,5 @@
 import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -19,6 +20,8 @@ const CARDS = [
 // ----------------------------------------------------------------------
 
 export default function HomeDiscovery() {
+  const { t } = useTranslation();
+  
   return (
     <Container
       component={MotionViewport}
@@ -80,7 +83,9 @@ export default function HomeDiscovery() {
 
               <Typography variant='h5' sx={{ color: 'text.primary', mt:2, mb: 2 }}>{card.description}</Typography>
 
-              <Button variant='text' sx={{ color: 'rgb(250,161,91)', typography: 'h6', padding: 0, '&:hover': { backgroundColor: 'transparent' } }} href={card.link}>Approfondisci</Button>
+              <Button variant='text' sx={{ color: 'rgb(250,161,91)', typography: 'h6', padding: 0, '&:hover': { backgroundColor: 'transparent' } }} href={card.link}>
+                {t('common.buttons.learnMore', 'Approfondisci')}
+              </Button>
             </Card>
           </m.div>
         ))}

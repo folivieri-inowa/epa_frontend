@@ -62,7 +62,7 @@ const WHY_CONTACT_US = [
   },
 ];
 
-export default function ContactView({ data }) {
+export default function ContactView() {
   const { t } = useTranslation();
   const theme = useTheme();
 
@@ -225,7 +225,7 @@ export default function ContactView({ data }) {
       <Grid container spacing={8} alignItems="center">
         {/* Form Column */}
         <Grid xs={12} md={7}>
-          <ContactForm title={data.contact_title} labels={data.form} />
+          <ContactForm />
         </Grid>
 
         {/* Info Column */}
@@ -277,7 +277,7 @@ export default function ContactView({ data }) {
 
   return (
     <>
-      <ContactHero title={data.title} subtitle={data.subtitle} />
+      <ContactHero />
       {renderBreadcrumbs}
       {renderContactInfo}
       {renderWhyContactUs}
@@ -285,12 +285,3 @@ export default function ContactView({ data }) {
     </>
   );
 }
-
-ContactView.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    contact_title: PropTypes.string.isRequired,
-    form: PropTypes.object.isRequired,
-  }).isRequired,
-};

@@ -16,31 +16,6 @@ import { MotionViewport, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
-const PILLARS = [
-  {
-    title: 'Sicurezza Preventiva:',
-    description:
-      'Attraverso un meticoloso Risk Assessment analizziamo i rischi con un approccio personalizzato, mitighiamo le vulnerabilità implementando le misure specifiche necessarie prima che i rischi identificati si trasformino in realtà.',
-  },
-  {
-    title: 'Sicurezza Pro-attiva:',
-    description:
-      'Agiamo per anticipare e gestire i rischi prima che si manifestino. Costruiamo resilienza basandoci sulla profilazione e l\'esperienza, al fine di anticipare ed evitare ogni possibile rischio.',
-  },
-  {
-    title: 'Sicurezza Predittiva:',
-    description:
-      'Utilizziamo l\'analisi basandoci su tecnologie avanzate e fonti di intelligence. I nostri Risk Analyst incrociano informazioni di IA, OSINT, closint, map site Risk e deep web per studiare possibili scenari, anticipare minacce emergenti e prevedere potenziali rischi prima che si verifichino.',
-  },
-  {
-    title: 'Deep Security:',
-    description:
-      'Approccio multilivello della sicurezza per gestire ogni nostro cliente, la sua reputazione, i suoi asset e proxi combinando sicurezza fisica, informatica, organizzativa e attraverso una formazione costante. Creiamo un sistema resiliente anche alle minacce più complesse.',
-  },
-];
-
-// ----------------------------------------------------------------------
-
 export default function HomePillars() {
   const { t } = useTranslation();
   const theme = useTheme();
@@ -48,8 +23,8 @@ export default function HomePillars() {
 
   const lightMode = theme.palette.mode === 'light';
 
-  // Usa sempre il fallback statico per ora
-  const pillars = PILLARS;
+  // Usa le traduzioni invece dell'array statico
+  const pillars = t('home.pillars.items', { returnObjects: true }) || [];
 
   return (
     <Box

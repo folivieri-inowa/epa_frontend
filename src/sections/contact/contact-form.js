@@ -22,7 +22,7 @@ import Button from '@mui/material/Button';
 import { useSnackbar } from '../../components/snackbar';
 
 // ----------------------------------------------------------------------
-export default function ContactForm({ labels, title }) {
+export default function ContactForm() {
   const { t } = useTranslation();
   
   const FormSchema = Yup.object().shape({
@@ -69,13 +69,13 @@ export default function ContactForm({ labels, title }) {
   });
 
   // Aggiunta delle label mancanti
-  const updatedLabels = {
-    name: labels?.name || 'Nome',
-    email: labels?.email || 'Email',
-    phone: labels?.phone || 'Telefono',
-    subject: labels?.subject || 'Oggetto',
-    message: labels?.message || 'Messaggio',
-    submit: labels?.submit || 'Invia',
+  const formLabels = {
+    name: t('contact.page.form.labels.name'),
+    email: t('contact.page.form.labels.email'),
+    phone: t('contact.page.form.labels.phone'),
+    subject: t('contact.page.form.labels.subject'),
+    message: t('contact.page.form.labels.message'),
+    submit: t('contact.page.form.labels.submit'),
   };
 
   return (
@@ -86,64 +86,62 @@ export default function ContactForm({ labels, title }) {
         </Backdrop>
       )}
 
-      {labels && (
-        <FormProvider methods={methods} onSubmit={onSubmit}>
-          <Stack component={MotionViewport} spacing={10}>
+      <FormProvider methods={methods} onSubmit={onSubmit}>
+        <Stack component={MotionViewport} spacing={10}>
+          <m.div variants={varFade().inUp}>
+            <Typography variant="h3">{t('contact.page.form.overline')}</Typography>
+          </m.div>
+          <Stack spacing={3}>
             <m.div variants={varFade().inUp}>
-              <Typography variant="h3">{title}</Typography>
+              <RHFTextField fullWidth name="name" label={formLabels.name} />
             </m.div>
-            <Stack spacing={3}>
-              <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="name" label={updatedLabels.name} />
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="email" label={updatedLabels.email} />
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="phone" label={updatedLabels.phone} />
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="subject" label={updatedLabels.subject} />
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <RHFTextField fullWidth name="message" label={updatedLabels.message} multiline rows={4} />
-              </m.div>
-            </Stack>
 
             <m.div variants={varFade().inUp}>
-              <LoadingButton
-                fullWidth
-                color="alert"
-                size="large"
-                type="submit"
-                variant="soft"
-                loading={isSubmitting}
-                sx={{
-                  bgcolor: 'common.white',
-                  color: 'common.black',
-                  width: '100%',
-                  border: `1px solid ${companyColors.primary}`,
-                  borderRadius: 2,
-                  transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s, color 0.2s',
-                  boxShadow: 'none',
-                  '&:hover': {
-                    bgcolor: 'grey.100',
-                    color: companyColors.primary,
-                    borderColor: companyColors.primary,
-                    boxShadow: '0 4px 20px 0 rgba(0,0,0,0.12)',
-                  }
-                }}
-              >
-                {updatedLabels.submit}
-              </LoadingButton>
+              <RHFTextField fullWidth name="email" label={formLabels.email} />
+            </m.div>
+
+            <m.div variants={varFade().inUp}>
+              <RHFTextField fullWidth name="phone" label={formLabels.phone} />
+            </m.div>
+
+            <m.div variants={varFade().inUp}>
+              <RHFTextField fullWidth name="subject" label={formLabels.subject} />
+            </m.div>
+
+            <m.div variants={varFade().inUp}>
+              <RHFTextField fullWidth name="message" label={formLabels.message} multiline rows={4} />
             </m.div>
           </Stack>
-        </FormProvider>
-      )}
+
+          <m.div variants={varFade().inUp}>
+            <LoadingButton
+              fullWidth
+              color="alert"
+              size="large"
+              type="submit"
+              variant="soft"
+              loading={isSubmitting}
+              sx={{
+                bgcolor: 'common.white',
+                color: 'common.black',
+                width: '100%',
+                border: `1px solid ${companyColors.primary}`,
+                borderRadius: 2,
+                transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s, color 0.2s',
+                boxShadow: 'none',
+                '&:hover': {
+                  bgcolor: 'grey.100',
+                  color: companyColors.primary,
+                  borderColor: companyColors.primary,
+                  boxShadow: '0 4px 20px 0 rgba(0,0,0,0.12)',
+                }
+              }}
+            >
+              {formLabels.submit}
+            </LoadingButton>
+          </m.div>
+        </Stack>
+      </FormProvider>
     </>
   );
 }

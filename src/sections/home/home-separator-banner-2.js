@@ -23,7 +23,7 @@ export default function HomeSeparatorBanner2() {
         py: { xs: 6, md: 8 },
         position: 'relative',
         bgcolor: 'rgba(147, 160, 167, 0.8)',
-        backgroundImage: 'url(/assets/images/roadmap2.png)',
+        backgroundImage: 'url(/assets/images/roadmap1.png)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -73,7 +73,7 @@ export default function HomeSeparatorBanner2() {
                 textShadow: '2px 2px 4px rgba(0,0,0,0.3)', // Ombra per maggiore contrasto
               }}
             >
-              {t('home.separator_banner_2.title', 'La sicurezza come arte, la protezione come missione')}
+              {t('home.separator_banner_2.title')}
             </Typography>
           </m.div>
 

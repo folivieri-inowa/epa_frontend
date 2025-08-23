@@ -6,8 +6,86 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
 
 const CookieConsentComponent = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
   useEffect(() => {
+    // Ottiene la lingua corrente
+    const currentLang = i18n.language || 'it';
+    
+    // Prepara le traduzioni per la lingua corrente
+    const translations = {
+      it: {
+        consentModal: {
+          title: 'Utilizziamo i cookie per migliorare la tua esperienza',
+          description: 'Questo sito utilizza cookie tecnici e di analisi per fornire una migliore esperienza di navigazione. Continuando a navigare accetti l\'utilizzo dei cookie.',
+          acceptAllBtn: 'Accetta tutti',
+          acceptNecessaryBtn: 'Accetta selezione',
+          showPreferencesBtn: 'Gestisci preferenze',
+          closeIconLabel: 'Chiudi'
+        },
+        preferencesModal: {
+          title: 'Preferenze Cookie',
+          acceptAllBtn: 'Accetta tutti',
+          acceptNecessaryBtn: 'Accetta selezione',
+          savePreferencesBtn: 'Salva preferenze',
+          closeIconLabel: 'Chiudi',
+          serviceCounterLabel: 'Servizio|Servizi',
+          sections: [
+            {
+              title: 'Cookie necessari',
+              description: 'Questi cookie sono essenziali per il funzionamento del sito web e non possono essere disabilitati.',
+              linkedCategory: 'necessary'
+            },
+            {
+              title: 'Cookie di analisi',
+              description: 'Questi cookie ci aiutano a capire come i visitatori interagiscono con il sito web raccogliendo e fornendo informazioni in modo anonimo.',
+              linkedCategory: 'analytics'
+            },
+            {
+              title: 'Cookie di marketing',
+              description: 'Questi cookie vengono utilizzati per tracciare i visitatori sui siti web per mostrare annunci pertinenti e coinvolgenti.',
+              linkedCategory: 'marketing'
+            }
+          ]
+        }
+      },
+      en: {
+        consentModal: {
+          title: 'We use cookies to improve your experience',
+          description: 'This site uses technical and analytical cookies to provide a better browsing experience. By continuing to browse you accept the use of cookies.',
+          acceptAllBtn: 'Accept all',
+          acceptNecessaryBtn: 'Accept selection',
+          showPreferencesBtn: 'Manage preferences',
+          closeIconLabel: 'Close'
+        },
+        preferencesModal: {
+          title: 'Cookie Preferences',
+          acceptAllBtn: 'Accept all',
+          acceptNecessaryBtn: 'Accept selection',
+          savePreferencesBtn: 'Save preferences',
+          closeIconLabel: 'Close',
+          serviceCounterLabel: 'Service|Services',
+          sections: [
+            {
+              title: 'Necessary cookies',
+              description: 'These cookies are essential for the website to function and cannot be disabled.',
+              linkedCategory: 'necessary'
+            },
+            {
+              title: 'Analytics cookies',
+              description: 'These cookies help us understand how visitors interact with the website by collecting and providing information anonymously.',
+              linkedCategory: 'analytics'
+            },
+            {
+              title: 'Marketing cookies',
+              description: 'These cookies are used to track visitors across websites to display relevant and engaging ads.',
+              linkedCategory: 'marketing'
+            }
+          ]
+        }
+      }
+    };
+    
     // Inizializza vanilla-cookieconsent con la configurazione base
     CookieConsent.run({
       guiOptions: {
@@ -27,43 +105,26 @@ const CookieConsentComponent = () => {
         necessary: {
           enabled: true,
           readOnly: true // I cookie necessari non possono essere disabilitati
+        },
+        analytics: {
+          enabled: false,
+          readOnly: false
+        },
+        marketing: {
+          enabled: false,
+          readOnly: false
         }
-        // analytics: {}  <-- RIMUOVI questa categoria perché non usi analytics
       },
 
       language: {
-        default: 'it',
-        translations: {
-          it: {
-            consentModal: {
-              title: t('cookies.title'),
-              description: t('cookies.description'),
-              acceptAllBtn: t('cookies.accept'),
-              showPreferencesBtn: t('cookies.moreInfo')
-            },
-            preferencesModal: {
-              title: t('cookies.modal.title'),
-              closeIconLabel: t('cookies.modal.close'),
-              sections: [
-                {
-                  title: t('cookies.modal.necessary.title'),
-                  description: t('cookies.modal.necessary.description'),
-                  linkedCategory: 'necessary'
-                },
-                {
-                  title: t('cookies.modal.privacy.title'),
-                  description: t('cookies.modal.privacy.description')
-                }
-              ]
-            }
-          }
-        }
+        default: currentLang,
+        translations
       }
     });
     
     // Non è necessario fare altro, vanilla-cookieconsent gestirà
     // automaticamente l'interazione con gli attributi data-cc
-  }, [t]);
+  }, [t, i18n.language]);
 
   return null;
 }
