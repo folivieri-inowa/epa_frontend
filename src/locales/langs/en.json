@@ -64,8 +64,20 @@
     "hero": {
       "title": "Oracle Executive Protection",
       "subtitle": "See the invisible and do the impossible",
-      "description": "Founded on experience, driven by innovation: we protect your world with discretion and professionalism, wherever you are.",
-      "button": "Request Consultation"
+      "description": "Elite protection for an ever-evolving world",
+      "subdescription": "Founded on experience, driven by innovation: we protect your world with discretion and professionalism, wherever you are.",
+      "badge": "Global security leaders",
+      "cta": {
+        "primary": "Request Consultation",
+        "secondary": "Learn More"
+      },
+      "stats": {
+        "experience": "Years of Experience",
+        "clients": "Protected Clients",
+        "support": "Continuous Support",
+        "countries": "Countries Covered"
+      },
+      "scroll": "Scroll to explore"
     },
     "servicesOverview": {
       "overline": "Our Services",

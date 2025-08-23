@@ -1,5 +1,3 @@
-import MaintenanceView from 'src/sections/maintenance/view';
-
 // ----------------------------------------------------------------------
 
 export const metadata = {
@@ -7,5 +5,5 @@ export const metadata = {
 };
 
 export default function MaintenancePage() {
-  return <MaintenanceView />;
+  return <div>Maintenance Page</div>;
 }

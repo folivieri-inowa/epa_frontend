@@ -1,4 +1,4 @@
-import { RiskTravelManagementView } from '../../sections/risk-travel-management/view';
+import { TravelRiskManagementView } from '../../sections/travel-risk-management/view';
 
 // ----------------------------------------------------------------------
 
@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function RiskTravelManagementPage() {
-  return <RiskTravelManagementView />;
+  return <TravelRiskManagementView />;
 }

@@ -64,9 +64,20 @@
     "hero": {
       "title": "Oracle Executive Protection",
       "subtitle": "Vedere l'invisibile e fare l'impossibile",
-      "description": "Fondata sull'esperienza, guidata dall'innovazione: proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.",
-      "cta_primary": "I nostri servizi",
-      "cta_secondary": "Contattaci"
+      "description": "Protezione d'élite per un mondo in continua evoluzione",
+      "subdescription": "Fondata sull'esperienza, guidata dall'innovazione: proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.",
+      "badge": "Leader nella sicurezza globale",
+      "cta": {
+        "primary": "Richiedi Consulenza",
+        "secondary": "Scopri di più"
+      },
+      "stats": {
+        "experience": "Anni di Esperienza",
+        "clients": "Clienti Protetti",
+        "support": "Supporto Continuo", 
+        "countries": "Paesi Coperti"
+      },
+      "scroll": "Scorri per esplorare"
     },
     "split_section": {
       "title": "Travel Risk Management",

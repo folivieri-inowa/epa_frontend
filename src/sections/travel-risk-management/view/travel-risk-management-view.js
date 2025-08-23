@@ -148,7 +148,7 @@ export default function TravelRiskManagementView() {
 
             <Typography
               sx={{
-                fontSize: { xs: '1.1rem', md: '1.5rem' },
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
                 color: 'common.white',
                 mb: 3,
                 lineHeight: 1.7,
@@ -210,7 +210,7 @@ export default function TravelRiskManagementView() {
 
               <Typography
                 sx={{
-                  fontSize: { xs: '1.1rem', md: '1.5rem' },
+                  fontSize: { xs: '1.1rem', md: '1.25rem' },
                   color: 'common.white',
                   lineHeight: 1.7,
                   whiteSpace: 'pre-line'
@@ -237,7 +237,7 @@ export default function TravelRiskManagementView() {
           sx={{
             mx: 'auto',
             maxWidth: 900,
-            fontSize: { xs: '1.1rem', md: '1.5rem' },
+            fontSize: { xs: '1.1rem', md: '1.25rem' },
             color: 'common.white',
             textAlign: 'center',
             lineHeight: 1.7,
@@ -265,7 +265,7 @@ export default function TravelRiskManagementView() {
               maxWidth: 700,
               color: 'common.white',
               textAlign: 'center',
-              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              fontSize: { xs: '1.1rem', md: '1.25rem' },
               lineHeight: 1.7
             }}
           >
@@ -313,7 +313,7 @@ export default function TravelRiskManagementView() {
 
                 <Typography
                   sx={{
-                    fontSize: { xs: '1.1rem', md: '1.5rem' },
+                    fontSize: { xs: '1.1rem', md: '1.25rem' },
                     lineHeight: 1.7,
                     whiteSpace: 'pre-line',
                     color: 'common.white',
@@ -360,7 +360,7 @@ export default function TravelRiskManagementView() {
 
                 <Typography
                   sx={{
-                    fontSize: { xs: '1.1rem', md: '1.5rem' },
+                    fontSize: { xs: '1.1rem', md: '1.25rem' },
                     lineHeight: 1.7,
                     whiteSpace: 'pre-line',
                     color: 'common.white',
@@ -390,7 +390,7 @@ export default function TravelRiskManagementView() {
             sx={{
               mx: 'auto',
               maxWidth: 800,
-              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              fontSize: { xs: '1.1rem', md: '1.25rem' },
               color: 'common.white',
               textAlign: 'center',
               lineHeight: 1.7
@@ -568,7 +568,7 @@ export default function TravelRiskManagementView() {
           sx={{
             mx: 'auto',
             maxWidth: 640,
-            fontSize: { xs: '1.1rem', md: '1.5rem' },
+            fontSize: { xs: '1.1rem', md: '1.25rem' },
             color: 'common.white',
             mb: 5
           }}

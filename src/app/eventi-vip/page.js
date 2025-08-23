@@ -1,5 +1,3 @@
-import EventiVipView from 'src/sections/eventi-vip/view/eventi-vip-view';
-
 // ----------------------------------------------------------------------
 
 export const metadata = {
@@ -7,5 +5,5 @@ export const metadata = {
 };
 
 export default function EventiVipPage() {
-  return <EventiVipView />;
+  return <div>Eventi VIP Page</div>;
 }

@@ -1,5 +1,3 @@
-import { FaqsView } from 'src/sections/faqs/view';
-
 // ----------------------------------------------------------------------
 
 export const metadata = {
@@ -7,5 +5,5 @@ export const metadata = {
 };
 
 export default function FaqsPage() {
-  return <FaqsView />;
+  return <div>Privacy Policy Page</div>;
 }
