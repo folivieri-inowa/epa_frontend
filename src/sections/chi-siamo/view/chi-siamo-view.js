@@ -191,6 +191,107 @@ export default function ChiSiamoView() {
 
   // Expertise section
   const renderExpertise = (
+    <Box sx={{ py: { xs: 10, md: 15 }, position: 'relative' }}>
+      <Container>
+        <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
+          <Grid xs={12} md={6}>
+            <m.div variants={varFade().inLeft}>
+              <Typography variant="h2" sx={{ mb: 3 }}>
+                {t('about.page.expertise.title')}
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: 'text.secondary',
+                  mb: 3,
+                  lineHeight: 1.7,
+                }}
+              >
+                {t('about.page.expertise.description')}
+              </Typography>
+            </m.div>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <m.div variants={varFade().inRight}>
+              <Box
+                component="img"
+                alt="Expertise in Security"
+                src="/assets/images/about2.jpg"
+                sx={{
+                  width: 1,
+                  height: { xs: 280, md: 360 },
+                  objectFit: 'cover',
+                  borderRadius: 2,
+                  boxShadow: (theme) => theme.customShadows.z8,
+                }}
+              />
+            </m.div>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+
+  // Technology section
+  const renderTechnology = (
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
+      <Container component={MotionViewport}>
+        <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
+          <Grid xs={12} md={6} order={{ xs: 2, md: 1 }}>
+            <m.div variants={varFade().inLeft}>
+              <Box
+                component="img"
+                alt="Advanced Technology"
+                src="/assets/images/team4.jpg"
+                sx={{
+                  width: 1,
+                  height: { xs: 280, md: 360 },
+                  objectFit: 'cover',
+                  borderRadius: 2,
+                  boxShadow: (theme) => theme.customShadows.z8,
+                }}
+              />
+            </m.div>
+          </Grid>
+
+          <Grid xs={12} md={6} order={{ xs: 1, md: 2 }}>
+            <Stack spacing={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+              <m.div variants={varFade().inUp}>
+                <Typography
+                  variant="overline"
+                  sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
+                >
+                  {t('about.page.technology.overline')}
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inUp}>
+                <Typography variant="h3" sx={{ mb: 3 }}>
+                  {t('about.page.technology.title')}
+                </Typography>
+              </m.div>
+
+              <m.div variants={varFade().inUp}>
+                <Typography 
+                  sx={{ 
+                    fontSize: { xs: '1rem', md: '1.1rem' },
+                    lineHeight: 1.7,
+                    color: 'text.secondary'
+                  }}
+                >
+                  {t('about.page.technology.description')}
+                </Typography>
+              </m.div>
+            </Stack>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+
+  // Team section
+  const renderTeam = (
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
       <Container component={MotionViewport}>
         <Stack spacing={4} alignItems="center" sx={{ textAlign: 'center', mb: 6 }}>
@@ -199,13 +300,13 @@ export default function ChiSiamoView() {
               variant="overline"
               sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
             >
-              {t('about.page.expertise.overline')}
+              {t('about.page.team.overline')}
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inUp}>
             <Typography variant="h3" sx={{ mb: 3, maxWidth: 600 }}>
-              {t('about.page.expertise.title')}
+              {t('about.page.team.title')}
             </Typography>
           </m.div>
 
@@ -215,10 +316,11 @@ export default function ChiSiamoView() {
                 fontSize: { xs: '1.1rem', md: '1.25rem' },
                 lineHeight: 1.7,
                 maxWidth: 900,
-                mx: 'auto'
+                mx: 'auto',
+                whiteSpace: 'pre-line'
               }}
             >
-              {t('about.page.expertise.description')}
+              {t('about.page.team.description')}
             </Typography>
           </m.div>
         </Stack>
@@ -226,119 +328,51 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Technology section
-  const renderTechnology = (
-    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
-      <Stack spacing={4} alignItems="center" sx={{ textAlign: 'center' }}>
-        <m.div variants={varFade().inUp}>
-          <Typography
-            variant="overline"
-            sx={{ color: 'company.main', fontWeight: 'fontWeightBold' }}
-          >
-            {t('about.page.technology.overline')}
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <Typography variant="h3" sx={{ mb: 3, maxWidth: 600 }}>
-            {t('about.page.technology.title')}
-          </Typography>
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            sx={{ 
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
-              lineHeight: 1.7,
-              maxWidth: 900,
-              mx: 'auto',
-              whiteSpace: 'pre-line'
-            }}
-          >
-            {t('about.page.technology.description')}
-          </Typography>
-        </m.div>
-      </Stack>
-    </Container>
-  );
-
   // Standards section
   const renderStandards = (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
-      <Container component={MotionViewport}>
-        <m.div variants={varFade().inUp}>
-          <Typography
-            variant="overline"
-            sx={{ 
-              color: 'company.main', 
-              fontWeight: 'fontWeightBold',
-              textAlign: 'center',
-              display: 'block',
-              mb: 2
-            }}
-          >
-            {t('about.page.standards.overline')}
-          </Typography>
-        </m.div>
+    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
+      <m.div variants={varFade().inUp}>
+        <Typography
+          variant="overline"
+          sx={{ 
+            color: 'company.main', 
+            fontWeight: 'fontWeightBold',
+            textAlign: 'center',
+            display: 'block',
+            mb: 2
+          }}
+        >
+          {t('about.page.standards.overline')}
+        </Typography>
+      </m.div>
 
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            variant="h3" 
-            sx={{ 
-              textAlign: 'center',
-              mb: 3
-            }}
-          >
-            {t('about.page.standards.title')}
-          </Typography>
-        </m.div>
+      <m.div variants={varFade().inUp}>
+        <Typography 
+          variant="h3" 
+          sx={{ 
+            textAlign: 'center',
+            mb: 3
+          }}
+        >
+          {t('about.page.standards.title')}
+        </Typography>
+      </m.div>
 
-        <m.div variants={varFade().inUp}>
-          <Typography 
-            sx={{ 
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
-              textAlign: 'center',
-              maxWidth: '900px',
-              mx: 'auto',
-              mb: 6
-            }}
-          >
-            {t('about.page.standards.description')}
-          </Typography>
-        </m.div>
-
-        <Grid container spacing={3} justifyContent="center">
-          {t('about.page.standards.items', { returnObjects: true }).map((item, index) => (
-            <Grid key={item.title} xs={12} sm={6} md={4}>
-              <m.div variants={varFade().inUp}>
-                <Card 
-                  sx={{ 
-                    p: 3, 
-                    height: '100%',
-                    textAlign: 'center',
-                    border: `1px solid ${alpha(theme.palette.company.main, 0.2)}`,
-                    '&:hover': {
-                      borderColor: 'company.main',
-                      boxShadow: theme.customShadows.z8,
-                      transition: 'all 0.3s ease'
-                    }
-                  }}
-                >
-                  <CardContent>
-                    <Typography variant="h6" sx={{ mb: 1, color: 'company.main' }}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {item.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </m.div>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
+      <m.div variants={varFade().inUp}>
+        <Typography 
+          sx={{ 
+            fontSize: { xs: '1.1rem', md: '1.25rem' },
+            textAlign: 'center',
+            maxWidth: '900px',
+            mx: 'auto',
+            mb: 6,
+            whiteSpace: 'pre-line'
+          }}
+        >
+          {t('about.page.standards.description')}
+        </Typography>
+      </m.div>
+    </Container>
   );
 
   // Call to action
@@ -391,6 +425,7 @@ export default function ChiSiamoView() {
       {renderContent}
       {renderExpertise}
       {renderTechnology}
+      {renderTeam}
       {renderStandards}
       {renderCTA}
     </>
