@@ -43,7 +43,10 @@ RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 
-RUN chown -R nextjs:nodejs /app/public/assets/images/home
+# Set correct ownership and permissions for all public assets
+RUN chown -R nextjs:nodejs /app/public && \
+    find /app/public -type f -exec chmod 644 {} \; && \
+    find /app/public -type d -exec chmod 755 {} \;
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
@@ -54,6 +57,6 @@ USER nextjs
 
 EXPOSE 3000
 
-ENV PORT 3000
+ENV PORT=3000
 
 CMD ["node", "server.js"]

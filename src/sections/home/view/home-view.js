@@ -12,7 +12,15 @@ import HomeHero from '../home-hero';
 import HomeAbout from '../home-about';
 import HomeDiscovery from '../home-discovery';
 import HomeAlternatingSection from '../home-alternating-section';
-import ContactSection from '../../shared/contact-section';
+import HomePillars from '../home-pillars';
+import HomeSplitSection from '../home-split-section';
+import HomeSeparatorBanner from '../home-separator-banner';
+import HomeSplitSectionReversed from '../home-split-section-reversed';
+import HomeSeparatorBanner2 from '../home-separator-banner-2';
+import HomeStrategicProtectionSection from '../home-strategic-protection-section';
+import HomeSeparatorBanner3 from '../home-separator-banner-3';
+import HomeLuxurySecuritySection from '../home-luxury-security-section';
+import HomeContact from '../home-contact';
 import {CookieConsentButton} from "../../../components/cookie-conesent";
 
 // ----------------------------------------------------------------------
@@ -33,28 +41,39 @@ export default function HomeView() {
       </Box>
 
       <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
-        <HomeAlternatingSection />
+        <HomePillars />
       </Box>
 
-      <Box
-        sx={{
-          overflow: 'hidden',
-          position: 'relative',
-          zIndex: 1,
-          bgcolor: 'background.default',
-        }}
-      >
-        <HomeDiscovery />
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeSplitSection />
       </Box>
 
-      <Box
-        sx={{
-          position: 'relative',
-          zIndex: 1,
-          mt: 0,
-        }}
-      >
-        <ContactSection title="Contattaci per una consulenza" />
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeSeparatorBanner />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeSplitSectionReversed />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeSeparatorBanner2 />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeStrategicProtectionSection />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeSeparatorBanner3 />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeLuxurySecuritySection />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeContact />
       </Box>
     </MainLayout>
   );

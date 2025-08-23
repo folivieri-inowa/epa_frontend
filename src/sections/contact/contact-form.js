@@ -1,4 +1,5 @@
 import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -21,30 +22,30 @@ import Button from '@mui/material/Button';
 import { useSnackbar } from '../../components/snackbar';
 
 // ----------------------------------------------------------------------
-export const FormSchema = Yup.object().shape({
-  name: Yup.string()
-    .required('Nome è un campo obbligatorio'),
-  email: Yup.string().required('Email è un campo obbligatorio').email('Email deve essere un indirizzo valido'),
-  phone: Yup.string().required('Telefono è un campo obbligatorio'),
-  subject: Yup.string().required('Oggetto è un campo obbligatorio'),
-  message: Yup.string().required('Messaggio è un campo obbligatorio'),
-});
-
-export const defaultValues = {
-  name: '',
-  email: '',
-  phone: '',
-  subject: '',
-  message: '',
-};
-
 export default function ContactForm({ labels, title }) {
+  const { t } = useTranslation();
+  
+  const FormSchema = Yup.object().shape({
+    name: Yup.string()
+      .required(t('contact.page.form.validation.name_required')),
+    email: Yup.string().required(t('contact.page.form.validation.email_required')).email(t('contact.page.form.validation.email_valid')),
+    phone: Yup.string().required(t('contact.page.form.validation.phone_required')),
+    subject: Yup.string().required(t('contact.page.form.validation.subject_required')),
+    message: Yup.string().required(t('contact.page.form.validation.message_required')),
+  });
+
   const { enqueueSnackbar } = useSnackbar();
   const companyColors = useCompanyColors();
 
   const methods = useForm({
     resolver: yupResolver(FormSchema),
-    defaultValues,
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    },
   });
 
   const {
@@ -121,7 +122,21 @@ export default function ContactForm({ labels, title }) {
                 type="submit"
                 variant="soft"
                 loading={isSubmitting}
-                sx={{ bgcolor: 'company.main', color: 'common.white', width: '100%' }}
+                sx={{
+                  bgcolor: 'common.white',
+                  color: 'common.black',
+                  width: '100%',
+                  border: `1px solid ${companyColors.primary}`,
+                  borderRadius: 2,
+                  transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s, color 0.2s',
+                  boxShadow: 'none',
+                  '&:hover': {
+                    bgcolor: 'grey.100',
+                    color: companyColors.primary,
+                    borderColor: companyColors.primary,
+                    boxShadow: '0 4px 20px 0 rgba(0,0,0,0.12)',
+                  }
+                }}
               >
                 {updatedLabels.submit}
               </LoadingButton>

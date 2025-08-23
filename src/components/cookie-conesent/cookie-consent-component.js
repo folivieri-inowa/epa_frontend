@@ -1,11 +1,12 @@
 'use client'
 
+import { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
-import {useEffect} from "react";
-
 
 const CookieConsentComponent = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     // Inizializza vanilla-cookieconsent con la configurazione base
     CookieConsent.run({
@@ -35,32 +36,23 @@ const CookieConsentComponent = () => {
         translations: {
           it: {
             consentModal: {
-              title: 'Utilizzo dei cookie', // Titolo più chiaro
-              description: 'Questo sito utilizza solo cookie tecnici necessari al funzionamento. Non utilizziamo cookie di profilazione o di terze parti. Per maggiori informazioni, consulta la nostra <a href="/privacy">Informativa sulla Privacy</a>.', // Descrizione concisa e link all'informativa
-              acceptAllBtn: 'Ho capito', // Pulsante più appropriato
-              // acceptNecessaryBtn: 'Rifiuta tutti', <-- RIMUOVI, non hai cookie non necessari
-              showPreferencesBtn: 'Maggiori informazioni' // Opzionale, se vuoi dare più dettagli
+              title: t('cookies.title'),
+              description: t('cookies.description'),
+              acceptAllBtn: t('cookies.accept'),
+              showPreferencesBtn: t('cookies.moreInfo')
             },
             preferencesModal: {
-              title: 'Informazioni sui cookie', // Titolo più chiaro
-              // acceptAllBtn: 'Accetta tutti', <-- RIMUOVI
-              // acceptNecessaryBtn: 'Rifiuta tutti', <-- RIMUOVI
-              // savePreferencesBtn: 'Salva preferenze', <-- RIMUOVI
-              closeIconLabel: 'Chiudi',
+              title: t('cookies.modal.title'),
+              closeIconLabel: t('cookies.modal.close'),
               sections: [
                 {
-                  title: 'Cookie necessari', // Titolo più chiaro
-                  description: 'Questi cookie sono essenziali per il corretto funzionamento del sito e non possono essere disabilitati.  Essi includono cookie di sessione, mantenimento dello stato dell\'utente durante la navigazione, ecc.', // Descrizione dettagliata dei cookie tecnici
+                  title: t('cookies.modal.necessary.title'),
+                  description: t('cookies.modal.necessary.description'),
                   linkedCategory: 'necessary'
                 },
-                // {  <-- RIMUOVI la sezione analytics
-                //   title: 'Performance e Analytics',
-                //   description: 'Questi cookie...',
-                //   linkedCategory: 'analytics'
-                // },
                 {
-                  title: 'Informativa sulla Privacy', // Titolo più chiaro
-                  description: 'Per maggiori informazioni sul trattamento dei dati personali, consulta la nostra <a href="/privacy">Informativa sulla Privacy</a>.' // Link all'informativa
+                  title: t('cookies.modal.privacy.title'),
+                  description: t('cookies.modal.privacy.description')
                 }
               ]
             }
@@ -71,7 +63,7 @@ const CookieConsentComponent = () => {
     
     // Non è necessario fare altro, vanilla-cookieconsent gestirà
     // automaticamente l'interazione con gli attributi data-cc
-  }, []);
+  }, [t]);
 
   return null;
 }

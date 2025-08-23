@@ -13,7 +13,6 @@ import Header from './header';
 
 export default function MainLayout({ children }) {
   const pathname = usePathname();
-
   const homePage = pathname === '/';
 
   return (

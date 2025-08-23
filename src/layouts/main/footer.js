@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
@@ -14,32 +15,29 @@ import {RouterLink} from 'src/routes/components';
 
 import Logo from 'src/components/logo';
 
-// ----------------------------------------------------------------------
-
-const LINKS = [
-  {
-    headline: 'Contatti',
-    children: [
-      { name: 'Email: info@protectionagency.it', href: 'mailto:info@protectionagency.it' },
-      { name: 'Telefono: +39 392 926 4907', href: 'tel:+393929264907'}
-    ],
-  },
-];
-
-// Array delle certificazioni
-const certifications = [
-  { src: '/logo/certificate.png', alt: 'Certificazione' },
-  { src: '/logo/31000.jpg', alt: 'ISO 31000' },
-  { src: '/logo/ISO_27001.jpg', alt: 'ISO 27001' },
-  { src: '/logo/ISO-28000.png', alt: 'ISO 28000' },
-];
-
-// ----------------------------------------------------------------------
-
 export default function Footer() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState(1);
   const carouselRef = useRef(null);
+
+  // Array delle certificazioni
+  const certifications = [
+    { src: '/logo/certificate.png', alt: t('footer.certifications.certificate') },
+    { src: '/logo/31000.jpg', alt: t('footer.certifications.iso31000') },
+    { src: '/logo/ISO_27001.jpg', alt: t('footer.certifications.iso27001') },
+    { src: '/logo/ISO-28000.png', alt: t('footer.certifications.iso28000') },
+  ];
+
+  const LINKS = [
+    {
+      headline: t('footer.contact.headline'),
+      children: [
+        { name: t('footer.contact.email'), href: 'mailto:info@protectionagency.it' },
+        { name: t('footer.contact.phone'), href: 'tel:+393929264907'}
+      ],
+    },
+  ];
   
   // Gestisci il numero di elementi visibili in base alla larghezza dello schermo
   useEffect(() => {
@@ -102,7 +100,7 @@ export default function Footer() {
       >
         {/* Sezione dei loghi di certificazione con carousel personalizzato */}
         <Box sx={{ mb: 6, textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ mb: 2 }}>Le nostre certificazioni</Typography>
+          <Typography variant="h6" sx={{ mb: 2 }}>{t('footer.certifications_title')}</Typography>
           
           <Box 
             sx={{ 
@@ -246,8 +244,7 @@ export default function Footer() {
                 mx: {xs: 'auto', md: 'unset'},
               }}
             >
-              Società di consulenza, analisi e formazione nel settore sicurezza, difesa e protezione fisica e
-              tecnologica.
+              {t('footer.description')}
             </Typography>
 
             {/* <Stack
@@ -304,10 +301,10 @@ export default function Footer() {
         </Grid>
 
         <Typography variant="body2" sx={{mt: 10, display: 'flex', justifyContent: 'space-between'}}>
-          <span>© 2024. All rights reserved</span>
+          <span>{t('footer.copyright')}</span>
           <span>
             {/*<Link href="#" color="inherit" sx={{ ml: 2 }}>Termini e Condizioni</Link>*/}
-            <Link href="/privacy-policy" color="inherit" sx={{ml: 2}}>Privacy Policy</Link>
+            <Link href="/privacy-policy" color="inherit" sx={{ml: 2}}>{t('footer.privacyPolicy')}</Link>
           </span>
         </Typography>
       </Container>

@@ -1,129 +1,80 @@
-import { m } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
-import { bgGradient } from 'src/theme/css';
-
-import { varFade, MotionContainer } from 'src/components/animate';
-import Link from "@mui/material/Link";
-import {RouterLink} from "../../routes/components";
-
-// ----------------------------------------------------------------------
-
-const CONTACTS = [
-  {
-    phoneLabel: 'Telefono',
-    phone: <Link
-      component={RouterLink}
-      href='tel:+393929264907'
-      color="inherit"
-      variant="h5"
-    >
-      +393929264907
-    </Link>,
-    emailLabel: 'E-mail',
-    email: <Link
-      component={RouterLink}
-      href='mailto:info@protectionagency.it'
-      color="inherit"
-      variant="h5"
-    >
-      info@protectionagency.it
-    </Link>
-  },
-];
-
 // ----------------------------------------------------------------------
 
 export default function ContactHero({title, subtitle}) {
+  const { t } = useTranslation();
   const theme = useTheme();
 
   return (
     <Box
       sx={{
-        ...bgGradient({
-          color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/images/image25.jpeg',
-        }),
-        height: { xs: '50vh', md: '60vh' }, // Ridotto da mobile/desktop
-        py: { xs: 10, md: 0 },
-        overflow: 'hidden',
+        height: { xs: '50vh', md: '60vh' },
+        minHeight: { xs: 320, md: 480 },
         position: 'relative',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: 'url(/assets/images/contact1.jpg)',
+        '&:after': {
+          top: 0,
+          content: '""',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          backgroundColor: alpha(theme.palette.grey[900], 0.6),
+        },
       }}
     >
-      <Container component={MotionContainer}>
+      <Container sx={{ height: 1, position: 'relative', zIndex: 9 }}>
         <Box
           sx={{
             bottom: { md: 80 },
             position: { md: 'absolute' },
-            textAlign: { xs: 'center', md: 'unset' },
+            width: 1,
+            textAlign: { xs: 'center', md: 'left' },
+            pt: { xs: 15, md: 0 },
+            pb: { xs: 8, md: 4 },
           }}
         >
-          <TextAnimate text={title} sx={{ color: 'primary.main' }} variants={varFade().inRight} />
-          <br />
-
-          <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'primary.main' }}>
-            <TextAnimate text={subtitle} />
-          </Stack>
-
-          <Stack
-            spacing={10}
-            alignItems={{ xs: 'center', md: 'unset' }}
-            direction={{ xs: 'column', md: 'row' }}
-            sx={{ mt: 5, color: 'common.white' }}
+          <Typography 
+            variant="h1" 
+            component="h1" 
+            sx={{ 
+              color: 'common.white', 
+              textTransform: 'uppercase', 
+              mb: 3,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+              lineHeight: { xs: 1.2, md: 1.1 }
+            }}
           >
-            {CONTACTS.map((contact, index) => (
-              <Stack key={index} sx={{ maxWidth: 380 }}>
-                <m.div variants={varFade().in}>
-                  <Typography variant="h5" gutterBottom>
-                    {contact.phoneLabel}: {contact.phone}
-                  </Typography>
-                </m.div>
+            {t('contact.page.hero.title')}
+          </Typography>
 
-                <m.div variants={varFade().inRight}>
-                  <Typography variant="h5" gutterBottom>
-                    {contact.emailLabel}: {contact.email}
-                  </Typography>
-                </m.div>
-              </Stack>
-            ))}
-          </Stack>
+          <Typography
+            variant="h4"
+            sx={{
+              color: 'common.white',
+              fontWeight: theme.typography.fontWeightMedium,
+              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+              lineHeight: { xs: 1.4, md: 1.3 },
+              maxWidth: { xs: '100%', md: '80%' }
+            }}
+          >
+            {t('contact.page.hero.subtitle')}
+          </Typography>
         </Box>
       </Container>
     </Box>
   );
 }
 
-// ----------------------------------------------------------------------
-
-function TextAnimate({ text, variants, sx, ...other }) {
-  return (
-    <Box
-      component={m.div}
-      sx={{
-        typography: 'h1',
-        overflow: 'hidden',
-        display: 'inline-flex',
-        ...sx,
-      }}
-      {...other}
-    >
-      {text.split('').map((letter, index) => (
-        <m.span key={index} variants={variants || varFade().inUp}>
-          {letter}
-        </m.span>
-      ))}
-    </Box>
-  );
-}
-
-TextAnimate.propTypes = {
-  sx: PropTypes.object,
-  text: PropTypes.string,
-  variants: PropTypes.object,
+ContactHero.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };

@@ -4,6 +4,7 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CookieIcon from '@mui/icons-material/Cookie';
+import { useTranslation } from 'react-i18next';
 
 const StyledCookieButton = styled(Button)(({ theme }) => ({
   position: 'fixed',
@@ -11,7 +12,7 @@ const StyledCookieButton = styled(Button)(({ theme }) => ({
   right: '20px',
   zIndex: 99999, // Aumentato lo z-index
   backgroundColor: 'rgb(255, 215, 0)', // Colore oro per mantenere coerenza con altri pulsanti
-  color: '#fff',
+  color: '#000',
   padding: '10px 15px',
   borderRadius: '4px',
   boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
@@ -20,6 +21,7 @@ const StyledCookieButton = styled(Button)(({ theme }) => ({
   gap: '8px',
   '&:hover': {
     backgroundColor: 'rgba(246,142,59, 0.85)',
+    color: '#000',
   },
   // Aggiunta di stili più specifici per assicurare il corretto posizionamento
   top: 'auto',
@@ -31,6 +33,8 @@ const StyledCookieButton = styled(Button)(({ theme }) => ({
 }));
 
 const CookieConsentButton = () => {
+  const { t } = useTranslation();
+  
   return (
     <StyledCookieButton 
       type="button" 
@@ -38,7 +42,7 @@ const CookieConsentButton = () => {
       data-cc="show-preferencesModal"
       startIcon={<CookieIcon />}
     >
-      Preferenze cookie
+      {t('cookies.moreInfo')}
     </StyledCookieButton>
   );
 }

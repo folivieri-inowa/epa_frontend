@@ -1,6 +1,8 @@
-import useCompanyColors from 'src/hooks/use-company-colors';
+'use client';
+
 import { m } from 'framer-motion';
 import { alpha, useTheme } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -16,10 +18,13 @@ import { RouterLink } from 'src/routes/components';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
+import useCompanyColors from 'src/hooks/use-company-colors';
+import HtmlText from 'src/components/html-text';
 
 // ----------------------------------------------------------------------
 
 export default function HomeAbout() {
+  const { t } = useTranslation();
   const theme = useTheme();
   const companyColors = useCompanyColors();
   
@@ -39,36 +44,35 @@ export default function HomeAbout() {
     >
       <Grid container spacing={3} alignItems="center">
         {/* Always show image on all breakpoints */}
-        <Grid xs={12} md={7}>
+        <Grid xs={12} md={5}>
           <m.div variants={varFade().inLeft}>
             <Image
               alt="security expertise"
-              src="/assets/images/about/chi-siamo.png"
-              ratio="16/9"
+              src="/assets/images/about/about.jpg"
               sx={{ borderRadius: 2, boxShadow: shadow }}
             />
           </m.div>
         </Grid>
 
         {/* Text content */}
-        <Grid xs={12} md={5}>
+        <Grid xs={12} md={7}>
           <Stack spacing={3}>
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ mb: 3, color: 'company.main' }}>
-                I tuoi partner per la sicurezza d'eccellenza
+              <Typography variant="h3" sx={{ mb: 3 }}>
+                {t('about.home_section.title')}              
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <Typography sx={{ fontSize: '1.5rem' }}>
-                Fondata sull’esperienza, guidata dall’innovazione: proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia
-              </Typography>
+              <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
+                {t('about.home_section.description')}
+              </HtmlText>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <Button
                 component={RouterLink}
-                href={paths.about}
+                href={paths.chi_siamo}
                 color="primary"
                 size="large"
                 variant="contained"
@@ -76,12 +80,14 @@ export default function HomeAbout() {
                 sx={{
                   mt: 3,
                   bgcolor: 'company.main',
+                  color: 'common.black',
                   '&:hover': {
                     bgcolor: 'company.dark',
+                    color: 'common.black',
                   },
                 }}
               >
-                Scopri di più su di noi
+                {t('about.home_section.button')}
               </Button>
             </m.div>
           </Stack>

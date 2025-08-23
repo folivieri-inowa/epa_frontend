@@ -20,15 +20,17 @@ import { useResponsive } from 'src/hooks/use-responsive';
 import { useBoolean } from 'src/hooks/use-boolean';
 
 import { bgBlur } from 'src/theme/css';
+import { useTranslation } from 'react-i18next';
 
 import Logo from 'src/components/logo';
 import Label from 'src/components/label';
 import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
 import Scrollbar from 'src/components/scrollbar';
+import { LanguageSwitcher } from 'src/components/language-switcher';
 
 import { HEADER } from '../config-layout';
-import { navConfig } from './config-navigation';
+import { getNavConfig } from './config-navigation';
 import LoginButton from '../common/login-button';
 import HeaderShadow from '../common/header-shadow';
 import SettingsButton from '../common/settings-button';
@@ -40,12 +42,16 @@ import { useCallback, useEffect, useState } from 'react';
 
 export default function Header() {
   const theme = useTheme();
+  const { t } = useTranslation();
 
   const mdUp = useResponsive('up', 'md');
 
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   const pathname = usePathname();
+  
+  // Ottieni la configurazione di navigazione tradotta
+  const navConfig = getNavConfig(t);
 
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -103,7 +109,7 @@ export default function Header() {
             </Box>
             
             <Typography variant="h6" sx={{ mb: 2, px: 1 }}>
-              Menu
+              {t('navigation.menu')}
             </Typography>
 
             <Stack component="nav" spacing={1}>
@@ -137,7 +143,7 @@ export default function Header() {
                   justifyContent: 'center'
                 }}
               >
-                Contattaci
+                {t('navigation.contact')}
               </Button>
             </Stack>
           </Box>
@@ -151,9 +157,14 @@ export default function Header() {
       position="fixed"
       color="transparent"
       sx={{
-        background: 'rgba(0,0,0,0.6)',
+        background: offsetTop ? 'rgba(0,0,0,0.6)' : 'transparent',
+        //borderBottom: offsetTop ? 'none' : '1px solid black',
         height: 72,
-        boxShadow: (theme) => theme.customShadows.z8,
+        boxShadow: offsetTop ? (theme) => theme.customShadows.z8 : 'none',
+        transition: theme.transitions.create(['background', 'border', 'box-shadow'], {
+          easing: theme.transitions.easing.easeInOut,
+          duration: theme.transitions.duration.shorter,
+        }),
       }}
     >
       <Toolbar
@@ -185,6 +196,7 @@ export default function Header() {
           <Logo />
           
           <Stack direction="row" spacing={2} alignItems="center">
+            <LanguageSwitcher />
             <Button
               variant="outlined"
               color="primary"
@@ -194,7 +206,7 @@ export default function Header() {
                 display: { xs: 'none', md: 'flex' }
               }}
             >
-              Contattaci
+              {t('common.contact_us')}
             </Button>
             
             {renderNavigation}

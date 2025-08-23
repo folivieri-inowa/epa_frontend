@@ -144,7 +144,7 @@ export default function HomeAlternatingSection() {
                       sx={{
                         lineHeight: 1.8, // Migliorato l'interlinea
                         mb: 3,
-                        fontSize: '1.325rem'
+                        fontSize: { xs: '1.1rem', md: '1.5rem' }
                       }}
                     >
                       {item.description}

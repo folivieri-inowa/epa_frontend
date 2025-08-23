@@ -6,45 +6,42 @@ import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export const navConfig = [
+export const getNavConfig = (t) => [
   {
-    title: 'Home',
+    title: t('navigation.home'),
     path: '/',
     icon: <Iconify icon="carbon:home" sx={{ width: 1, height: 1 }} />,
   },
   {
-    title: 'Chi siamo',
-    path: paths.about,
+    title: t('navigation.about'),
+    path: paths.chi_siamo,
     icon: <Iconify icon="mdi:account-group" sx={{ width: 1, height: 1 }} />,
   },
   {
-    title: 'Ville e residenze di Lusso',
-    path: paths.security_management,
-    icon: <Iconify icon="solar:shield-keyhole-bold-duotone" />,
+    title: t('navigation.team'),
+    path: paths.il_team,
+    icon: <Iconify icon="mdi:account-multiple" sx={{ width: 1, height: 1 }} />,
   },
   {
-    title: 'Hotel e Hospitality',
-    path: paths.hotel_security_management,
-    icon: <Iconify icon="mdi:hotel" />,
-  },
-  {
-    title: 'Travel Risk Management',
-    path: paths.risk_travel_management,
+    title: t('navigation.travel_risk_management'),
+    path: paths.travel_risk_management,
     icon: <Iconify icon="mdi:airplane-takeoff" />,
   },
   {
-    title: 'Eventi VIP',
-    path: paths.eventi_vip,
+    title: t('navigation.strategic_protection'),
+    path: paths.protezione_strategica,
+    icon: <Iconify icon="mdi:shield-account" />,
+  },
+  {
+    title: t('navigation.events'),
+    path: paths.eventi,
     icon: <Iconify icon="mdi:ticket-confirmation" />,
   },
   {
-    title: 'Corporate, Infrastrutture e Siti Sensibili',
-    path: paths.corporate_infrastrutture,
-    icon: <Iconify icon="mdi:office-building" />,
-  },
-  {
-    title: 'Anti Terrorismo',
-    path: paths.anti_terrorism,
-    icon: <Iconify icon="mdi:shield-alert" />,
+    title: t('navigation.luxury_security'),
+    path: paths.luxury_security,
+    icon: <Iconify icon="mdi:security" />,
   }
 ];
+
+// Se necessario in futuro, usare sempre getNavConfig(t) per le traduzioni

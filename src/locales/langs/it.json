@@ -1,0 +1,246 @@
+{
+  "common": {
+    "contact_us": "Contattaci",
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "contact": "Contatti",
+    "menu": "Menu",
+    "cookie_preferences": "Preferenze Cookie",
+    "read_more": "Leggi di più",
+    "learn_more": "Scopri di più",
+    "get_quote": "Richiedi preventivo",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo",
+    "years_experience": "anni di esperienza"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "home": "Home",
+    "about": "Chi siamo", 
+    "team": "Il Team",
+    "travel_risk_management": "Travel Risk Management",
+    "strategic_protection": "Protezione Strategica",
+    "events": "Eventi",
+    "luxury_security": "Luxury Security",
+    "contact": "Contatti",
+    "privacy_policy": "Privacy Policy"
+  },
+  "meta": {
+    "home": {
+      "title": "Oracle Executive Protection | Sicurezza e Protezione Globale",
+      "description": "Oracle Executive Protection: leader nella sicurezza d'élite con oltre 30 anni di esperienza. Protezione esecutiva, travel risk management, security management e servizi di sicurezza globale.",
+      "keywords": "oracle Executive Protection, sicurezza globale, protezione esecutiva, executive protection, security management, travel risk management"
+    },
+    "about": {
+      "title": "Chi siamo | Oracle Executive Protection",
+      "description": "Scopri Oracle Executive Protection: oltre 30 anni di esperienza nella security management e protezione esecutiva. Protezione predittiva, preventiva, proattiva e multilivello.",
+      "keywords": "chi siamo oracle Executive Protection, sicurezza globale, esperienza security management, protezione esecutiva storia"
+    },
+    "team": {
+      "title": "Il Team | Oracle Executive Protection",
+      "description": "Incontra il team di Oracle Executive Protection: esperti internazionali nella sicurezza esecutiva e gestione del rischio. Professionalità, esperienza e dedizione al servizio della tua sicurezza.",
+      "keywords": "team oracle Executive Protection, esperti sicurezza, professionisti protezione esecutiva, specialisti security management"
+    },
+    "travel_risk": {
+      "title": "Travel Risk Management | Oracle Executive Protection",
+      "description": "Travel Risk Management Oracle Executive Protection: gestione completa del rischio viaggi business e leisure. Protezione, intelligence e supporto H24 in tutto il mondo.",
+      "keywords": "travel risk management, gestione rischio viaggi, sicurezza viaggi business, protezione travel internazionale"
+    },
+    "events": {
+      "title": "Eventi VIP | Oracle Executive Protection", 
+      "description": "Sicurezza eventi VIP Oracle Executive Protection: protezione discreta ed efficace per eventi esclusivi, cerimonie private e manifestazioni di alto profilo.",
+      "keywords": "sicurezza eventi VIP, protezione eventi esclusivi, security management eventi, sicurezza cerimonie private"
+    },
+    "contact": {
+      "title": "Contattaci | Oracle Executive Protection",
+      "description": "Contatta Oracle Executive Protection per soluzioni di sicurezza personalizzate. Consulenza specializzata, protezione esecutiva e gestione sicurezza globale.",
+      "keywords": "contatti oracle Executive Protection, consulenza sicurezza, richiesta informazioni protezione esecutiva, preventivo security management"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Oracle Executive Protection",
+      "subtitle": "Vedere l'invisibile e fare l'impossibile",
+      "description": "Fondata sull'esperienza, guidata dall'innovazione: proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.",
+      "cta_primary": "I nostri servizi",
+      "cta_secondary": "Contattaci"
+    },
+    "split_section": {
+      "title": "Travel Risk Management",
+      "description": "Oracle Executive Protection rappresenta una delle più importanti realtà internazionali nel Travel Risk Management. <br /><br /> Offriamo un servizio d'eccellenza, altamente personalizzato per garantire che ogni tuo viaggio: business o vacanza, ovunque nel mondo, sia sicuro, fluido e privo di preoccupazioni. <br /><br />",
+      "button": "Scopri di più"
+    },
+    "pillars": {
+      "title": "I 4 pilastri della nostra filosofia:",
+      "items": [
+        {
+          "title": "Sicurezza Preventiva:",
+          "description": "Attraverso un meticoloso Risk Assessment analizziamo i rischi in maniera personalizzata e mitighiamo le vulnerabilità implementando le misure specifiche necessarie prima che i rischi identificati si trasformino in realtà."
+        },
+        {
+          "title": "Sicurezza Pro-attiva:",
+          "description": "Agiamo per anticipare e gestire i rischi prima che si manifestino. Costruiamo resilienza basandoci sulla profilazione e la nostra esperienza al fine di anticipare ed evitare ogni possibile rischio."
+        },
+        {
+          "title": "Sicurezza Predittiva:",
+          "description": "Utilizziamo l’analisi basandoci su tecnologie avanzate e fonti di intelligence. I nostri Risk Analyst incrociando informazioni di IA, OSINT, closint, map site Risk e deep web per studiare possibili scenari, anticipare minacce emergenti e prevedere potenziali rischi prima che si verifichino."
+        },
+        {
+          "title": "Sicurezza Profonda:",
+          "description": "Abbiamo un approccio multilivello della sicurezza per gestire ogni nostro cliente, la sua reputazione, i suoi asset e proxi combinando sicurezza fisica, informatica, organizzativa e attraverso la formazione costante per creare un sistema resiliente anche alle minacce piu complesse."
+        }
+      ]
+    },
+    "separator_banner": {
+      "title": "30+ anni di eccellenza nella sicurezza globale",
+      "subtitle": "La tua sicurezza è la nostra missione"
+    },
+    "separator_banner_2": {
+      "title": "La sicurezza come arte, la protezione come missione"
+    },
+    "separator_banner_3": {
+      "title": "La sicurezza non è un prodotto, ma un processo continuo di evoluzione e miglioramento"
+    },
+    "split_section_reversed": {
+      "title": "Eventi VIP e Protezione Esecutiva",
+      "description": "Garantiamo massima discrezione e sicurezza per eventi esclusivi e protezione esecutiva di alto profilo. Dalla pianificazione all'esecuzione, ogni dettaglio è gestito con precisione millimetrica.",
+      "button": "Scopri di più"
+    },
+    "strategic_protection_section": {
+      "title": "Protezione Strategica Contro le Minacce Globali",
+      "description": "Soluzioni avanzate di sicurezza Antiterrorismo e Anti crimine per istituzioni, aziende, corporate, infrastrutture pubbliche e private e siti sensibili, progettate per prevenire, proteggere e rispondere alle minacce, conformi ai più alti standard internazionali",
+      "button": "Scopri di più"
+    },
+    "luxury_security_section": {
+      "title": "Luxury Hotel Security Management e Dimore Private",
+      "description": "Proteggiamo hotel di lusso e dimore private attraverso un'analisi completa delle vulnerabilità e l'implementazione di sistemi di sicurezza all'avanguardia.\n\nTrasformiamo la sicurezza in un punto di forza per la vostra struttura, garantendo protezione discreta e di alto livello per clienti VIP, personale e reputazione aziendale.",
+      "button": "Scopri di più"
+    },
+    "about": {
+      "title": "Chi siamo",
+      "description": "Oracle Executive Protection è una società leader nella consulenza, analisi e formazione specializzata nel settore della sicurezza, difesa e protezione fisica e tecnologica. <br /><br /> Con oltre 30 anni di esperienza nel settore, ci distinguiamo per l'eccellenza dei nostri servizi e l'approccio innovativo alla gestione del rischio.",
+      "button": "Scopri di più"
+    },
+    "contact": {
+      "overline": "Contattaci",
+      "title": "Hai bisogno di una consulenza?",
+      "description": "Il nostro team di esperti è pronto a valutare le tue esigenze specifiche e offrirti soluzioni su misura per la tua sicurezza.",
+      "button": "Richiedi informazioni",
+      "info": [
+        {
+          "title": "Telefono",
+          "value": "+39 02 123 456 789"
+        },
+        {
+          "title": "Email",
+          "value": "info@oracleep.com"
+        },
+        {
+          "title": "Indirizzo",
+          "value": "Milano, Italia"
+        }
+      ]
+    }
+  },
+  "about": {
+    "home_section": {
+      "title": "Eccellenza nella Sicurezza Globale",
+      "description": "Fondata sull'esperienza, guidata dall'innovazione: proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia. <br /><br /> Oracle Executive Protection è un punto di riferimento globale nel settore dell’analisi e mitigazione dei rischi: una società che si occupa di Analisi del Rischio, Security Management, Eventi Vip, Executive Protection e Controterrorismo. <br /><br /> Oracle è una delle prime Agenzie di sicurezza globale in Europa ad occuparsi del Travel Risk Management, diventando leader nel settore anche grazie alle sue prestigiose partnership e collaborazioni nazionali e internazionali.",
+      "button": "Scopri di più su di noi"
+    },
+    "page": {
+      "hero": {
+        "breadcrumb": "Chi siamo"
+      },
+      "content": {
+        "title": "Oracle Executive Protection",
+        "subtitle": "Fondata sull'esperienza, guidata dall'innovazione",
+        "description": "Proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.\n\nOracle Executive Protection è un punto di riferimento globale nel settore dell'analisi e mitigazione dei rischi: una società che si occupa di Analisi del Rischio, Security Management, Eventi Vip, Executive Protection e Controterrorismo.\n\nOracle è una delle prime Agenzie di sicurezza globale in Europa ad occuparsi del Travel Risk Management, diventando leader nel settore anche grazie alle sue prestigiose partnership e collaborazioni nazionali e internazionali.\n\nFacciamo parte di una rete internazionale di società della sicurezza che interagiscono tra loro scambiandosi informazioni, incarichi e servizi nel settore Executive Protection."
+      },
+      "expertise": {
+        "overline": "La nostra expertise",
+        "title": "Know-how di oltre 30 anni",
+        "description": "Un know-how di oltre 30 anni di esperienza grazie al nostro team in Security Management, operazioni di sicurezza globale, Intelligence, Analisi del Rischio, Protezione esecutiva di soggetti istituzionali, infrastrutture, siti sensibili, aziende multinazionali, hotel di lusso, eventi VIP e dimore private."
+      },
+      "technology": {
+        "overline": "Tecnologia avanzata",
+        "title": "All'avanguardia nella sicurezza",
+        "description": "Oracle EP è una società che non si limita all'analisi della sicurezza fisica, ma è tecnologicamente all'avanguardia.\n\nUtilizziamo strumenti avanzati come analisi OSINT, CLOSINT e intelligenza artificiale, per monitorare e prevedere minacce, garantendo una sicurezza predittiva e proattiva, Comunicazioni Criptate, Sorveglianza da Remoto e UAV, Sistemi avanzati di contro sorveglianza e di Analisi dei Rischi."
+      },
+      "standards": {
+        "overline": "I nostri standard",
+        "title": "Certificazioni internazionali",
+        "description": "Operiamo secondo i più rigorosi standard internazionali di sicurezza, mantenendo certificazioni riconosciute a livello mondiale.",
+        "items": [
+          {
+            "title": "ISO 31000",
+            "description": "Standard internazionale per la gestione del rischio"
+          },
+          {
+            "title": "ISO 27001",
+            "description": "Gestione della sicurezza delle informazioni"
+          },
+          {
+            "title": "ISO 28000",
+            "description": "Sicurezza della catena di approvvigionamento"
+          },
+          {
+            "title": "Formazione Specializzata",
+            "description": "Programmi di formazione avanzata per la sicurezza"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Pronto a migliorare la tua sicurezza?",
+        "description": "Contattaci per una consulenza personalizzata",
+        "button": "Contattaci"
+      }
+    }
+  },
+  "footer": {
+    "description": "Società di consulenza, analisi e formazione nel settore sicurezza, difesa e protezione fisica e tecnologica.",
+    "certifications_title": "Le nostre Certificazioni",
+    "contact": {
+      "headline": "Contatti",
+      "email": "Email: info@protectionagency.it", 
+      "phone": "Telefono: +39 392 926 4907"
+    },
+    "copyright": "© 2025 Oracle Executive Protection. Tutti i diritti riservati.",
+    "privacyPolicy": "Privacy Policy",
+    "company_description": "Oracle Executive Protection: il tuo partner di fiducia per la sicurezza globale. Oltre 30 anni di esperienza nella protezione di dirigenti, VIP e aziende in tutto il mondo.",
+    "quick_links": {
+      "title": "Link Rapidi",
+      "home": "Home",
+      "about": "Chi Siamo",
+      "services": "Servizi",
+      "contact": "Contatti"
+    },
+    "services": {
+      "title": "Servizi",
+      "executive_protection": "Protezione Esecutiva",
+      "travel_risk": "Travel Risk Management",
+      "security_consulting": "Consulenza Sicurezza",
+      "event_security": "Sicurezza Eventi"
+    },
+    "legal": {
+      "title": "Note Legali",
+      "privacy": "Privacy Policy",
+      "terms": "Termini di Servizio",
+      "cookies": "Cookie Policy"
+    },
+    "social": {
+      "follow": "Seguici",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "certifications": {
+      "certificate": "Certificazione",
+      "iso31000": "ISO 31000",
+      "iso27001": "ISO 27001", 
+      "iso28000": "ISO 28000"
+    }
+  }
+}

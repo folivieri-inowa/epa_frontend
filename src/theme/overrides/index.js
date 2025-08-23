@@ -40,6 +40,7 @@ import { datePicker } from './components/date-picker';
 import { breadcrumbs } from './components/breadcrumbs';
 import { cssBaseline } from './components/css-baseline';
 import { buttonGroup } from './components/button-group';
+import { container } from './components/container';
 import { autocomplete } from './components/autocomplete';
 import { toggleButton } from './components/toggle-button';
 import { loadingButton } from './components/loading-button';
@@ -91,7 +92,8 @@ export function componentsOverrides(theme) {
     cssBaseline(theme),
     autocomplete(theme),
     toggleButton(theme),
-    loadingButton(theme)
+    loadingButton(theme),
+    container(theme)
   );
 
   return components;

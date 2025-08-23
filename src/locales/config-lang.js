@@ -2,15 +2,17 @@
 
 import merge from 'lodash/merge';
 import {
+  it as itITAdapter,
+  enUS as enUSAdapter,
   fr as frFRAdapter,
   vi as viVNAdapter,
-  enUS as enUSAdapter,
   zhCN as zhCNAdapter,
   arSA as arSAAdapter,
 } from 'date-fns/locale';
 
 // date-pickers
 import {
+  itIT as itITDate,
   enUS as enUSDate,
   frFR as frFRDate,
   viVN as viVNDate,
@@ -18,6 +20,7 @@ import {
 } from '@mui/x-date-pickers/locales';
 // core
 import {
+  itIT as itITCore,
   enUS as enUSCore,
   frFR as frFRCore,
   viVN as viVNCore,
@@ -26,6 +29,7 @@ import {
 } from '@mui/material/locale';
 // data-grid
 import {
+  itIT as itITDataGrid,
   enUS as enUSDataGrid,
   frFR as frFRDataGrid,
   viVN as viVNDataGrid,
@@ -37,6 +41,13 @@ import {
 // ----------------------------------------------------------------------
 
 export const allLangs = [
+  {
+    label: 'Italiano',
+    value: 'it',
+    systemValue: merge(itITDate, itITDataGrid, itITCore),
+    adapterLocale: itITAdapter,
+    icon: 'flagpack:it',
+  },
   {
     label: 'English',
     value: 'en',
@@ -74,7 +85,7 @@ export const allLangs = [
   },
 ];
 
-export const defaultLang = allLangs[0]; // English
+export const defaultLang = allLangs[0]; // Italiano
 
 // GET MORE COUNTRY FLAGS
 // https://icon-sets.iconify.design/flagpack/
