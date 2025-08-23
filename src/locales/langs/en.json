@@ -257,6 +257,53 @@
     }
   },
   "about": {
+    "home_section": {
+      "title": "Excellence in Global Security",
+      "description": "Founded on experience, driven by innovation: we protect your world with discretion and professionalism, wherever you are. <br /><br /> Oracle Executive Protection is a global reference point in the field of risk analysis and mitigation: a company that deals with Risk Analysis, Security Management, VIP Events, Executive Protection and Counter-terrorism. <br /><br /> Oracle is one of the first global security agencies in Europe to deal with Travel Risk Management, becoming a leader in the sector also thanks to its prestigious national and international partnerships and collaborations.",
+      "button": "Learn more about us"
+    },
+    "page": {
+      "hero": {
+        "title": "About Us",
+        "subtitle": "Over 30+ years of excellence in global security",
+        "breadcrumb": "About Us",
+        "cta": "Request Consultation"
+      },
+      "breadcrumbs": {
+        "home": "Home",
+        "about": "About Us"
+      },
+      "content": {
+        "title": "Oracle Executive Protection",
+        "subtitle": "Founded on experience, driven by innovation",
+        "description": "We protect your world with discretion and professionalism, wherever you are.\n\nOracle Executive Protection is a global reference point in the field of risk analysis and mitigation: a company that deals with Risk Analysis, Security Management, VIP Events, Executive Protection and Counter-terrorism.\n\nOracle is one of the first global security agencies in Europe to deal with Travel Risk Management, becoming a leader in the sector also thanks to its prestigious national and international partnerships and collaborations.\n\nWe are part of an international network of security companies that interact with each other by exchanging information, assignments and services in the Executive Protection sector."
+      },
+      "expertise": {
+        "overline": "Our expertise",
+        "title": "Know-how of over 30 years",
+        "description": "Know-how of over 30 years of experience thanks to our team in Security Management, global security operations, Intelligence, Risk Analysis, Executive protection of institutional subjects, infrastructures, sensitive sites, multinational companies, luxury hotels, VIP events and private residences."
+      },
+      "technology": {
+        "overline": "Advanced technology",
+        "title": "At the forefront of security",
+        "description": "Oracle EP is a company that is not limited to physical security analysis, but is technologically at the forefront.\n\nWe use advanced tools such as OSINT analysis, CLOSINT and artificial intelligence, to monitor and predict threats, ensuring predictive and proactive security, Encrypted Communications, Remote Surveillance and UAV, Advanced counter-surveillance systems and Risk Analysis.\n\nOur task is to \"Predict the future\"! Solving problems when they manifest is already too late.\n\nFor this reason the 4 pillars of ORACLE are: Predictive, Preventive, Proactive and Multi-level Security.\n\nOur mission is to ensure the safety of our clients with discretion, innovation and a personalized functional approach."
+      },
+      "team": {
+        "overline": "Our team",
+        "title": "Global security professionals",
+        "description": "Our main strength is absolutely the Team.\n\nOur Team is composed of former Law Enforcement and Military Operators and Global Security Operators. We boast Operators and Analysts with over 30 years of experience in global security operations, specialized in physical protection and management of high-risk contexts, experts in Counter-Terrorism and anti-crime.\n\nWe have spent our entire life, our entire career taking care of the security and protection of lives, people, families, companies, sensitive sites, critical infrastructures, borders, states, perimeters that had to be impregnable, places of worship and we have trained some of the best professionals in Security Management, Close Protection and modern Anti-terrorism."
+      },
+      "standards": {
+        "overline": "Our standards",
+        "title": "Professional security system",
+        "description": "Oracle Executive Protection is composed of expert professionals in the key roles of the \"Security System\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Anti-terrorism Analysts, Logistics Coordinators, Drivers, Skippers, Cyber Security Operators, UAV pilots.\n\nA team with an unparalleled synergy between prestigious academic certifications and field experience, strategic Intelligence and Cybersecurity."
+      },
+      "cta": {
+        "title": "Ready to improve your security?",
+        "description": "Contact us for a personalized consultation",
+        "button": "Contact Us"
+      }
+    },
     "hero": {
       "overline": "About Us",
       "title": "Oracle Executive Protection",
@@ -327,6 +374,67 @@
       "title": "Security Professionals",
       "description": "Meet our team of experts: former law enforcement officers, military personnel and risk analysts with global experience.",
       "button": "Request Consultation"
+    },
+    "page": {
+      "hero": {
+        "title": "The Team",
+        "subtitle": "Born to Protect… Expert professionals in key roles of the Security System, meticulously selected with an excellent background.",
+        "cta": "Request a consultation"
+      },
+      "breadcrumbs": {
+        "team": "The Team"
+      },
+      "professionals": {
+        "overline": "The Professionals",
+        "title": "Experts in the Security System",
+        "description": "Oracle Executive Protection is composed of expert professionals in the key roles of the \"Security System\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Anti-terrorism Analysts, Logistics Coordinators. Meticulously selected with excellent backgrounds and exclusive reliability."
+      },
+      "leadership": {
+        "overline": "Leadership",
+        "title": "Operational leadership that guarantees rapid solutions",
+        "description": "An operational leadership that ensures rapid and effective solutions in the field, risk analysts and anti-terrorism experts. For years we have cared for the security and protection of people and families, companies, sensitive sites, critical infrastructures, borders, states, perimeters that had to be impregnable, places of worship, training some of the best professionals in Security Management, Close Protection and modern Anti-terrorism."
+      },
+      "organigramma": {
+        "overline": "Organizational Structure",
+        "title": "Organization chart of our company roles",
+        "security_board": "Security Board",
+        "field_direction": "Field Direction", 
+        "field_operators": "Field Operators",
+        "support_staff": "Support Staff",
+        "roles": {
+          "chief_security_manager": "Chief Security Manager",
+          "security_manager": "Security Manager", 
+          "risk_analyst": "Risk Analyst",
+          "counter_terrorism_analyst": "Counter Terrorism Analyst",
+          "operative_security_manager": "Operative Security Manager",
+          "team_leader": "Team Leader",
+          "travel_risk_officer": "Travel Risk Officer",
+          "protective_security_specialist": "Protective Security Specialist",
+          "security_officer": "Security Officer",
+          "driver": "Driver",
+          "uav_pilot": "UAV Pilot",
+          "security_system_specialist": "Security System Specialist",
+          "logistics_coordinator": "Logistics Coordinator"
+        }
+      },
+      "standards": {
+        "overline": "Training",
+        "title": "International standards and competence",
+        "description": "Every member of our team is trained according to the highest international standards, ensuring competence, discretion and readiness in every situation thanks to maximum level field experience."
+      },
+      "research": {
+        "overline": "Innovation",
+        "title": "Continuous research and technological development",
+        "description": "We are committed to continuous research of the most updated defense techniques, intelligence and physical protection and the best technological systems, also strengthened by an internal development section for Technological Protection."
+      },
+      "quote": {
+        "text": "Our team combines international experience, continuous training and total dedication to ensure maximum security in every operational scenario."
+      },
+      "cta": {
+        "title": "Trust our professionals",
+        "description": "Contact us to learn more about our team and discover how our experience can ensure your security.",
+        "button": "Request a consultation"
+      }
     }
   },
   "travel_risk": {
@@ -726,6 +834,80 @@
       },
       "save": "Save preferences",
       "close": "Close"
+    }
+  },
+  "strategicProtection": {
+    "breadcrumb": "Strategic Protection",
+    "hero": {
+      "title": "Strategic Protection Against Global Threats",
+      "subtitle": "Advanced security solutions for Counter-terrorism and Anti-crime for institutions, companies, corporate, public and private infrastructures and sensitive sites, designed to prevent, protect and respond to threats, compliant with the highest international standards.",
+      "cta": "Discover Our Services"
+    },
+    "content": {
+      "mainTitle": "Experts in Global Strategic Protection",
+      "description1": "With over 30 years of experience in the security sector, we provide specialized strategic protection services for institutions, companies and critical infrastructures.",
+      "description2": "Our expert teams combine advanced academic skills with field operational experience, ensuring maximum effectiveness in security operations."
+    },
+    "overview": {
+      "title": "Oracle Executive Protection Trusted Partner",
+      "description": "Oracle Executive Protection is the trusted partner for institutional subjects, international organizations and companies that require advanced protection against threats of political, social or religious terrorism and criminal threats.\n\nWith expert teams with over 30 years of experience in global security operations, specialized in physical protection, high-risk context management, crisis management and experts in Counter-Terrorism and anti-crime, with an unparalleled synergy between prestigious academic certifications and field experience, and an important strategic intelligence structure, cybersecurity, we offer integrated security solutions combining our personal experience with the highest international standards in security and anti-terrorism and ensuring global protection and resilience."
+    },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        "Risk Analysis and Management",
+        "Physical Protection", 
+        "Intelligence and Advanced Security Technology",
+        "Cybersecurity",
+        "Specialized Excellence Training"
+      ]
+    },
+    "certifications": {
+      "overline": "Our Standards",
+      "title": "International Standards and Certifications",
+      "subtitle": "In collaboration with prestigious international partners, we operate in compliance with the most rigorous security and protection protocols, compliant with the highest international standards:",
+      "items": [
+        {
+          "title": "Advanced Certificate in Terrorism Studies",
+          "organization": "The Handa Centre for the Study of Terrorism and Political Violence and University of St Andrews",
+          "description": "The most important certification on the study and security protocols, defense and anti-terrorism protection."
+        },
+        {
+          "title": "ISO 31000",
+          "organization": "International standard for risk management",
+          "description": "Provides principles and guidelines to identify, assess and manage risks systematically at a global level."
+        },
+        {
+          "title": "UNI ISO 31030",
+          "organization": "Guidelines for business travel risk management",
+          "description": "Focused on the safety and well-being of employees on business trips."
+        },
+        {
+          "title": "Hospitality Security Guidelines",
+          "organization": "Security guidelines for the hospitality sector",
+          "description": "Aimed at protecting guests, staff and facilities through preventive and management measures."
+        },
+        {
+          "title": "ISO 27002",
+          "organization": "Guidelines for information security management",
+          "description": "Best practices to protect corporate data and systems."
+        },
+        {
+          "title": "ISO 27005",
+          "organization": "Standard for risk management in information security",
+          "description": "Provides a structured approach to identify, assess and mitigate risks."
+        },
+        {
+          "title": "ISO 22301",
+          "organization": "Standard for operational continuity management",
+          "description": "Defines the requirements for planning, implementing and maintaining an emergency response system."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Do You Need Strategic Protection?",
+      "description": "Contact our experts for personalized consultation on our advanced strategic protection services.",
+      "button": "Contact Us Now"
     }
   }
 }

@@ -20,6 +20,7 @@ import { RouterLink } from 'src/routes/components';
 import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
+import MainLayout from 'src/layouts/main';
 
 // ----------------------------------------------------------------------
 
@@ -128,7 +129,7 @@ export default function ChiSiamoView() {
       <Container>
         <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
           <Link href="/" component={RouterLink} color="inherit">
-            {t('about.page.breadcrumbs.home')}
+            {t('navigation.home')}
           </Link>
           <Typography color="text.primary">{t('about.page.breadcrumbs.about')}</Typography>
         </Breadcrumbs>
@@ -136,9 +137,9 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Content section - Main content with image
+  // Content section - Main content with image (bianco)
   const renderContent = (
-    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
+    <Container component={MotionViewport} sx={{ py: { xs: 10, md: 15 } }}>
       <Grid container spacing={5} alignItems="center">
         <Grid xs={12} md={7}>
           <Stack spacing={4}>
@@ -165,8 +166,9 @@ export default function ChiSiamoView() {
               <Typography 
                 sx={{ 
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
-                  lineHeight: 1.7,
-                  whiteSpace: 'pre-line'
+                  lineHeight: 1.8,
+                  whiteSpace: 'pre-line',
+                  color: theme.palette.text.primary
                 }}
               >
                 {t('about.page.content.description')}
@@ -189,7 +191,7 @@ export default function ChiSiamoView() {
     </Container>
   );
 
-  // Expertise section (grigio neutro)
+  // Expertise section (grigio neutro per alternanza)
   const renderExpertise = (
     <Box sx={{ py: { xs: 10, md: 15 }, position: 'relative', bgcolor: 'background.neutral' }}>
       <Container>
@@ -202,10 +204,10 @@ export default function ChiSiamoView() {
 
               <Typography
                 sx={{
-                  color: alpha(theme.palette.primary.contrastText, 0.8),
+                  color: theme.palette.text.primary,
                   mb: 3,
-                  lineHeight: 1.6,
-                  fontSize: { xs: '1.1rem', md: '1.5rem' },
+                  lineHeight: 1.8,
+                  fontSize: { xs: '1.1rem', md: '1.25rem' },
                   whiteSpace: 'pre-line',
                 }}
               >
@@ -235,9 +237,9 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Technology section (grigio neutro per alternanza)
+  // Technology section (bianco per alternanza)
   const renderTechnology = (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
+    <Box sx={{ py: { xs: 10, md: 15 } }}>
       <Container component={MotionViewport}>
         <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
           <Grid xs={12} md={6} order={{ xs: 2, md: 1 }}>
@@ -277,9 +279,9 @@ export default function ChiSiamoView() {
               <m.div variants={varFade().inUp}>
                 <Typography 
                   sx={{ 
-                    fontSize: { xs: '1.1rem', md: '1.5rem' },
-                    lineHeight: 1.6,
-                    color: alpha(theme.palette.primary.contrastText, 0.8),
+                    fontSize: { xs: '1.1rem', md: '1.25rem' },
+                    lineHeight: 1.8,
+                    color: theme.palette.text.primary,
                     whiteSpace: 'pre-line',
                   }}
                 >
@@ -293,9 +295,9 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Team section (bianco)
+  // Team section (grigio neutro per alternanza)
   const renderTeam = (
-    <Box sx={{ py: { xs: 8, md: 12 } }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
       <Container component={MotionViewport}>
         <Stack spacing={4} alignItems="center" sx={{ textAlign: 'center', mb: 6 }}>
           <m.div variants={varFade().inUp}>
@@ -317,10 +319,11 @@ export default function ChiSiamoView() {
             <Typography 
               sx={{ 
                 fontSize: { xs: '1.1rem', md: '1.25rem' },
-                lineHeight: 1.7,
+                lineHeight: 1.8,
                 maxWidth: 900,
                 mx: 'auto',
-                whiteSpace: 'pre-line'
+                whiteSpace: 'pre-line',
+                color: theme.palette.text.primary
               }}
             >
               {t('about.page.team.description')}
@@ -333,7 +336,7 @@ export default function ChiSiamoView() {
 
   // Standards section (bianco per alternanza) 
   const renderStandards = (
-    <Box sx={{ py: { xs: 8, md: 12 } }}>
+    <Box sx={{ py: { xs: 10, md: 15 } }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
         <Typography
@@ -370,7 +373,9 @@ export default function ChiSiamoView() {
             maxWidth: '900px',
             mx: 'auto',
             mb: 6,
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+            lineHeight: 1.8,
+            color: theme.palette.text.primary
           }}
         >
           {t('about.page.standards.description')}
@@ -380,23 +385,24 @@ export default function ChiSiamoView() {
     </Box>
   );
 
-  // Call to action
+  // Call to action (grigio neutro per alternanza)
   const renderCTA = (
-    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
-      <m.div variants={varFade().inUp}>
-        <Box
-          sx={{
-            textAlign: 'center',
-            p: { xs: 4, md: 6 },
-            borderRadius: 2,
-            backgroundColor: alpha(theme.palette.company.main, 0.08),
-          }}
-        >
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
+      <Container component={MotionViewport}>
+        <m.div variants={varFade().inUp}>
+          <Box
+            sx={{
+              textAlign: 'center',
+              p: { xs: 4, md: 6 },
+              borderRadius: 2,
+              backgroundColor: alpha(theme.palette.company.main, 0.08),
+            }}
+          >
           <Typography variant="h3" sx={{ mb: 3 }}>
             {t('about.page.cta.title')}
           </Typography>
           
-          <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, mb: 4, maxWidth: '600px', mx: 'auto' }}>
+          <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, mb: 4, maxWidth: '600px', mx: 'auto', lineHeight: 1.8 }}>
             {t('about.page.cta.description')}
           </Typography>
           
@@ -417,14 +423,13 @@ export default function ChiSiamoView() {
             startIcon={<Iconify icon="carbon:send" />}
           >
             {t('about.page.cta.button')}
-          </Button>
-        </Box>
-      </m.div>
-    </Container>
-  );
-
-  return (
-    <>
+            </Button>
+          </Box>
+        </m.div>
+      </Container>
+    </Box>
+  );  return (
+    <MainLayout>
       {renderHero}
       {renderBreadcrumbs}
       {renderContent}
@@ -433,6 +438,6 @@ export default function ChiSiamoView() {
       {renderTeam}
       {renderStandards}
       {renderCTA}
-    </>
+    </MainLayout>
   );
 }

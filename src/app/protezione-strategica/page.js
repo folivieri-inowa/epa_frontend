@@ -1,3 +1,4 @@
+import MainLayout from 'src/layouts/main';
 import ProtezioneStrategicaView from 'src/sections/protezione-strategica/view/protezione-strategica-view';
 
 // ----------------------------------------------------------------------
@@ -9,5 +10,9 @@ export const metadata = {
 };
 
 export default function ProtezioneStrategicaPage() {
-  return <ProtezioneStrategicaView />;
+  return (
+    <MainLayout>
+      <ProtezioneStrategicaView />
+    </MainLayout>
+  );
 }

@@ -9,5 +9,7 @@ export const metadata = {
 };
 
 export default function IlTeamPage() {
-  return <IlTeamView />;
+  return (
+    <IlTeamView />
+  );
 }

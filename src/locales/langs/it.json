@@ -332,6 +332,7 @@
     }
   },
   "strategicProtection": {
+    "breadcrumb": "Protezione Strategica",
     "hero": {
       "title": "Protezione Strategica Contro Le Minacce Globali",
       "subtitle": "Soluzioni avanzate di sicurezza Antiterrorismo e Anti crimine per istituzioni, aziende, corporate, infrastrutture pubbliche e private e siti sensibili, progettate per prevenire, proteggere e rispondere alle minacce, conformi ai più alti standard internazionali.",
@@ -358,6 +359,7 @@
       ]
     },
     "certifications": {
+      "overline": "I nostri standard",
       "title": "Standard e Certificazioni Internazionali",
       "subtitle": "In collaborazione con prestigiosi partner internazionali, operiamo nel rispetto dei più rigorosi protocolli di sicurezza e protezione, conformi ai più elevati standard internazionali:",
       "items": [
@@ -605,6 +607,69 @@
       },
       "save": "Salva preferenze",
       "close": "Chiudi"
+    }
+  },
+  "team": {
+    "page": {
+      "hero": {
+        "title": "Il Team",
+        "subtitle": "Nati per Proteggere… Professionisti esperti nei ruoli chiave del Sistema Sicurezza, meticolosamente selezionati con background d'eccellenza.",
+        "cta": "Richiedi una consulenza"
+      },
+      "breadcrumbs": {
+        "team": "Il Team"
+      },
+      "professionals": {
+        "overline": "I Professionisti",
+        "title": "Esperti nel Sistema Sicurezza",
+        "description": "Oracle Executive Protection è composta da professionisti esperti nei ruoli chiave del \"Sistema Sicurezza\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Analisti anti terrorismo, Coordinatori Logistici. Meticolosamente selezionati con background d'eccellenza e affidabilità esclusiva."
+      },
+      "leadership": {
+        "overline": "Leadership",
+        "title": "Una leadership operativa che garantisce soluzioni rapide",
+        "description": "Una leadership operativa che garantisce soluzioni rapide ed efficaci sul campo, analisti del rischio e anti terrorismo. Da anni curiamo la sicurezza e la protezione di persone e famiglie, aziende, siti sensibili, infrastrutture critiche, confini, stati, perimetri che dovevano essere invalicabili, luoghi di culto addestrando alcuni dei migliori professionisti nel Security Management, nel close Protection e nell'Antiterrorismo moderno."
+      },
+      "organigramma": {
+        "overline": "Struttura Organizzativa",
+        "title": "Organigramma dei ruoli della nostra società",
+        "security_board": "Security Board",
+        "field_direction": "Direzione sul campo", 
+        "field_operators": "Operatori sul campo",
+        "support_staff": "Staff di supporto",
+        "roles": {
+          "chief_security_manager": "Chief Security Manager",
+          "security_manager": "Security Manager", 
+          "risk_analyst": "Risk Analyst",
+          "counter_terrorism_analyst": "Counter Terrorism Analyst",
+          "operative_security_manager": "Operative Security Manager",
+          "team_leader": "Team Leader",
+          "travel_risk_officer": "Travel Risk Officer",
+          "protective_security_specialist": "Protective Security Specialist",
+          "security_officer": "Security Officer",
+          "driver": "Driver",
+          "uav_pilot": "UAV Pilot",
+          "security_system_specialist": "Security System Specialist",
+          "logistics_coordinator": "Logistics Coordinator"
+        }
+      },
+      "standards": {
+        "overline": "Formazione",
+        "title": "Standard internazionali e competenza",
+        "description": "Ogni membro del nostro team è formato secondo i più alti standard internazionali, assicurando competenza, discrezione e prontezza in ogni situazione grazie ad un'esperienza sul campo di massimo livello."
+      },
+      "research": {
+        "overline": "Innovazione",
+        "title": "Ricerca continua e sviluppo tecnologico",
+        "description": "Siamo impegnati nella ricerca continua delle più aggiornate tecniche di difesa, intelligence e protezione fisica e dei migliori sistemi tecnologici, forti anche di una sezione di sviluppo interno di Protezione Tecnologica."
+      },
+      "quote": {
+        "text": "Il nostro team unisce esperienza internazionale, formazione continua e dedizione totale per garantire la massima sicurezza in ogni scenario operativo."
+      },
+      "cta": {
+        "title": "Affidati ai nostri professionisti",
+        "description": "Contattaci per conoscere meglio il nostro team e scopri come la nostra esperienza può garantire la tua sicurezza.",
+        "button": "Richiedi una consulenza"
+      }
     }
   }
 }

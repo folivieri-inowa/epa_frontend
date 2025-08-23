@@ -38,7 +38,7 @@ export default function IlTeamView() {
         position: 'relative',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(/assets/images/image27.jpeg)',
+        backgroundImage: 'url(/assets/images/mantas-hesthaven-_g1WdcKcV3w-unsplash.jpg)',
         '&:after': {
           top: 0,
           content: '""',
@@ -68,8 +68,10 @@ export default function IlTeamView() {
               color: 'common.white', 
               textTransform: 'uppercase', 
               mb: 3,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
-              lineHeight: { xs: 1.2, md: 1.1 }
+              fontWeight: 800,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem', lg: '4rem' },
+              lineHeight: { xs: 1.2, md: 1.1 },
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
           >
             {t('team.page.hero.title')}
@@ -80,9 +82,10 @@ export default function IlTeamView() {
             sx={{
               color: 'common.white',
               fontWeight: theme.typography.fontWeightMedium,
-              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.5rem' },
               lineHeight: { xs: 1.4, md: 1.3 },
-              maxWidth: { xs: '100%', md: '80%' }
+              maxWidth: { xs: '100%', md: '80%' },
+              textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
             }}
           >
             {t('team.page.hero.subtitle')}
@@ -129,7 +132,7 @@ export default function IlTeamView() {
       <Container>
         <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
           <Link href="/" component={RouterLink} color="inherit">
-            {t('team.page.breadcrumbs.home')}
+            {t('navigation.home')}
           </Link>
           <Typography color="text.primary">{t('team.page.breadcrumbs.team')}</Typography>
         </Breadcrumbs>
@@ -145,7 +148,7 @@ export default function IlTeamView() {
           <m.div variants={varFade().inLeft}>
             <Image
               alt="Il nostro team di professionisti"
-              src="/assets/images/team1.jpg"
+              src="/assets/images/Fc1lH5DDNpnq957L_2OomURCvf4P9heCx.jpg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -164,15 +167,21 @@ export default function IlTeamView() {
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
+              <Typography variant="h3" sx={{ mb: 3, fontWeight: 700, color: theme.palette.text.primary }}>
                 {t('team.page.professionals.title')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
+              <Typography 
+                sx={{ 
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  lineHeight: 1.8,
+                  color: theme.palette.text.primary
+                }}
+              >
                 {t('team.page.professionals.description')}
-              </HtmlText>
+              </Typography>
             </m.div>
           </Stack>
         </Grid>
@@ -197,15 +206,21 @@ export default function IlTeamView() {
               </m.div>
 
               <m.div variants={varFade().inLeft}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
+                <Typography variant="h3" sx={{ mb: 3, fontWeight: 700, color: theme.palette.text.primary }}>
                   {t('team.page.leadership.title')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inLeft}>
-                <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
+                <Typography 
+                  sx={{ 
+                    fontSize: { xs: '1rem', md: '1.1rem' },
+                    lineHeight: 1.8,
+                    color: theme.palette.text.primary
+                  }}
+                >
                   {t('team.page.leadership.description')}
-                </HtmlText>
+                </Typography>
               </m.div>
             </Stack>
           </Grid>
@@ -214,7 +229,7 @@ export default function IlTeamView() {
             <m.div variants={varFade().inRight}>
               <Image
                 alt="Leadership operativa"
-                src="/assets/images/team2.jpeg"
+                src="/assets/images/Y1SJAsVYAXrWc2wH_iRrkzF5MD3YeyMLN.jpg"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
               />
@@ -248,7 +263,9 @@ export default function IlTeamView() {
           variant="h3" 
           sx={{ 
             textAlign: 'center',
-            mb: 8
+            mb: 8,
+            fontWeight: 700,
+            color: theme.palette.text.primary
           }}
         >
           {t('team.page.organigramma.title')}
@@ -491,7 +508,7 @@ export default function IlTeamView() {
             <m.div variants={varFade().inLeft}>
               <Image
                 alt="Standard internazionali"
-                src="/assets/images/team3.png"
+                src="/assets/images/83WklLpbXcHLuOKL_sPAXRApn3fWJeNmz.jpg"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
               />
@@ -510,13 +527,19 @@ export default function IlTeamView() {
               </m.div>
 
               <m.div variants={varFade().inRight}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
+                <Typography variant="h3" sx={{ mb: 3, fontWeight: 700, color: theme.palette.text.primary }}>
                   {t('team.page.standards.title')}
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inRight}>
-                <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
+                <Typography 
+                  sx={{ 
+                    fontSize: { xs: '1rem', md: '1.1rem' },
+                    lineHeight: 1.8,
+                    color: theme.palette.text.primary
+                  }}
+                >
                   {t('team.page.standards.description')}
                 </Typography>
               </m.div>
@@ -543,13 +566,19 @@ export default function IlTeamView() {
             </m.div>
 
             <m.div variants={varFade().inLeft}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
+              <Typography variant="h3" sx={{ mb: 3, fontWeight: 700, color: theme.palette.text.primary }}>
                 {t('team.page.research.title')}
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inLeft}>
-              <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
+              <Typography 
+                sx={{ 
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  lineHeight: 1.8,
+                  color: theme.palette.text.primary
+                }}
+              >
                 {t('team.page.research.description')}
               </Typography>
             </m.div>
@@ -560,7 +589,7 @@ export default function IlTeamView() {
           <m.div variants={varFade().inRight}>
             <Image
               alt="Ricerca e sviluppo"
-              src="/assets/images/team4.jpg"
+              src="/assets/images/ZTEghfviryhm00Qt_kpYr-oh1MPC0u3zY.jpg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -577,13 +606,15 @@ export default function IlTeamView() {
         <m.div variants={varFade().inUp}>
           <Typography 
             sx={{ 
-              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              fontSize: { xs: '1rem', md: '1.1rem' },
               textAlign: 'center',
               mb: 4,
-              fontStyle: 'italic'
+              fontStyle: 'italic',
+              lineHeight: 1.8,
+              color: theme.palette.text.primary
             }}
           >
-            {t('team.page.quote')}
+            "{t('team.page.quote.text')}"
           </Typography>
         </m.div>
       </Container>
@@ -602,11 +633,20 @@ export default function IlTeamView() {
             backgroundColor: alpha(theme.palette.company.main, 0.08),
           }}
         >
-          <Typography variant="h3" sx={{ mb: 3 }}>
+          <Typography variant="h3" sx={{ mb: 3, fontWeight: 700, color: theme.palette.text.primary }}>
             {t('team.page.cta.title')}
           </Typography>
           
-          <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' }, mb: 4, maxWidth: '600px', mx: 'auto' }}>
+          <Typography 
+            sx={{ 
+              fontSize: { xs: '1rem', md: '1.1rem' }, 
+              mb: 4, 
+              maxWidth: '600px', 
+              mx: 'auto', 
+              lineHeight: 1.8,
+              color: theme.palette.text.primary
+            }}
+          >
             {t('team.page.cta.description')}
           </Typography>
           

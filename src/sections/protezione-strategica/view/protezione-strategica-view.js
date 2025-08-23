@@ -24,8 +24,6 @@ import { RouterLink } from 'src/routes/components';
 import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
-import HtmlText from 'src/components/html-text';
-import MainLayout from 'src/layouts/main';
 
 // ----------------------------------------------------------------------
 
@@ -43,7 +41,7 @@ export default function ProtezioneStrategicaView() {
         position: 'relative',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(/assets/images/about1.jpg)',
+        backgroundImage: 'url(/assets/images/us-army-blackhawk-middle-east-web.jpg)',
         '&:after': {
           top: 0,
           content: '""',
@@ -54,267 +52,54 @@ export default function ProtezioneStrategicaView() {
         },
       }}
     >
-      <Container
-        sx={{
-          height: 1,
-          position: 'relative',
-          zIndex: 10,
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Stack spacing={3} sx={{ textAlign: 'center', color: 'common.white', mx: 'auto' }}>
-          <m.div variants={varFade().inDown}>
-            <Typography variant="h1" component="h1">
-              {t('strategicProtection.hero.title')}
-            </Typography>
-          </m.div>
-
-          <m.div variants={varFade().inUp}>
-            <Typography variant="h5" sx={{ opacity: 0.8, maxWidth: 800, mx: 'auto' }}>
-              {t('strategicProtection.hero.subtitle')}
-            </Typography>
-          </m.div>
-
-          <m.div variants={varFade().inUp}>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={2}
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-            >
-              <Button
-                size="large"
-                variant="contained"
-                color="primary"
-                component={RouterLink}
-                href={paths.contact}
-                sx={{
-                  bgcolor: 'company.main',
-                  color: 'black',
-                  '&:hover': {
-                    bgcolor: (theme) => alpha(theme.palette.company.main, 0.8),
-                    color: 'black',
-                  },
-                }}
-                startIcon={<Iconify icon="carbon:send" />}
-              >
-                {t('strategicProtection.hero.cta')}
-              </Button>
-            </Stack>
-          </m.div>
-        </Stack>
-      </Container>
-    </Box>
-  );
-
-  // Breadcrumbs
-  const renderBreadcrumbs = (
-    <Container sx={{ pt: 5, pb: 3 }}>
-      <Breadcrumbs
-        sx={{
-          mb: { xs: 3, md: 5 },
-        }}
-      >
-        <Link component={RouterLink} href="/" color="inherit">
-          {t('common.home')}
-        </Link>
-        <Typography color="text.primary">{t('strategicProtection.breadcrumb')}</Typography>
-      </Breadcrumbs>
-    </Container>
-  );
-
-  // Main content
-  const renderContent = (
-    <Container sx={{ pb: 10 }}>
-      <MotionViewport>
-        <m.div variants={varFade().inUp}>
-          <Typography
-            variant="h3"
-            sx={{
-              mb: 3,
-              textAlign: 'center',
-              color: 'common.white',
-            }}
-          >
-            {t('strategicProtection.content.mainTitle')}
-          </Typography>
-        </m.div>
-
-        <Grid container spacing={5} sx={{ mb: 8 }}>
-          <Grid xs={12} md={6}>
-            <m.div variants={varFade().inLeft}>
-              <Stack spacing={3}>
-                <Typography variant="body1" sx={{ color: 'common.white', lineHeight: 1.7, fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                  <HtmlText text={t('strategicProtection.content.description1')} />
-                </Typography>
-                
-                <Typography variant="body1" sx={{ color: 'common.white', lineHeight: 1.7, fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                  <HtmlText text={t('strategicProtection.content.description2')} />
-                </Typography>
-              </Stack>
-            </m.div>
-          </Grid>
-
-          <Grid xs={12} md={6}>
-            <m.div variants={varFade().inRight}>
-              <Box
-                sx={{
-                  borderRadius: 2,
-                  overflow: 'hidden',
-                  position: 'relative',
-                  height: { xs: 280, md: 320 },
-                }}
-              >
-                <Image
-                  alt="Protezione Strategica"
-                  src="/assets/images/about2.jpg"
-                  sx={{ height: 1, width: 1 }}
-                />
-              </Box>
-            </m.div>
-          </Grid>
-        </Grid>
-
-        <m.div variants={varFade().inUp}>
-          <Typography
-            variant="body1"
+      <Container sx={{ height: 1, position: 'relative', zIndex: 9 }}>
+        <Box
+          sx={{
+            bottom: { md: 80 },
+            position: { md: 'absolute' },
+            width: 1,
+            textAlign: { xs: 'center', md: 'left' },
+            pt: { xs: 15, md: 0 },
+            pb: { xs: 8, md: 4 },
+            px: { xs: 2, md: 0 },
+          }}
+        >
+          <Typography 
+            variant="h1" 
+            component="h1" 
             sx={{ 
               color: 'common.white', 
-              lineHeight: 1.7, 
-              mb: 5,
-              textAlign: 'center',
-              fontSize: { xs: '1.1rem', md: '1.5rem' }
+              textTransform: 'uppercase', 
+              mb: 3,
+              fontWeight: 800,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem', lg: '4rem' },
+              lineHeight: { xs: 1.2, md: 1.1 },
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
           >
-            <HtmlText text={t('strategicProtection.content.description3')} />
+            {t('strategicProtection.hero.title')}
           </Typography>
-        </m.div>
 
-        {/* Services Section */}
-        <m.div variants={varFade().inUp}>
-          <Container maxWidth="lg">
-            <Typography
-              variant="h3"
-              sx={{
-                mb: 8,
-                textAlign: 'center',
-                color: 'common.white',
-                fontSize: { xs: '2rem', md: '2.5rem' },
-                fontWeight: 700,
-              }}
-            >
-              {t('strategicProtection.services.title')}
-            </Typography>
-
-            <Grid container spacing={4} alignItems="stretch" sx={{ minHeight: { md: 350 } }}>
-              {t('strategicProtection.services.items', { returnObjects: true })?.map((service, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
-                  <Card
-                    sx={{
-                      p: 4,
-                      height: '100%',
-                      width: '100%',
-                      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                      backdropFilter: 'blur(10px)',
-                      border: '2px solid #FFD700',
-                      borderRadius: 2,
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                      '&:hover': {
-                        transform: 'translateY(-8px)',
-                        borderColor: '#FFA500',
-                        boxShadow: '0 20px 40px rgba(255, 215, 0, 0.15)',
-                      },
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      textAlign: 'center',
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        width: 80,
-                        height: 80,
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #FFD700, #FFA500)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        mb: 3,
-                        boxShadow: '0 8px 24px rgba(255, 215, 0, 0.3)',
-                      }}
-                    >
-                      <Iconify 
-                        icon={
-                          index === 0 ? 'carbon:analytics' :
-                          index === 1 ? 'carbon:security' :
-                          index === 2 ? 'carbon:intelligence' :
-                          index === 3 ? 'carbon:security-services' :
-                          'carbon:education'
-                        } 
-                        sx={{ 
-                          color: 'common.black', 
-                          width: 36, 
-                          height: 36,
-                          fontWeight: 'bold'
-                        }} 
-                      />
-                    </Box>
-                    
-                    <Typography 
-                      variant="h5" 
-                      sx={{ 
-                        color: 'common.white',
-                        fontWeight: 700,
-                        fontSize: { xs: '1.25rem', md: '1.5rem' },
-                        lineHeight: 1.3,
-                        mb: 2,
-                      }}
-                    >
-                      {service}
-                    </Typography>
-                  </Card>
-                </Grid>
-              )) || []}
-            </Grid>
-          </Container>
-        </m.div>
-
-        {/* CTA Section */}
-        <m.div variants={varFade().inUp}>
-          <Box
+          <Typography
+            variant="h4"
             sx={{
-              mt: 8,
-              p: 5,
-              textAlign: 'center',
-              borderRadius: 2,
-              bgcolor: alpha(theme.palette.primary.main, 0.08),
-              border: `1px solid ${alpha(theme.palette.primary.main, 0.12)}`,
+              color: 'common.white',
+              fontWeight: theme.typography.fontWeightMedium,
+              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.5rem' },
+              lineHeight: { xs: 1.4, md: 1.3 },
+              maxWidth: { xs: '100%', md: '80%' },
+              textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
             }}
           >
-            <Typography
-              variant="h3"
-              sx={{
-                mb: 2,
-                color: 'common.white',
-              }}
-            >
-              {t('strategicProtection.cta.title')}
-            </Typography>
+            {t('strategicProtection.hero.subtitle')}
+          </Typography>
 
-            <Typography
-              variant="body1"
-              sx={{
-                mb: 4,
-                color: 'common.white',
-                maxWidth: 600,
-                mx: 'auto',
-                fontSize: { xs: '1.1rem', md: '1.5rem' },
-                lineHeight: 1.7
-              }}
-            >
-              {t('strategicProtection.cta.description')}
-            </Typography>
-
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={2}
+            sx={{ mt: 5 }}
+            justifyContent={{ xs: 'center', md: 'flex-start' }}
+          >
             <Button
               size="large"
               variant="contained"
@@ -331,17 +116,177 @@ export default function ProtezioneStrategicaView() {
               }}
               startIcon={<Iconify icon="carbon:send" />}
             >
-              {t('strategicProtection.cta.button')}
+              {t('strategicProtection.hero.cta')}
             </Button>
-          </Box>
-        </m.div>
-      </MotionViewport>
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
+  );
+
+  // Breadcrumbs
+  const renderBreadcrumbs = (
+    <Box
+      sx={{
+        py: 2,
+        bgcolor: theme.palette.background.neutral,
+      }}
+    >
+      <Container>
+        <Breadcrumbs separator={<Iconify icon="carbon:chevron-right" />}>
+          <Link href="/" component={RouterLink} color="inherit">
+            {t('navigation.home')}
+          </Link>
+          <Typography color="text.primary">{t('strategicProtection.breadcrumb')}</Typography>
+        </Breadcrumbs>
+      </Container>
+    </Box>
+  );
+
+  // Main content section (bianco)
+  const renderContent = (
+    <Container component={MotionViewport} sx={{ py: { xs: 10, md: 15 } }}>
+      <Grid container spacing={5} alignItems="center">
+        <Grid xs={12} md={7}>
+          <Stack spacing={4}>
+            <m.div variants={varFade().inLeft}>
+              <Typography 
+                variant="h3" 
+                sx={{ 
+                  mb: 2,
+                  fontWeight: 700,
+                  color: theme.palette.text.primary
+                }}
+              >
+                {t('strategicProtection.content.mainTitle')}
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inLeft}>
+              <Typography 
+                sx={{ 
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  lineHeight: 1.8,
+                  whiteSpace: 'pre-line',
+                  color: theme.palette.text.primary,
+                  mb: 3
+                }}
+              >
+                {t('strategicProtection.content.description1')}
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inLeft}>
+              <Typography 
+                sx={{ 
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  lineHeight: 1.8,
+                  whiteSpace: 'pre-line',
+                  color: theme.palette.text.primary,
+                  mb: 3
+                }}
+              >
+                {t('strategicProtection.content.description2')}
+              </Typography>
+            </m.div>
+          </Stack>
+        </Grid>
+
+        <Grid xs={12} md={5}>
+          <m.div variants={varFade().inRight}>
+            <Image
+              alt="Protezione Strategica"
+              src="/assets/images/glowing-europe-sunrise-space-illuminated-cities-roads-earth-day-hour-353108841.webp"
+              ratio="4/3"
+              sx={{ borderRadius: 2 }}
+            />
+          </m.div>
+        </Grid>
+      </Grid>
     </Container>
   );
 
-  // Standards and Certifications section
+  // Overview section with services list (grigio neutro per alternanza)
+  const renderOverview = (
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
+      <Container component={MotionViewport}>
+        <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
+          <Grid xs={12} md={6}>
+            <m.div variants={varFade().inLeft}>
+              <Typography 
+                variant="h3" 
+                sx={{ 
+                  mb: 3,
+                  fontWeight: 700,
+                  color: theme.palette.text.primary
+                }}
+              >
+                {t('strategicProtection.overview.title')}
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: theme.palette.text.primary,
+                  mb: 4,
+                  lineHeight: 1.8,
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  whiteSpace: 'pre-line',
+                }}
+              >
+                {t('strategicProtection.overview.description')}
+              </Typography>
+
+              {/* Services as bulleted list */}
+              <Typography 
+                variant="h4" 
+                sx={{ 
+                  mb: 2, 
+                  color: 'company.main',
+                  fontWeight: 700
+                }}
+              >
+                {t('strategicProtection.services.title')}
+              </Typography>
+              <List sx={{ pl: 0 }}>
+                {t('strategicProtection.services.items', { returnObjects: true })?.map((service, index) => (
+                  <ListItem key={index} sx={{ px: 0, py: 0.5 }}>
+                    <ListItemIcon sx={{ minWidth: 36 }}>
+                      <Iconify icon="carbon:checkmark" sx={{ color: 'company.main', width: 20, height: 20 }} />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary={service}
+                      primaryTypographyProps={{
+                        sx: { 
+                          fontSize: { xs: '1rem', md: '1.1rem' },
+                          fontWeight: 500,
+                          color: theme.palette.text.primary
+                        }
+                      }}
+                    />
+                  </ListItem>
+                )) || []}
+              </List>
+            </m.div>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <m.div variants={varFade().inRight}>
+              <Image
+                alt="Expertise in Security"
+                src="/assets/images/Neptune-P2P-Group-Risk-Map-Q1-Q2.png"
+                ratio="4/3"
+                sx={{ borderRadius: 2 }}
+              />
+            </m.div>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+
+  // Standards and Certifications section (bianco)
   const renderCertifications = (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: theme.palette.background.neutral }}>
+    <Box sx={{ py: { xs: 10, md: 15 } }}>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
           <Typography
@@ -364,7 +309,8 @@ export default function ProtezioneStrategicaView() {
             sx={{ 
               textAlign: 'center',
               mb: 3,
-              color: 'common.white'
+              fontWeight: 700,
+              color: theme.palette.text.primary
             }}
           >
             {t('strategicProtection.certifications.title')}
@@ -374,13 +320,13 @@ export default function ProtezioneStrategicaView() {
         <m.div variants={varFade().inUp}>
           <Typography 
             sx={{ 
-              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              fontSize: { xs: '1rem', md: '1.1rem' },
               textAlign: 'center',
               maxWidth: '900px',
               mx: 'auto',
               mb: 6,
-              lineHeight: 1.7,
-              color: 'common.white'
+              lineHeight: 1.8,
+              color: theme.palette.text.primary
             }}
           >
             {t('strategicProtection.certifications.subtitle')}
@@ -410,7 +356,7 @@ export default function ProtezioneStrategicaView() {
                     <Typography 
                       variant="h6" 
                       sx={{ 
-                        color: 'common.white',
+                        color: theme.palette.text.primary,
                         fontWeight: 'fontWeightBold',
                         mb: 1,
                         fontSize: { xs: '1rem', md: '1.1rem' }
@@ -421,7 +367,7 @@ export default function ProtezioneStrategicaView() {
                     <Typography 
                       variant="body2" 
                       sx={{ 
-                        color: 'primary.main',
+                        color: 'company.main',
                         fontSize: { xs: '0.8rem', md: '0.85rem' },
                         fontWeight: 500,
                         mb: 2
@@ -432,7 +378,7 @@ export default function ProtezioneStrategicaView() {
                     <Typography 
                       variant="body2" 
                       sx={{ 
-                        color: 'common.white',
+                        color: theme.palette.text.secondary,
                         fontSize: { xs: '0.85rem', md: '0.9rem' },
                         lineHeight: 1.5,
                         flexGrow: 1
@@ -450,12 +396,75 @@ export default function ProtezioneStrategicaView() {
     </Box>
   );
 
+  // Call to action (grigio neutro per alternanza)
+  const renderCTA = (
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: 'background.neutral' }}>
+      <Container component={MotionViewport}>
+        <m.div variants={varFade().inUp}>
+          <Box
+            sx={{
+              textAlign: 'center',
+              p: { xs: 4, md: 6 },
+              borderRadius: 2,
+              backgroundColor: alpha(theme.palette.company.main, 0.08),
+            }}
+          >
+          <Typography 
+            variant="h3" 
+            sx={{ 
+              mb: 3,
+              fontWeight: 700,
+              color: theme.palette.text.primary
+            }}
+          >
+            {t('strategicProtection.cta.title')}
+          </Typography>
+          
+          <Typography 
+            sx={{ 
+              fontSize: { xs: '1rem', md: '1.1rem' }, 
+              mb: 4, 
+              maxWidth: '600px', 
+              mx: 'auto', 
+              lineHeight: 1.8,
+              color: theme.palette.text.primary
+            }}
+          >
+            {t('strategicProtection.cta.description')}
+          </Typography>
+          
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            component={RouterLink}
+            href={paths.contact}
+            sx={{
+              bgcolor: 'company.main',
+              color: 'black',
+              '&:hover': {
+                bgcolor: (theme) => alpha(theme.palette.company.main, 0.8),
+                color: 'black',
+              },
+            }}
+            startIcon={<Iconify icon="carbon:send" />}
+          >
+            {t('strategicProtection.cta.button')}
+            </Button>
+          </Box>
+        </m.div>
+      </Container>
+    </Box>
+  );
+
   return (
-    <MainLayout>
+    <>
       {renderHero}
       {renderBreadcrumbs}
       {renderContent}
+      {renderOverview}
       {renderCertifications}
-    </MainLayout>
+      {renderCTA}
+    </>
   );
 }
