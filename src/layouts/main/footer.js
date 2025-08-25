@@ -42,6 +42,11 @@ export default function Footer() {
           textAlign: {xs: 'center', md: 'unset'},
         }}
       >
+        {/* Logo Section */}
+        <Box sx={{ mb: 5, textAlign: { xs: 'center', md: 'left' } }}>
+          <Logo />
+        </Box>
+
         <Grid
           container
           justifyContent={{

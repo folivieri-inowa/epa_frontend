@@ -73,8 +73,10 @@ export default function LuxurySecurityView() {
               color: 'common.white', 
               textTransform: 'uppercase', 
               mb: 3,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
-              lineHeight: { xs: 1.2, md: 1.1 }
+              fontWeight: 800,
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.8rem', lg: '3.2rem' },
+              lineHeight: { xs: 1.2, md: 1.1 },
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
           >
             {t('luxurySecurity.hero.title')}
@@ -85,12 +87,13 @@ export default function LuxurySecurityView() {
             sx={{
               color: 'common.white',
               fontWeight: theme.typography.fontWeightMedium,
-              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+              fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.4rem' },
               lineHeight: { xs: 1.4, md: 1.3 },
-              maxWidth: { xs: '100%', md: '80%' }
+              maxWidth: { xs: '100%', md: '70%' },
+              textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
             }}
           >
-            {t('luxurySecurity.hero.subtitle')}
+            {t('luxurySecurity.hero.shortSubtitle')}
           </Typography>
 
           <Stack
@@ -172,9 +175,21 @@ export default function LuxurySecurityView() {
             
             <Typography 
               sx={{ 
+                fontSize: { xs: '1.2rem', md: '1.3rem' },
+                lineHeight: 1.7,
+                color: 'text.primary',
+                mb: 4,
+                fontWeight: 500
+              }}
+            >
+              {t('luxurySecurity.hero.subtitle')}
+            </Typography>
+            
+            <Typography 
+              sx={{ 
                 fontSize: { xs: '1.1rem', md: '1.25rem' },
                 lineHeight: 1.8,
-                color: 'common.white'
+                color: 'text.primary'
               }}
             >
               {t('luxurySecurity.introduction.description')}

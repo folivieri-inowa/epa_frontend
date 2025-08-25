@@ -1,4 +1,5 @@
 import { HomeView } from 'src/sections/home/view';
+import PageWithLoading from 'src/components/page-with-loading';
 
 // ----------------------------------------------------------------------
 
@@ -9,5 +10,9 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return <HomeView />;
+  return (
+    <PageWithLoading>
+      <HomeView />
+    </PageWithLoading>
+  );
 }

@@ -1,3 +1,4 @@
+import PageWithLoading from 'src/components/page-with-loading';
 import ChiSiamoView from 'src/sections/chi-siamo/view/chi-siamo-view';
 
 // ----------------------------------------------------------------------
@@ -9,5 +10,9 @@ export const metadata = {
 };
 
 export default function ChiSiamoPage() {
-  return <ChiSiamoView />;
+  return (
+    <PageWithLoading>
+      <ChiSiamoView />
+    </PageWithLoading>
+  );
 }

@@ -33,6 +33,10 @@ export default function LanguageSwitcher() {
   const handleChangeLang = useCallback((newLang) => {
     i18n.changeLanguage(newLang.value);
     handleClosePopover();
+    // Forza il refresh della pagina per assicurare che tutte le traduzioni siano aggiornate
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }, [i18n, handleClosePopover]);
 
   return (

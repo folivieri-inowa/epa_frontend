@@ -23,6 +23,10 @@ export default function LanguagePopover() {
     (newLang) => {
       onChangeLang(newLang);
       popover.onClose();
+      // Forza il refresh della pagina per assicurare che tutte le traduzioni siano aggiornate
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     },
     [onChangeLang, popover]
   );

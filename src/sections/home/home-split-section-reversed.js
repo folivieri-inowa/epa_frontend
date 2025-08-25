@@ -80,7 +80,7 @@ export default function HomeSplitSectionReversed() {
               <m.div variants={varFade().inUp}>
                 <Button
                   component={RouterLink}
-                  href={paths.eventi_vip}
+                  href={paths.eventi}
                   color="primary"
                   size="large"
                   variant="contained"

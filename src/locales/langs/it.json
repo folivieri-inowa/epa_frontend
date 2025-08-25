@@ -116,7 +116,7 @@
       "title": "La sicurezza non è un prodotto, ma un processo continuo di evoluzione e miglioramento"
     },
     "split_section_reversed": {
-      "title": "Eventi VIP e Protezione Esecutiva",
+      "title": "Eventi VIP",
       "description": "Garantiamo massima discrezione e sicurezza per eventi esclusivi e protezione esecutiva di alto profilo. Dalla pianificazione all'esecuzione, ogni dettaglio è gestito con precisione millimetrica.",
       "button": "Scopri di più"
     },
@@ -346,6 +346,7 @@
     "breadcrumb": "Protezione Strategica",
     "hero": {
       "title": "Protezione Strategica Contro Le Minacce Globali",
+      "shortSubtitle": "Soluzioni avanzate di sicurezza per proteggere ciò che conta di più",
       "subtitle": "Soluzioni avanzate di sicurezza Antiterrorismo e Anti crimine per istituzioni, aziende, corporate, infrastrutture pubbliche e private e siti sensibili, progettate per prevenire, proteggere e rispondere alle minacce, conformi ai più alti standard internazionali.",
       "cta": "Scopri i Nostri Servizi"
     },
@@ -494,6 +495,7 @@
   "luxurySecurity": {
     "hero": {
       "title": "Luxury Security Management",
+      "shortSubtitle": "Sicurezza d'élite per Hotel di Lusso e Dimore Private",
       "subtitle": "Sicurezza d'élite per Hotel di Lusso e Dimore Private. Trasformiamo il vostro Hotel e proteggiamo la vostra famiglia con servizi di security management su misura, dove sicurezza e protezione diventano un punto di forza attrattivo per una clientela VIP, preservando classe, eleganza e discrezione.",
       "cta": "Richiedi Consulenza"
     },

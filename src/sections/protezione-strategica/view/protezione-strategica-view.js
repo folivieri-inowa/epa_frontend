@@ -72,7 +72,7 @@ export default function ProtezioneStrategicaView() {
               textTransform: 'uppercase', 
               mb: 3,
               fontWeight: 800,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem', lg: '4rem' },
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.8rem', lg: '3.2rem' },
               lineHeight: { xs: 1.2, md: 1.1 },
               textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}
@@ -85,13 +85,13 @@ export default function ProtezioneStrategicaView() {
             sx={{
               color: 'common.white',
               fontWeight: theme.typography.fontWeightMedium,
-              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.5rem' },
+              fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.4rem' },
               lineHeight: { xs: 1.4, md: 1.3 },
-              maxWidth: { xs: '100%', md: '80%' },
+              maxWidth: { xs: '100%', md: '70%' },
               textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
             }}
           >
-            {t('strategicProtection.hero.subtitle')}
+            {t('strategicProtection.hero.shortSubtitle')}
           </Typography>
 
           <Stack
@@ -165,6 +165,20 @@ export default function ProtezioneStrategicaView() {
             <m.div variants={varFade().inLeft}>
               <Typography 
                 sx={{ 
+                  fontSize: { xs: '1.1rem', md: '1.2rem' },
+                  lineHeight: 1.7,
+                  color: theme.palette.text.primary,
+                  mb: 4,
+                  fontWeight: 500
+                }}
+              >
+                {t('strategicProtection.hero.subtitle')}
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inLeft}>
+              <Typography 
+                sx={{ 
                   fontSize: { xs: '1rem', md: '1.1rem' },
                   lineHeight: 1.8,
                   whiteSpace: 'pre-line',
@@ -193,12 +207,15 @@ export default function ProtezioneStrategicaView() {
         </Grid>
 
         <Grid xs={12} md={5}>
-          <m.div variants={varFade().inRight}>
+                    <m.div variants={varFade().inRight}>
             <Image
-              alt="Protezione Strategica"
-              src="/assets/images/glowing-europe-sunrise-space-illuminated-cities-roads-earth-day-hour-353108841.webp"
+              alt="Protezione Strategica - Mappa Rischi Globali"
+              src="/assets/images/Neptune-P2P-Group-Risk-Map-Q1-Q2.png"
               ratio="4/3"
-              sx={{ borderRadius: 2 }}
+              sx={{
+                borderRadius: 2,
+                boxShadow: (theme) => theme.customShadows.z24,
+              }}
             />
           </m.div>
         </Grid>
@@ -213,6 +230,20 @@ export default function ProtezioneStrategicaView() {
         <Grid container spacing={{ xs: 3, md: 5 }} alignItems="center">
           <Grid xs={12} md={6}>
             <m.div variants={varFade().inLeft}>
+              <Image
+                alt="Sicurezza Strategica Globale"
+                src="/assets/images/1659354288823-1.jpg"
+                ratio="4/3"
+                sx={{ 
+                  borderRadius: 2,
+                  boxShadow: (theme) => theme.customShadows.z24,
+                }}
+              />
+            </m.div>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <m.div variants={varFade().inRight}>
               <Typography 
                 variant="h3" 
                 sx={{ 
@@ -266,17 +297,6 @@ export default function ProtezioneStrategicaView() {
                   </ListItem>
                 )) || []}
               </List>
-            </m.div>
-          </Grid>
-
-          <Grid xs={12} md={6}>
-            <m.div variants={varFade().inRight}>
-              <Image
-                alt="Expertise in Security"
-                src="/assets/images/Neptune-P2P-Group-Risk-Map-Q1-Q2.png"
-                ratio="4/3"
-                sx={{ borderRadius: 2 }}
-              />
             </m.div>
           </Grid>
         </Grid>

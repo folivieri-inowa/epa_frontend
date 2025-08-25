@@ -218,7 +218,7 @@
       "button": "Learn More"
     },
     "split_section_reversed": {
-      "title": "VIP Events and Executive Protection",
+      "title": "VIP Events",
       "description": "We guarantee maximum discretion and security for exclusive events and high-profile executive protection. From planning to execution, every detail is managed with millimetric precision.",
       "button": "Learn More"
     },
@@ -769,6 +769,7 @@
   "luxurySecurity": {
     "hero": {
       "title": "Luxury Security Management",
+      "shortSubtitle": "Elite security for luxury hotels and private residences",
       "subtitle": "Elite security for luxury hotels and private residences. We transform your hotel and protect your family with custom security management services, where security and protection become an attractive strength for VIP clientele, preserving class, elegance and discretion.",
       "cta": "Request Consultation"
     },
@@ -852,6 +853,7 @@
     "breadcrumb": "Strategic Protection",
     "hero": {
       "title": "Strategic Protection Against Global Threats",
+      "shortSubtitle": "Advanced security solutions to protect what matters most",
       "subtitle": "Advanced security solutions for Counter-terrorism and Anti-crime for institutions, companies, corporate, public and private infrastructures and sensitive sites, designed to prevent, protect and respond to threats, compliant with the highest international standards.",
       "cta": "Discover Our Services"
     },
@@ -920,6 +922,32 @@
       "title": "Do You Need Strategic Protection?",
       "description": "Contact our experts for personalized consultation on our advanced strategic protection services.",
       "button": "Contact Us Now"
+    }
+  },
+  "footer": {
+    "description": "Consulting, analysis and training company in the security, defense and physical and technological protection sector.",
+    "certifications_title": "Our Certifications",
+    "contact": {
+      "headline": "Contact",
+      "email": "Email: info@protectionagency.it",
+      "phone": "Phone: +39 392 926 4907"
+    },
+    "copyright": "© 2025 Oracle Executive Protection. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "company_description": "Oracle Executive Protection: your trusted partner for global security. Over 30 years of experience in protecting executives, VIPs and companies worldwide.",
+    "quick_links": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Our Services",
+      "executive_protection": "Executive Protection",
+      "strategic_protection": "Strategic Protection",
+      "luxury_security": "Luxury Security",
+      "travel_risk": "Travel Risk Management"
     }
   }
 }

@@ -1,3 +1,4 @@
+import PageWithLoading from 'src/components/page-with-loading';
 import { ContactView } from '../../sections/contact/view';
 
 // ----------------------------------------------------------------------
@@ -9,6 +10,9 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  // Non passiamo più dati statici, i componenti useranno le traduzioni direttamente
-  return <ContactView />;
+  return (
+    <PageWithLoading>
+      <ContactView />
+    </PageWithLoading>
+  );
 }

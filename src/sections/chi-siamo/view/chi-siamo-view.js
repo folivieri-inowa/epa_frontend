@@ -429,7 +429,7 @@ export default function ChiSiamoView() {
       </Container>
     </Box>
   );  return (
-    <MainLayout>
+    <>
       {renderHero}
       {renderBreadcrumbs}
       {renderContent}
@@ -438,6 +438,6 @@ export default function ChiSiamoView() {
       {renderTeam}
       {renderStandards}
       {renderCTA}
-    </MainLayout>
+    </>
   );
 }

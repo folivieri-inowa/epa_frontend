@@ -1,3 +1,4 @@
+import PageWithLoading from 'src/components/page-with-loading';
 import { TravelRiskManagementView } from 'src/sections/travel-risk-management/view';
 
 // ----------------------------------------------------------------------
@@ -9,5 +10,9 @@ export const metadata = {
 };
 
 export default function TravelRiskManagementPage() {
-  return <TravelRiskManagementView />;
+  return (
+    <PageWithLoading>
+      <TravelRiskManagementView />
+    </PageWithLoading>
+  );
 }

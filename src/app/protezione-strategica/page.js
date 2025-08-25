@@ -1,4 +1,4 @@
-import MainLayout from 'src/layouts/main';
+import PageWithLoading from 'src/components/page-with-loading';
 import ProtezioneStrategicaView from 'src/sections/protezione-strategica/view/protezione-strategica-view';
 
 // ----------------------------------------------------------------------
@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function ProtezioneStrategicaPage() {
   return (
-    <MainLayout>
+    <PageWithLoading>
       <ProtezioneStrategicaView />
-    </MainLayout>
+    </PageWithLoading>
   );
 }

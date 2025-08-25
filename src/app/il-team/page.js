@@ -1,3 +1,4 @@
+import PageWithLoading from 'src/components/page-with-loading';
 import IlTeamView from 'src/sections/il-team/view/il-team-view';
 
 // ----------------------------------------------------------------------
@@ -10,6 +11,8 @@ export const metadata = {
 
 export default function IlTeamPage() {
   return (
-    <IlTeamView />
+    <PageWithLoading>
+      <IlTeamView />
+    </PageWithLoading>
   );
 }

@@ -20,16 +20,13 @@ import { varFade, MotionContainer } from 'src/components/animate';
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
-  ...bgGradient({
-    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.9 : 0.94),
-    imgUrl: '/assets/background/overlay_3.jpg',
-  }),
   width: '100%',
   height: '60vh',
   position: 'relative',
   paddingTop: HEADER.H_MOBILE,
   zIndex: 0,
   marginBottom: 0,
+  overflow: 'hidden',
   [theme.breakpoints.up('md')]: {
     top: 0,
     left: 0,
@@ -37,6 +34,26 @@ const StyledRoot = styled('div')(({ theme }) => ({
     paddingTop: HEADER.H_DESKTOP,
     height: '70vh',
   },
+}));
+
+const StyledVideoBackground = styled('video')(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  zIndex: -2,
+}));
+
+const StyledVideoOverlay = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: alpha(theme.palette.common.black, 0.4),
+  zIndex: -1,
 }));
 
 const StyledWrapper = styled('div')(({ theme }) => ({
@@ -58,13 +75,14 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   lineHeight: 1.1,
   fontWeight: 900,
   marginBottom: 16,
-  letterSpacing: 8,
+  letterSpacing: 6,
   textAlign: 'left',
   backgroundSize: '400%',
-  fontSize: `${54 / 16}rem`,
+  fontSize: `${42 / 16}rem`,
   fontFamily: theme.typography.fontSecondaryFamily,
   [theme.breakpoints.up('md')]: {
     fontSize: `${84 / 16}rem`,
+    letterSpacing: 8,
   },
 }));
 
@@ -181,9 +199,10 @@ export default function HomeHero() {
         <Typography
           variant="h6"
           sx={{
-            color: 'text.secondary',
+            color: 'common.white',
             mb: 2,
-            textAlign: 'left'
+            textAlign: 'left',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
           }}
         >
           {t('home.hero.title')}
@@ -197,7 +216,9 @@ export default function HomeHero() {
             repeat: Infinity,
           }}
           sx={{ 
-            overflow: 'visible'
+            overflow: 'visible',
+            color: 'common.white',
+            textShadow: '3px 3px 6px rgba(0,0,0,0.7)',
           }}
         >
           {t('home.hero.subtitle')}
@@ -230,12 +251,20 @@ export default function HomeHero() {
           ...(hide && {
             opacity: 0,
           }),
-          ...bgGradient({
-            color: alpha(theme.palette.background.default, 0.85),
-            imgUrl: '/assets/background/home1.jpg',
-          }),
         }}
       >
+        <StyledVideoBackground
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/assets/videos/bangkok-hero.mp4" type="video/mp4" />
+          {/* Fallback per browser che non supportano il video */}
+        </StyledVideoBackground>
+        <StyledVideoOverlay />
+        
         <StyledWrapper>
           <Container component={MotionContainer} sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
             <Grid container columnSpacing={{ md: 10 }} sx={{ height: 'auto' }}>
