@@ -178,7 +178,7 @@ export default function PrivacyPolicyView() {
             <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 3 }}>
               Hai diritto a: accesso, rettifica, cancellazione, limitazione, portabilità dei dati 
               e opposizione al trattamento. Per esercitare i tuoi diritti contattaci a: 
-              info@oracleprotectionagency.it
+  info@oracleprotection.it
             </Typography>
           </m.div>
 
@@ -517,7 +517,7 @@ export default function PrivacyPolicyView() {
               <Typography variant="body2">
                 Puoi esercitare i tuoi diritti contattandoci all'indirizzo: 
                 <Link href="mailto:info@oracleprotectionagency.it" sx={{ ml: 1 }}>
-                  info@oracleprotectionagency.it
+      info@oracleprotection.it
                 </Link>
               </Typography>
             </Box>
