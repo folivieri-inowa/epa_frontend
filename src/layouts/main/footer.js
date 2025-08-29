@@ -22,7 +22,7 @@ export default function Footer() {
     {
       headline: t('footer.contact.headline'),
       children: [
-        { name: t('footer.contact.email'), href: 'mailto:info@oracleprotectionagency.it' },
+        { name: t('footer.contact.email'), href: 'mailto:info@oracleprotection.it' },
         { name: t('footer.contact.phone'), href: 'tel:+393929264907'}
       ],
     },

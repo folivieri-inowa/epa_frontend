@@ -98,7 +98,7 @@ export default function PrivacyPolicyView() {
                 Oracle Executive Protection
               </Typography>
               <Typography variant="body2" sx={{ mb: 0.5 }}>
-                Email: info@oracleprotectionagency.it
+                Email: info@oracleprotection.it
               </Typography>
               <Typography variant="body2">
                 Telefono: +39 392 926 4907
@@ -190,7 +190,7 @@ export default function PrivacyPolicyView() {
                 limitazione del trattamento, portabilità dei dati e opposizione.
               </Typography>
               <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'text.primary' }}>
-                Per esercitare i tuoi diritti contattaci a: info@oracleprotectionagency.it
+                Per esercitare i tuoi diritti contattaci a: info@oracleprotection.it
               </Typography>
             </Paper>
           </div>
@@ -231,7 +231,7 @@ export default function PrivacyPolicyView() {
             </Typography>
             <Stack spacing={1}>
               <Typography variant="body2" sx={{ color: 'common.black' }}>
-                <strong>Email:</strong> info@oracleprotectionagency.it
+                <strong>Email:</strong> info@oracleprotection.it
               </Typography>
               <Typography variant="body2" sx={{ color: 'common.black' }}>
                 <strong>Telefono:</strong> +39 392 926 4907
@@ -333,7 +333,7 @@ export default function PrivacyPolicyView() {
                 Oracle Executive Protection
               </Typography>
               <Typography variant="body2" sx={{ mb: 0.5 }}>
-                Email: info@oracleprotectionagency.it
+                Email: info@oracleprotection.it
               </Typography>
               <Typography variant="body2">
                 Telefono: +39 392 926 4907
@@ -425,7 +425,7 @@ export default function PrivacyPolicyView() {
                 limitazione del trattamento, portabilità dei dati e opposizione.
               </Typography>
               <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-                Per esercitare i tuoi diritti contattaci a: info@oracleprotectionagency.it
+                Per esercitare i tuoi diritti contattaci a: info@oracleprotection.it
               </Typography>
             </Paper>
           </m.div>
@@ -467,7 +467,7 @@ export default function PrivacyPolicyView() {
               </Typography>
               <Stack spacing={1}>
                 <Typography variant="body2">
-                  <strong>Email:</strong> info@oracleprotectionagency.it
+                  <strong>Email:</strong> info@oracleprotection.it
                 </Typography>
                 <Typography variant="body2">
                   <strong>Telefono:</strong> +39 392 926 4907

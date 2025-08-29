@@ -54,7 +54,7 @@ export default function PrivacyPolicyView() {
               Oracle Executive Protection
             </Typography>
             <Typography variant="body2" sx={{ mb: 0.5 }}>
-              Email: info@oracleprotectionagency.it
+              Email: info@oracleprotection.it
             </Typography>
             <Typography variant="body2">
               Telefono: +39 392 926 4907
@@ -130,7 +130,7 @@ export default function PrivacyPolicyView() {
               portabilità e opposizione al trattamento dei tuoi dati.
             </Typography>
             <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-              Contattaci: info@oracleprotectionagency.it
+              Contattaci: info@oracleprotection.it
             </Typography>
           </Box>
         </Box>
@@ -165,7 +165,7 @@ export default function PrivacyPolicyView() {
             Per questioni sulla privacy o esercitare i tuoi diritti:
           </Typography>
           <Typography variant="body2" sx={{ mb: 1, color: 'inherit' }}>
-            <strong>Email:</strong> info@oracleprotectionagency.it
+            <strong>Email:</strong> info@oracleprotection.it
           </Typography>
           <Typography variant="body2" sx={{ mb: 2, color: 'inherit' }}>
             <strong>Telefono:</strong> +39 392 926 4907

@@ -40,7 +40,7 @@ export async function POST(request) {
       port: 465,
       secure: true, // SSL/TLS
       auth: {
-        user: process.env.EMAIL_USER, // info@oracleprotectionagency.it
+        user: process.env.EMAIL_USER, // info@oracleprotection.it
         pass: process.env.EMAIL_PASS, // Password email Aruba
       },
       // Opzioni aggiuntive per Aruba
@@ -106,7 +106,7 @@ IP: ${request.headers.get('x-forwarded-for') || 'N/A'}
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
       try {
         await transporter.sendMail(mailOptions);
-        console.log('✅ Email inviata con successo a:', 'info@oracleprotectionagency.it');
+        console.log('✅ Email inviata con successo a:', 'info@oracleprotection.it');
       } catch (emailError) {
         console.error('❌ Errore invio email:', emailError);
         // Continua comunque e logga i dati
