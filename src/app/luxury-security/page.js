@@ -1,5 +1,6 @@
 import PageWithLoading from 'src/components/page-with-loading';
 import LuxurySecurityView from 'src/sections/luxury-security/view';
+import MainLayout from 'src/layouts/main';
 
 export const metadata = {
   title: 'Luxury Security Management | Sicurezza per Hotel di Lusso e Dimore Private',
@@ -10,7 +11,9 @@ export const metadata = {
 export default function LuxurySecurityPage() {
   return (
     <PageWithLoading>
-      <LuxurySecurityView />
+      <MainLayout>
+        <LuxurySecurityView />
+      </MainLayout>
     </PageWithLoading>
   );
 }

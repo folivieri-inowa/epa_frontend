@@ -25,7 +25,6 @@ import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
 import HtmlText from 'src/components/html-text';
-import MainLayout from 'src/layouts/main';
 
 // ----------------------------------------------------------------------
 
@@ -208,7 +207,7 @@ export default function LuxurySecurityView() {
           <m.div variants={varFade().inLeft}>
             <Image
               alt="Risk Assessment"
-              src="/assets/images/83WklLpbXcHLuOKL_sPAXRApn3fWJeNmz.jpg"
+              src="/assets/images/WhatsApp Image 2025-08-27 at 19.22.51.jpeg"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -413,7 +412,7 @@ export default function LuxurySecurityView() {
           <m.div variants={varFade().inRight}>
             <Image
               alt="Residence Assessment"
-              src="/assets/images/Y1SJAsVYAXrWc2wH_iRrkzF5MD3YeyMLN.jpg"
+              src="/assets/images/ab5b15_d2c841fdde8743b3b4eff80254c92661~mv2.avif"
               ratio="4/3"
               sx={{ borderRadius: 2 }}
             />
@@ -492,56 +491,58 @@ export default function LuxurySecurityView() {
 
   // Call to action
   const renderCTA = (
-    <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
-      <m.div variants={varFade().inUp}>
-        <Box
-          sx={{
-            textAlign: 'center',
-            p: { xs: 4, md: 6 },
-            borderRadius: 2,
-            backgroundColor: alpha(theme.palette.company.main, 0.08),
-          }}
-        >
-          <Typography 
-            variant="h2" 
-            sx={{ 
-              mb: 3, 
-              color: 'primary.main',
-              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
-            }}
-          >
-            {t('luxurySecurity.cta.title')}
-          </Typography>
-          
-          <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, mb: 4, maxWidth: '600px', mx: 'auto' }}>
-            {t('luxurySecurity.cta.description')}
-          </Typography>
-          
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            component={RouterLink}
-            href={paths.contact}
+    <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: theme.palette.background.neutral }}>
+      <Container component={MotionViewport} sx={{ py: { xs: 8, md: 12 } }}>
+        <m.div variants={varFade().inUp}>
+          <Box
             sx={{
-              bgcolor: 'company.main',
-              color: 'black',
-              '&:hover': {
-                bgcolor: (theme) => alpha(theme.palette.company.main, 0.8),
-                color: 'black',
-              },
+              textAlign: 'center',
+              p: { xs: 4, md: 6 },
+              borderRadius: 2,
+              // backgroundColor: alpha(theme.palette.company.main, 0.08),
             }}
-            startIcon={<Iconify icon="carbon:send" />}
           >
-            {t('luxurySecurity.cta.button')}
-          </Button>
-        </Box>
-      </m.div>
-    </Container>
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                mb: 3, 
+                color: 'primary.main',
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+              }}
+            >
+              {t('luxurySecurity.cta.title')}
+            </Typography>
+            
+            <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, mb: 4, maxWidth: '600px', mx: 'auto' }}>
+              {t('luxurySecurity.cta.description')}
+            </Typography>
+            
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              component={RouterLink}
+              href={paths.contact}
+              sx={{
+                bgcolor: 'company.main',
+                color: 'black',
+                '&:hover': {
+                  bgcolor: (theme) => alpha(theme.palette.company.main, 0.8),
+                  color: 'black',
+                },
+              }}
+              startIcon={<Iconify icon="carbon:send" />}
+            >
+              {t('luxurySecurity.cta.button')}
+            </Button>
+          </Box>
+        </m.div>
+      </Container>
+    </Box>
   );
 
   return (
-    <MainLayout>
+    <>
       {renderHero}
       {renderBreadcrumbs}
       {renderIntroduction}
@@ -553,6 +554,6 @@ export default function LuxurySecurityView() {
       {renderCustomSecurity}
       {renderFamilyTraining}
       {renderCTA}
-    </MainLayout>
+    </>
   );
 }

@@ -426,7 +426,7 @@ export default function ProtezioneStrategicaView() {
               textAlign: 'center',
               p: { xs: 4, md: 6 },
               borderRadius: 2,
-              backgroundColor: alpha(theme.palette.company.main, 0.08),
+              // backgroundColor: alpha(theme.palette.company.main, 0.08),
             }}
           >
           <Typography 

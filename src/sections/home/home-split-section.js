@@ -67,7 +67,7 @@ export default function HomeSplitSection() {
               <m.div variants={varFade().inUp}>
                 <Button
                   component={RouterLink}
-                  href={paths.travel_risk_management}
+                  href={paths.travel_risk_management || '/travel-risk-management'}
                   color="primary"
                   size="large"
                   variant="contained"
@@ -94,7 +94,7 @@ export default function HomeSplitSection() {
           <Box
             sx={{
               height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/2023-escalade-pj-01.webp)', // Luxury vehicle
+              backgroundImage: 'url(/assets/images/1675965408174.png)', // Travel Risk Management
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

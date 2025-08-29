@@ -169,6 +169,7 @@ export default function EventiView() {
                 variant="h2" 
                 sx={{ 
                   mb: 3,
+                  fontWeight: 700,
                   fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
                 }}
               >
@@ -206,6 +207,7 @@ export default function EventiView() {
                   variant="h2" 
                   sx={{ 
                     mb: 3,
+                    fontWeight: 700,
                     fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
                   }}
                 >
@@ -258,6 +260,7 @@ export default function EventiView() {
           sx={{ 
             textAlign: 'center',
             mb: 3,
+            fontWeight: 700,
             fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
           }}
         >
@@ -352,7 +355,14 @@ export default function EventiView() {
               </m.div>
 
               <m.div variants={varFade().inRight}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
+                <Typography 
+                  variant="h2" 
+                  sx={{ 
+                    mb: 3,
+                    fontWeight: 700,
+                    fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+                  }}
+                >
                   {t('events.vip_protection.title')}
                 </Typography>
               </m.div>
@@ -389,10 +399,12 @@ export default function EventiView() {
 
       <m.div variants={varFade().inUp}>
         <Typography 
-          variant="h3" 
+          variant="h2" 
           sx={{ 
             textAlign: 'center',
-            mb: 3
+            mb: 3,
+            fontWeight: 700,
+            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
           }}
         >
           {t('events.antiterrorism.title')}
@@ -488,10 +500,17 @@ export default function EventiView() {
             textAlign: 'center',
             p: { xs: 4, md: 6 },
             borderRadius: 2,
-            backgroundColor: alpha(theme.palette.company.main, 0.08),
+            // backgroundColor: alpha(theme.palette.company.main, 0.08),
           }}
         >
-          <Typography variant="h3" sx={{ mb: 3 }}>
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 3,
+              fontWeight: 700,
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+            }}
+          >
             {t('events.cta.title')}
           </Typography>
           

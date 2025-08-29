@@ -229,7 +229,7 @@ export default function IlTeamView() {
             <m.div variants={varFade().inRight}>
               <Image
                 alt="Leadership operativa"
-                src="/assets/images/Y1SJAsVYAXrWc2wH_iRrkzF5MD3YeyMLN.jpg"
+                src="/assets/images/team1.jpg"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
               />
@@ -508,7 +508,7 @@ export default function IlTeamView() {
             <m.div variants={varFade().inLeft}>
               <Image
                 alt="Standard internazionali"
-                src="/assets/images/83WklLpbXcHLuOKL_sPAXRApn3fWJeNmz.jpg"
+                src="/assets/images/WEGOTG031.jpg"
                 ratio="4/3"
                 sx={{ borderRadius: 2 }}
               />

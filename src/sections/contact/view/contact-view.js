@@ -26,16 +26,24 @@ import ContactForm from '../contact-form';
 
 const CONTACT_INFO = [
   {
-    titleKey: 'contact.page.info.phone.title',
+    titleKey: 'contact.page.info.whatsapp.title',
     value: '+39 392 926 4907',
-    icon: 'solar:phone-bold',
-    href: 'tel:+393929264907',
+    icon: 'logos:whatsapp-icon',
+    href: 'https://wa.me/393929264907',
+    color: '#25D366',
+  },
+  {
+    titleKey: 'contact.page.info.signal.title',
+    value: '+39 392 926 4907',
+    icon: 'simple-icons:signal',
+    href: 'https://signal.me/#p/+393929264907',
+    color: '#3A76F0',
   },
   {
     titleKey: 'contact.page.info.email.title',
-    value: 'info@protectionagency.it',
+    value: 'info@oracleprotection.it',
     icon: 'solar:letter-bold',
-    href: 'mailto:info@protectionagency.it',
+    href: 'mailto:info@oracleprotection.it',
   },
   {
     titleKey: 'contact.page.info.availability.title',
@@ -117,7 +125,7 @@ export default function ContactView() {
 
       <Grid container spacing={3}>
         {CONTACT_INFO.map((contact, index) => (
-          <Grid key={contact.title} xs={12} md={4}>
+          <Grid key={contact.title} xs={12} md={3}>
             <m.div variants={varFade().inUp}>
               <Card 
                 sx={{ 
@@ -137,7 +145,7 @@ export default function ContactView() {
                     sx={{ 
                       width: 48, 
                       height: 48, 
-                      color: 'company.main',
+                      color: contact.color || 'company.main',
                       mx: 'auto',
                       mb: 2
                     }} 
@@ -148,10 +156,12 @@ export default function ContactView() {
                   {contact.href ? (
                     <Link 
                       href={contact.href} 
+                      target={contact.href?.startsWith('http') ? '_blank' : undefined}
+                      rel={contact.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
                       sx={{ 
                         color: 'text.secondary',
                         textDecoration: 'none',
-                        '&:hover': { color: 'company.main' }
+                        '&:hover': { color: contact.color || 'company.main' }
                       }}
                     >
                       {contact.value}

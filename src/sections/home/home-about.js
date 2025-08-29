@@ -48,7 +48,7 @@ export default function HomeAbout() {
           <m.div variants={varFade().inLeft}>
             <Image
               alt="security expertise"
-              src="/assets/images/about/about.jpg"
+              src="/assets/images/WEGOTG031.jpg"
               sx={{ borderRadius: 2, boxShadow: shadow }}
             />
           </m.div>

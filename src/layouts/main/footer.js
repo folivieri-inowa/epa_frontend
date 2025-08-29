@@ -6,11 +6,14 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import { alpha } from '@mui/material/styles';
 
 import {paths} from 'src/routes/paths';
 import {RouterLink} from 'src/routes/components';
 
 import Logo from 'src/components/logo';
+import Iconify from 'src/components/iconify';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -19,10 +22,25 @@ export default function Footer() {
     {
       headline: t('footer.contact.headline'),
       children: [
-        { name: t('footer.contact.email'), href: 'mailto:info@protectionagency.it' },
+        { name: t('footer.contact.email'), href: 'mailto:info@oracleprotectionagency.it' },
         { name: t('footer.contact.phone'), href: 'tel:+393929264907'}
       ],
     },
+  ];
+
+  const SOCIALS = [
+    {
+      name: 'LinkedIn',
+      icon: 'mdi:linkedin',
+      color: '#0077B5',
+      href: 'https://www.linkedin.com/company/oracle-executive-protection/'
+    },
+    {
+      name: 'Instagram', 
+      icon: 'mdi:instagram',
+      color: '#E4405F',
+      href: 'https://www.instagram.com/oracle_protection/'
+    }
   ];
   
   return (
@@ -64,31 +82,9 @@ export default function Footer() {
             >
               {t('footer.description')}
             </Typography>
-
-            {/* <Stack
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{
-                mt: 3,
-                mb: { xs: 5, md: 0 },
-              }}
-            >
-              {_socials.map((social) => (
-                <IconButton
-                  key={social.name}
-                  sx={{
-                    '&:hover': {
-                      bgcolor: alpha(social.color, 0.08),
-                    },
-                  }}
-                >
-                  <Iconify color={social.color} icon={social.icon} />
-                </IconButton>
-              ))}
-            </Stack> */}
           </Grid>
 
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={3}>
             <Stack spacing={10} direction={{xs: 'column', md: 'row'}}>
               {LINKS.map((list) => (
                 <Stack
@@ -116,14 +112,88 @@ export default function Footer() {
               ))}
             </Stack>
           </Grid>
+
+          <Grid xs={12} md={3}>
+            {/* Social Media Section */}
+            <Stack
+              spacing={2}
+              alignItems={{xs: 'center', md: 'flex-start'}}
+              sx={{
+                mb: { xs: 5, md: 0 },
+              }}
+            >
+              <Typography component="div" variant="overline">
+                {t('footer.social.follow', 'Seguici')}
+              </Typography>
+              
+              {SOCIALS.map((social) => (
+                <Link
+                  key={social.name}
+                  component="a"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      color: social.color,
+                      transform: 'translateX(4px)',
+                    },
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  <Iconify 
+                    icon={social.icon} 
+                    width={20} 
+                    sx={{ 
+                      mr: 1,
+                      color: social.color 
+                    }} 
+                  />
+                  <Typography variant="body2">
+                    {social.name}
+                  </Typography>
+                </Link>
+              ))}
+              
+              {/* Privacy Policy Link */}
+              <Link
+                href="/privacy-policy"
+                color="inherit"
+                variant="body2"
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    color: 'primary.main',
+                    transform: 'translateX(4px)',
+                  },
+                  transition: 'all 0.2s',
+                  mt: 1,
+                }}
+              >
+                <Iconify
+                  icon="mdi:shield-account"
+                  width={20}
+                  sx={{ 
+                    mr: 1,
+                    color: 'text.secondary' 
+                  }}
+                />
+                <Typography variant="body2">
+                  {t('footer.privacyPolicy')}
+                </Typography>
+              </Link>
+            </Stack>
+          </Grid>
         </Grid>
 
-        <Typography variant="body2" sx={{mt: 10, display: 'flex', justifyContent: 'space-between'}}>
+        <Typography variant="body2" sx={{mt: 10, textAlign: 'center'}}>
           <span>{t('footer.copyright')}</span>
-          <span>
-            {/*<Link href="#" color="inherit" sx={{ ml: 2 }}>Termini e Condizioni</Link>*/}
-            <Link href="/privacy-policy" color="inherit" sx={{ml: 2}}>{t('footer.privacyPolicy')}</Link>
-          </span>
         </Typography>
       </Container>
     </Box>

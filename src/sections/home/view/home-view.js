@@ -21,6 +21,7 @@ import HomeStrategicProtectionSection from '../home-strategic-protection-section
 import HomeSeparatorBanner3 from '../home-separator-banner-3';
 import HomeLuxurySecuritySection from '../home-luxury-security-section';
 import HomeJoinTeam from '../home-join-team';
+import HomeStandards from '../home-standards';
 import HomeContact from '../home-contact';
 import {CookieConsentButton} from "../../../components/cookie-conesent";
 
@@ -66,6 +67,10 @@ export default function HomeView() {
       </Box>
 
       <Box sx={{ position: 'relative', zIndex: 1, mt: 0 }}>
+        <HomeStandards />
+      </Box>
+
+      <Box sx={{ position: 'relative', zIndex: 1, mt: 0, bgcolor: 'background.neutral' }}>
         <HomeJoinTeam />
       </Box>
 

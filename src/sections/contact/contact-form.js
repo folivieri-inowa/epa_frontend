@@ -56,15 +56,16 @@ export default function ContactForm() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      const response = await axios.post(process.env.NEXT_PUBLIC_HOST+'/api/send-email', data);
+      const response = await axios.post('/api/send-email', data);
       reset();
-      enqueueSnackbar(response.data, {
+      enqueueSnackbar(response.data.message || 'Messaggio inviato con successo!', {
         variant: 'success',
-      })
+      });
     } catch (error) {
-      enqueueSnackbar(error, {
+      console.error('Errore invio form:', error);
+      enqueueSnackbar(error.response?.data?.error || 'Errore nell\'invio del messaggio', {
         variant: 'error',
-      })
+      });
     }
   });
 

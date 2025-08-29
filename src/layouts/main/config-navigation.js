@@ -18,11 +18,6 @@ export const getNavConfig = (t) => [
     icon: <Iconify icon="mdi:account-group" sx={{ width: 1, height: 1 }} />,
   },
   {
-    title: t('navigation.team'),
-    path: paths.il_team,
-    icon: <Iconify icon="mdi:account-multiple" sx={{ width: 1, height: 1 }} />,
-  },
-  {
     title: t('navigation.travel_risk_management'),
     path: paths.travel_risk_management,
     icon: <Iconify icon="mdi:airplane-takeoff" />,

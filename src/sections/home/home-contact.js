@@ -27,16 +27,24 @@ export default function HomeContact() {
 
   const contactInfo = [
     {
-      title: t('home.contact.info.0.title'),
-      value: t('home.contact.info.0.value'),
-      icon: 'solar:phone-bold',
-      href: 'tel:+393929264907',
+      title: t('home.contact.info.whatsapp.title'),
+      value: t('home.contact.info.whatsapp.value'),
+      icon: 'logos:whatsapp-icon',
+      href: 'https://wa.me/393929264907',
+      color: '#25D366',
+    },
+    {
+      title: t('home.contact.info.signal.title'),
+      value: t('home.contact.info.signal.value'),
+      icon: 'simple-icons:signal',
+      href: 'https://signal.me/#p/+393929264907',
+      color: '#3A76F0',
     },
     {
       title: t('home.contact.info.1.title'),
       value: t('home.contact.info.1.value'),
       icon: 'solar:letter-bold',
-      href: 'mailto:info@protectionagency.it',
+      href: 'mailto:info@oracleprotection.it',
     },
     {
       title: t('home.contact.info.2.title'),
@@ -92,7 +100,7 @@ export default function HomeContact() {
         {/* Contact Cards */}
         <Grid container spacing={3} sx={{ mb: 6 }}>
           {contactInfo.map((contact, index) => (
-            <Grid key={contact.title} xs={12} md={4}>
+            <Grid key={contact.title} xs={12} md={3}>
               <m.div variants={varFade().inUp}>
                 <Card 
                   sx={{ 
@@ -112,7 +120,7 @@ export default function HomeContact() {
                       sx={{ 
                         width: 48, 
                         height: 48, 
-                        color: 'company.main',
+                        color: contact.color || 'company.main',
                         mx: 'auto',
                         mb: 2
                       }} 
@@ -123,10 +131,12 @@ export default function HomeContact() {
                     {contact.href ? (
                       <Link 
                         href={contact.href} 
+                        target={contact.href.startsWith('http') ? '_blank' : undefined}
+                        rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         sx={{ 
                           color: 'text.secondary',
                           textDecoration: 'none',
-                          '&:hover': { color: 'company.main' }
+                          '&:hover': { color: contact.color || 'company.main' }
                         }}
                       >
                         {contact.value}

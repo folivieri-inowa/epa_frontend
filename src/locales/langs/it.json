@@ -117,7 +117,7 @@
     },
     "split_section_reversed": {
       "title": "Eventi VIP",
-      "description": "Garantiamo massima discrezione e sicurezza per eventi esclusivi e protezione esecutiva di alto profilo. Dalla pianificazione all'esecuzione, ogni dettaglio è gestito con precisione millimetrica.",
+      "description": "Garantiamo massima discrezione e sicurezza per eventi esclusivi e protezione esecutiva di alto profilo. Dalla pianificazione all'esecuzione, ogni dettaglio è studiato con professionalità e precisione. Proteggiamo la tua Reputazione e la sicurezza di ogni tua comunicazione di valore con esperienza e la migliore tecnologia.",
       "button": "Scopri di più"
     },
     "strategic_protection_section": {
@@ -132,7 +132,7 @@
     },
     "aboutSection": {
       "title": "Chi siamo",
-      "description": "Oracle Executive Protection è una società leader nella consulenza, analisi e formazione specializzata nel settore della sicurezza, difesa e protezione fisica e tecnologica. <br /><br /> Con oltre 30 anni di esperienza nel settore, ci distinguiamo per l'eccellenza dei nostri servizi e l'approccio innovativo alla gestione del rischio.",
+      "description": "Oracle - Executive Protection è una società leader nella consulenza, analisi e mitigazione dei Rischi, specializzata nel settore della sicurezza, difesa e protezione fisica, tecnologica e delle comunicazioni. <br /><br /> Con oltre 30 anni di esperienza nel settore, ci distinguiamo per l'eccellenza dei nostri servizi e l'approccio innovativo alla gestione del rischio.",
       "button": "Scopri di più"
     },
     "contact": {
@@ -140,20 +140,24 @@
       "title": "Hai bisogno di una consulenza?",
       "description": "Il nostro team di esperti è pronto a valutare le tue esigenze specifiche e offrirti soluzioni su misura per la tua sicurezza.",
       "button": "Richiedi informazioni",
-      "info": [
-        {
-          "title": "Telefono",
+      "info": {
+        "whatsapp": {
+          "title": "WhatsApp",
           "value": "+39 392 926 4907"
         },
-        {
-          "title": "Email",
-          "value": "info@protectionagency.it"
+        "signal": {
+          "title": "Signal", 
+          "value": "+39 392 926 4907"
         },
-        {
+        "1": {
+          "title": "Email",
+          "value": "info@oracleprotectionagency.it"
+        },
+        "2": {
           "title": "Disponibilità",
           "value": "Servizio di emergenza 24/7"
         }
-      ]
+      }
     },
     "alternatingSection": {
       "items": [
@@ -210,7 +214,7 @@
       "content": {
         "title": "Oracle Executive Protection",
         "subtitle": "Fondata sull'esperienza, guidata dall'innovazione",
-        "description": "Proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.\n\nOracle Executive Protection è un punto di riferimento globale nel settore dell'analisi e mitigazione dei rischi: una società che si occupa di Analisi del Rischio, Security Management, Eventi Vip, Executive Protection e Controterrorismo.\n\nOracle è una delle prime Agenzie di sicurezza globale in Europa ad occuparsi del Travel Risk Management, diventando leader nel settore anche grazie alle sue prestigiose partnership e collaborazioni nazionali e internazionali.\n\nFacciamo parte di una rete internazionale di società della sicurezza che interagiscono tra loro scambiandosi informazioni, incarichi e servizi nel settore Executive Protection."
+        "description": "Proteggiamo il tuo mondo con discrezione e professionalità, ovunque tu sia.\n\n Oracle - Executive Protection è un punto di riferimento globale nel settore dell'Analisi e Mitigazione dei rischi: una società che si occupa di Security Management, Travel Risk Management, Eventi Vip e di Alto Valore, Executive Protection e Analisi Contro-terrorismo.\n\nOracle è una delle prime Agenzie di sicurezza globale in Europa ad occuparsi del Travel Risk Management, diventando leader nel settore anche grazie alle sue prestigiose partnership e collaborazioni nazionali e internazionali.\n\nFacciamo parte di una rete internazionale di società della sicurezza che interagiscono tra loro scambiandosi informazioni, incarichi e servizi nel settore Executive Protection."
       },
       "expertise": {
         "overline": "La nostra expertise",
@@ -225,12 +229,12 @@
       "team": {
         "overline": "Il nostro team",
         "title": "Professionisti della sicurezza globale",
-        "description": "Il nostro principale punto di forza è assolutamente il Team.\n\nIl nostro Team è composto da ex Operatori delle Forze dell'Ordine e Militare e da Operatori della Sicurezza Globale. Vantiamo Operatori e Analisti con oltre 30 anni di esperienza in operazioni di sicurezza globale, specializzati in protezione fisica e gestione di contesti ad alto rischio, esperti in Counter-Terrorism e anticrimine.\n\nAbbiamo trascorso tutta la nostra vita, tutta la nostra carriera prendendoci cura della sicurezza e della protezione di vite, persone, famiglie, aziende, siti sensibili, infrastrutture critiche, confini, stati, perimetri che dovevano essere invalicabili, luoghi di culto ed abbiamo addestrato alcuni dei migliori professionisti nel Security Management, nel close Protection e nell'Antiterrorismo moderno."
+        "description": "Il nostro principale punto di forza è assolutamente il Team. \n\n Il nostro Team è composto da ex Operatori delle Forze dell'Ordine e Militari e da Operatori della Sicurezza Globale. Vantiamo Operatori e Analisti con oltre 30 anni di esperienza in operazioni di sicurezza globale, specializzati in protezione fisica e gestione di contesti ad alto rischio, esperti in Counter-Terrorism e anticrimine."
       },
       "standards": {
         "overline": "I nostri standard",
         "title": "Sistema sicurezza professionale",
-        "description": "Oracle Executive Protection è composta da professionisti esperti nei ruoli chiave del \"Sistema Sicurezza\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Analisti anti terrorismo, Coordinatori Logistici, Driver, Skipper, Operatori di Cyber Sicurezza, piloti UAV.\n\nUn team con un'impareggiabile sinergia tra certificazioni accademiche prestigiose ed esperienza sul campo, Intelligence strategica e Cybersecurity."
+        "description": "Oracle Executive Protection è composta da professionisti esperti nei ruoli chiave del \"Sistema Sicurezza\": Security Manager, Risk Analyst, Protective Security Specialist, Travel Risk Manager, Analisti anti terrorismo, Coordinatori Logistici, Driver, Skipper, Operatori di Cyber Sicurezza, piloti UAV.\n\nUn team con un'impareggiabile sinergia tra certificazioni accademiche prestigiose ed esperienza sul campo, Intelligence strategica e Cybersecurity.\n\nIn piena conformità con la normativa italiana, Oracle EP non propone sul mercato nazionale figure come bodyguard, PSD o close protector, ma un team di Analisti del Rischio altamente qualificati e specializzati. Questo team monitora costantemente, sia in presenza sia da remoto, l’evoluzione del Risk Assessment e Management, fattori in continuo cambiamento durante eventi e attività di Travel Risk Management (TRM), con l’obiettivo di prevenire e mitigare i rischi per i nostri clienti, nel rispetto dei più alti standard internazionali come le norme ISO 31000 e ISO 31030."
       },
       "cta": {
         "title": "Pronto a migliorare la tua sicurezza?",
@@ -244,7 +248,7 @@
     "certifications_title": "Le nostre Certificazioni",
     "contact": {
       "headline": "Contatti",
-      "email": "Email: info@protectionagency.it", 
+      "email": "Email: info@oracleprotectionagency.it", 
       "phone": "Telefono: +39 392 926 4907"
     },
     "copyright": "© 2025 Oracle Executive Protection. Tutti i diritti riservati.",
@@ -298,19 +302,19 @@
     },
     "standards": {
       "title": "Standard Internazionali",
-      "description": "Seguendo i più alti standard internazionali in materia legati alla ISO 31030 e 31000. Con un approccio discreto ma altamente efficace e l'utilizzo della tecnologia e delle metodologie più avanzate il nostro team di esperti si occupa di ogni dettaglio: dalla valutazione preventiva dei rischi alla gestione di imprevisti, fino alla protezione fisica e tecnologica e alla gestione logistica.\n\nIl nostro compito è anticipare ogni possibile situazione di rischio e rispondere ad ogni imprevisto con esperienza e professionalità senza pari. La tua tranquillità è la nostra missione."
+      "description": "Seguendo i più alti standard internazionali in materia legati alla ISO 31030 e 31000. Con un approccio discreto ma altamente efficace e l'utilizzo della tecnologia e delle metodologie più avanzate il nostro team di esperti si occupa di ogni dettaglio.\n\nIl nostro compito è anticipare ogni possibile situazione di rischio e rispondere ad ogni imprevisto con esperienza e professionalità senza pari. La tua tranquillità è la nostra missione."
     },
     "team_intro": {
       "title": "Team Specializzato Oracle",
-      "description": "Che sia un viaggio business o di vacanza un intero Team specializzato di Oracle gestirà ogni dettaglio del tuo soggiorno."
+      "description": "Che sia un viaggio business o di vacanza: un Team specializzato di Oracle gestirà ogni dettaglio del tuo soggiorno."
     },
     "security_board": {
       "title": "Security Board",
-      "description": "Composto dal Chief Security Manager, dai nostri Security Manager, Risk Analyst e dai nostri analisti anti terrorismo il Security Board si occupa h24 di monitorare ogni dettaglio del viaggio, anticipare ogni possibile incoveniente, comunicare con i nostri operatori sul campo, seguire i nostri gps, monitorare i Risk Map sites e le analisi Osint in tempo reale.\n\nCreare i protocolli personalizzati per il tuo viaggio, i migliori percorsi e aiutarti nella pianificazione del tuo viaggio. Monitoriamo in tempo reale e Utilizziamo tecnologie avanzate per il tracciamento, la comunicazione sicura e l'analisi delle minacce durante il viaggio."
+      "description": "Composto dal Chief Security Manager, dai nostri Security Manager, Risk Analyst e dai nostri analisti anti terrorismo: il Security Board si occupa h24 di monitorare ogni dettaglio del viaggio, anticipare ogni possibile incoveniente, comunicare con i nostri operatori sul campo, Tracciare gli spostamenti, monitorare i Risk Map sites e le analisi Osint in tempo reale.\n\nAnalizza e crea i protocolli personalizzati per il tuo viaggio, i migliori percorsi e la gestione logistica del viaggio. Monitoriamo in tempo reale e Utilizziamo tecnologie avanzate per il tracciamento, la comunicazione sicura e l'analisi delle minacce durante il viaggio."
     },
     "travel_risk_officer": {
       "title": "Travel Risk Officer",
-      "description": "I nostri TRO sul campo sono professionisti con un background di altissimo livello, Un team di élite con oltre 30 anni di esperienza in antiterrorismo, close protection vip e intelligence, guidato da professionisti di 1° classe, esperienza nei più importanti contesti internazionali che hanno inoltre superato complesse selezioni e corsi di specializzazione per essere al vostro fianco.\n\nI TRO con la massima discrezione ed educazione saranno al fianco del vostro team di lavoro o della vostra famiglia assicurandosi costantemente che ogni dettaglio del viaggio sia perfetto al fine di rendere il vostro viaggio senza pensieri, dalle Bonifiche ambientali e fisiche degli Hotel, Ristoranti e sale Meeting, alla esecuzione di ogni vostro spostamento."
+      "description": "I nostri TRO sul campo sono professionisti con un background di altissimo livello, Un team di élite con oltre 30 anni di esperienza in antiterrorismo, close protection vip e intelligence, guidato da professionisti di 1° classe, esperienza nei più importanti contesti internazionali che hanno inoltre superato complesse selezioni e corsi di specializzazione per essere al vostro fianco.\n\nI TRO con la massima discrezione e professionalità saranno al fianco del vostro team di lavoro o della vostra famiglia assicurandosi costantemente che ogni dettaglio del viaggio sia perfetto al fine di rendere il vostro viaggio senza pensieri, dalle Bonifiche ambientali e fisiche degli Hotel, Ristoranti e sale Meeting, alla esecuzione di ogni vostro spostamento."
     },
     "logistics_coordinator": {
       "title": "Logistics Coordinator",
@@ -364,8 +368,9 @@
       "title": "I Nostri Servizi",
       "items": [
         "Analisi e Gestione dei Rischi",
-        "Protezione fisica", 
-        "Intelligence e Tecnologia di sicurezza Avanzata",
+        "Executive Protection", 
+        "Security Management",
+        "Intelligence e Tecnologia di sicurezza fisica e delle comunicazioni avanzata",
         "Cybersecurity",
         "Formazione d'eccellenza specializzata"
       ]
@@ -564,8 +569,11 @@
       "info": {
         "overline": "Come Raggiungerci",
         "title": "Informazioni di Contatto",
-        "phone": {
-          "title": "Telefono"
+        "whatsapp": {
+          "title": "WhatsApp"
+        },
+        "signal": {
+          "title": "Signal"
         },
         "email": {
           "title": "Email"
