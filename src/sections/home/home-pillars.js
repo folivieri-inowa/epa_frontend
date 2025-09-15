@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 
 import useCompanyColors from 'src/hooks/use-company-colors';
+import { useStrapiHome } from 'src/hooks/use-strapi';
 import { MotionViewport, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
@@ -20,11 +21,14 @@ export default function HomePillars() {
   const { t } = useTranslation();
   const theme = useTheme();
   const companyColors = useCompanyColors();
+  const { pillarsComponent } = useStrapiHome();
 
   const lightMode = theme.palette.mode === 'light';
 
-  // Usa le traduzioni invece dell'array statico
-  const pillars = t('home.pillars.items', { returnObjects: true }) || [];
+  // Utilizza i dati da Strapi con fallback alle traduzioni
+  const title = pillarsComponent?.title || t('home.pillars.title');
+  const description = pillarsComponent?.description || t('home.pillars.description');
+  const pillars = pillarsComponent?.pillars || t('home.pillars.items', { returnObjects: true }) || [];
 
   return (
     <Box
@@ -69,15 +73,33 @@ export default function HomePillars() {
             variant="h3" 
             sx={{ 
               textAlign: 'center', 
-              mb: { xs: 5, md: 8 },
+              mb: { xs: 2, md: 3 },
               color: 'common.white',
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
               fontWeight: 700,
             }}
           >
-            {t('home.pillars.title')}
+            {title}
           </Typography>
         </m.div>
+
+        {description && (
+          <m.div variants={varFade().inUp}>
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                textAlign: 'center', 
+                mb: { xs: 5, md: 8 },
+                color: 'common.white',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                fontWeight: 400,
+                opacity: 0.9
+              }}
+            >
+              {description}
+            </Typography>
+          </m.div>
+        )}
 
         <Grid container spacing={3}>
           {pillars.map((item, idx) => (

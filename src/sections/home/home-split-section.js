@@ -11,6 +11,7 @@ import { alpha, useTheme } from '@mui/material/styles';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
+import { useStrapiHome } from 'src/hooks/use-strapi';
 import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import HtmlText from 'src/components/html-text';
@@ -20,6 +21,15 @@ import HtmlText from 'src/components/html-text';
 export default function HomeSplitSection() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const { splitSectionComponent } = useStrapiHome();
+
+  // Utilizza i dati da Strapi con fallback alle traduzioni
+  const title = splitSectionComponent?.title || t('home.split_section.title');
+  const subtitle = splitSectionComponent?.subtitle || t('home.split_section.subtitle');
+  const description = splitSectionComponent?.description || t('home.split_section.description');
+  const ctaText = splitSectionComponent?.cta_text || t('home.split_section.button');
+  const ctaLink = splitSectionComponent?.cta_link || paths.travel_risk_management || '/travel-risk-management';
+  const features = splitSectionComponent?.features || [];
 
   return (
     <Box component={MotionViewport} sx={{ width: '100%' }}>
@@ -47,9 +57,24 @@ export default function HomeSplitSection() {
                     fontWeight: 700,
                   }}
                 >
-                  {t('home.split_section.title')}
+                  {title}
                 </Typography>
               </m.div>
+
+              {subtitle && (
+                <m.div variants={varFade().inUp}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: alpha(theme.palette.primary.contrastText, 0.9),
+                      mb: 2,
+                      fontWeight: 400,
+                    }}
+                  >
+                    {subtitle}
+                  </Typography>
+                </m.div>
+              )}
 
               <m.div variants={varFade().inUp}>
                 <HtmlText
@@ -58,16 +83,62 @@ export default function HomeSplitSection() {
                     color: alpha(theme.palette.primary.contrastText, 0.8),
                     lineHeight: 1.6,
                     whiteSpace: 'pre-line',
+                    mb: features.length > 0 ? 3 : 0,
                   }}
                 >
-                  {t('home.split_section.description')}
+                  {description}
                 </HtmlText>
               </m.div>
+
+              {/* Lista delle features se presenti */}
+              {features.length > 0 && (
+                <m.div variants={varFade().inUp}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 1.5,
+                      mb: 3,
+                      alignItems: 'flex-start',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {features.map((feature, index) => (
+                      <Box
+                        key={feature.title || index}
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 2,
+                        }}
+                      >
+                        <Iconify 
+                          icon="eva:checkmark-circle-2-fill" 
+                          sx={{ 
+                            color: 'company.main',
+                            width: 24,
+                            height: 24,
+                          }} 
+                        />
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            color: alpha(theme.palette.primary.contrastText, 0.8),
+                            fontWeight: 500,
+                          }}
+                        >
+                          {feature.title || feature}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                </m.div>
+              )}
 
               <m.div variants={varFade().inUp}>
                 <Button
                   component={RouterLink}
-                  href={paths.travel_risk_management || '/travel-risk-management'}
+                  href={ctaLink}
                   color="primary"
                   size="large"
                   variant="contained"
@@ -82,7 +153,7 @@ export default function HomeSplitSection() {
                     },
                   }}
                 >
-                  {t('home.split_section.button')}
+                  {ctaText}
                 </Button>
               </m.div>
             </Box>
@@ -94,7 +165,9 @@ export default function HomeSplitSection() {
           <Box
             sx={{
               height: { xs: 300, md: '100%' },
-              backgroundImage: 'url(/assets/images/1675965408174.png)', // Travel Risk Management
+              backgroundImage: splitSectionComponent?.content_image?.url 
+                ? `url(${splitSectionComponent.content_image.url})`
+                : 'url(/assets/images/1675965408174.png)', // Travel Risk Management fallback
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

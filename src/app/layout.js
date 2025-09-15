@@ -16,6 +16,7 @@ import { MotionLazy } from 'src/components/animate/motion-lazy';
 import SnackbarProvider from 'src/components/snackbar/snackbar-provider';
 import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
 import PerformanceOptimizer from 'src/components/performance-optimizer';
+import DynamicFavicon from 'src/components/dynamic-favicon';
 
 import { AuthProvider } from 'src/auth/context/jwt';
 import {CookieConsentComponent, CookieConsentButton} from "../components/cookie-conesent";
@@ -41,6 +42,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={primaryFont.className}>
+      <head>
+        <DynamicFavicon />
+      </head>
       <body>
         <I18nProvider>
           <AuthProvider>

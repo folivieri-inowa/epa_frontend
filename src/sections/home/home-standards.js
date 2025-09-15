@@ -11,6 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Unstable_Grid2';
 import { useTheme } from '@mui/material/styles';
 
+import { useStrapiHome } from 'src/hooks/use-strapi';
 import { varFade, MotionViewport } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
@@ -18,6 +19,12 @@ import { varFade, MotionViewport } from 'src/components/animate';
 export default function HomeStandards() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const { standardsComponent } = useStrapiHome();
+
+  // Utilizza i dati da Strapi con fallback alle traduzioni
+  const title = standardsComponent?.title || t('strategicProtection.certifications.title');
+  const description = standardsComponent?.description || t('strategicProtection.certifications.subtitle');
+  const standards = standardsComponent?.standards || t('strategicProtection.certifications.items', { returnObjects: true }) || [];
 
   return (
     <Box sx={{ py: { xs: 10, md: 15 } }}>
@@ -47,7 +54,7 @@ export default function HomeStandards() {
               color: theme.palette.text.primary
             }}
           >
-            {t('strategicProtection.certifications.title')}
+            {title}
           </Typography>
         </m.div>
 
@@ -63,16 +70,13 @@ export default function HomeStandards() {
               color: theme.palette.text.primary
             }}
           >
-            {t('strategicProtection.certifications.subtitle')}
+            {description}
           </Typography>
         </m.div>
 
         <Grid container spacing={3} alignItems="stretch" sx={{ minHeight: { md: 250 } }}>
-          {(Array.isArray(t('strategicProtection.certifications.items', { returnObjects: true })) 
-            ? t('strategicProtection.certifications.items', { returnObjects: true }) 
-            : []
-          ).map((certification, index) => (
-            <Grid key={certification.title} xs={12} sm={6} md={4} lg={3} sx={{ display: 'flex' }}>
+          {(Array.isArray(standards) ? standards : []).map((certification, index) => (
+            <Grid key={certification.title || index} xs={12} sm={6} md={4} lg={3} sx={{ display: 'flex' }}>
               <m.div variants={varFade().inUp} style={{ width: '100%', display: 'flex' }}>
                 <Card 
                   sx={{ 
@@ -126,6 +130,19 @@ export default function HomeStandards() {
                     >
                       {certification.description}
                     </Typography>
+                    {certification.certification_code && (
+                      <Typography 
+                        variant="caption" 
+                        sx={{ 
+                          color: 'grey.600',
+                          fontSize: '0.75rem',
+                          mt: 1,
+                          fontStyle: 'italic'
+                        }}
+                      >
+                        {certification.certification_code}
+                      </Typography>
+                    )}
                   </CardContent>
                 </Card>
               </m.div>

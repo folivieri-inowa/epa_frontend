@@ -16,6 +16,8 @@ import { alpha, useTheme } from '@mui/material/styles';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
+import { useStrapiHome } from 'src/hooks/use-strapi';
+import { useContactSettings } from 'src/hooks/use-global-settings';
 import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 
@@ -24,31 +26,40 @@ import Iconify from 'src/components/iconify';
 export default function HomeContact() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const { contactComponent } = useStrapiHome();
+  const { contactCards, email, phone, whatsapp, businessHours } = useContactSettings();
 
-  const contactInfo = [
+  // Utilizza i dati da Strapi con fallback alle traduzioni
+  const title = contactComponent?.title || t('home.contact.title');
+  const description = contactComponent?.description || t('home.contact.description');
+  const ctaText = contactComponent?.cta_text || t('home.contact.button');
+  const ctaLink = contactComponent?.cta_link || paths.contact;
+
+  // Usa le contact cards da Global Settings o fallback statico
+  const contactInfo = contactCards?.length > 0 ? contactCards : [
     {
       title: t('home.contact.info.whatsapp.title'),
-      value: t('home.contact.info.whatsapp.value'),
+      value: whatsapp,
       icon: 'logos:whatsapp-icon',
-      href: 'https://wa.me/393929264907',
+      href: `https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`,
       color: '#25D366',
     },
     {
       title: t('home.contact.info.signal.title'),
-      value: t('home.contact.info.signal.value'),
+      value: phone,
       icon: 'simple-icons:signal',
-      href: 'https://signal.me/#p/+393929264907',
+      href: `https://signal.me/#p/${phone.replace(/[^0-9]/g, '')}`,
       color: '#3A76F0',
     },
     {
       title: t('home.contact.info.1.title'),
-      value: t('home.contact.info.1.value'),
+      value: email,
       icon: 'solar:letter-bold',
-      href: 'mailto:info@oracleprotection.it',
+      href: `mailto:${email}`,
     },
     {
       title: t('home.contact.info.2.title'),
-      value: t('home.contact.info.2.value'),
+      value: businessHours,
       icon: 'solar:clock-circle-bold',
     },
   ];
@@ -79,7 +90,7 @@ export default function HomeContact() {
                 fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
               }}
             >
-              {t('home.contact.title')}
+              {title}
             </Typography>
           </m.div>
 
@@ -92,7 +103,7 @@ export default function HomeContact() {
                 color: 'text.secondary'
               }}
             >
-              {t('home.contact.description')}
+              {description}
             </Typography>
           </m.div>
         </Stack>
@@ -161,7 +172,7 @@ export default function HomeContact() {
               variant="contained"
               color="primary"
               component={RouterLink}
-              href={paths.contact}
+              href={ctaLink}
               sx={{
                 bgcolor: 'company.main',
                 color: 'black',
@@ -175,7 +186,7 @@ export default function HomeContact() {
               }}
               startIcon={<Iconify icon="carbon:send" />}
             >
-              {t('home.contact.button')}
+              {ctaText}
             </Button>
           </Box>
         </m.div>

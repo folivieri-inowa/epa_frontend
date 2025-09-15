@@ -1,4 +1,4 @@
-import { EventiView } from 'src/sections/eventi/view';
+import DynamicPageView from '../../components/dynamic-page-view';
 
 // ----------------------------------------------------------------------
 
@@ -9,5 +9,12 @@ export const metadata = {
 };
 
 export default function EventiPage() {
-  return <EventiView />;
+  return (
+    <DynamicPageView
+      slug="eventi"
+      fallbackTitle="Sicurezza Eventi"
+      fallbackDescription="Proteggiamo i tuoi ospiti, il tuo evento e la tua reputazione con servizi di sicurezza professionale."
+      heroImage="/assets/images/events-hero.jpg"
+    />
+  );
 }

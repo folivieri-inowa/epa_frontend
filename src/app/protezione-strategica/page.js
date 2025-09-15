@@ -1,5 +1,4 @@
-import PageWithLoading from 'src/components/page-with-loading';
-import ProtezioneStrategicaView from 'src/sections/protezione-strategica/view/protezione-strategica-view';
+import DynamicPageView from 'src/components/dynamic-page-view';
 
 // ----------------------------------------------------------------------
 
@@ -11,8 +10,11 @@ export const metadata = {
 
 export default function ProtezioneStrategicaPage() {
   return (
-    <PageWithLoading>
-      <ProtezioneStrategicaView />
-    </PageWithLoading>
+    <DynamicPageView
+      slug="protezione-strategica"
+      fallbackTitle="Protezione Strategica"
+      fallbackDescription="Soluzioni avanzate di sicurezza Antiterrorismo e Anti crimine per istituzioni, aziende, corporate."
+      heroImage="/assets/images/protection-hero.jpg"
+    />
   );
 }

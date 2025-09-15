@@ -18,6 +18,7 @@ import { paths } from 'src/routes/paths';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useBoolean } from 'src/hooks/use-boolean';
+import { useNavigationSettings, useContactSettings } from 'src/hooks/use-global-settings';
 
 import { bgBlur } from 'src/theme/css';
 import { useTranslation } from 'react-i18next';
@@ -43,6 +44,8 @@ import { useCallback, useEffect, useState } from 'react';
 export default function Header() {
   const theme = useTheme();
   const { t } = useTranslation();
+  const { menuText, contactText, contactButtonText } = useNavigationSettings();
+  const { whatsapp } = useContactSettings();
 
   const mdUp = useResponsive('up', 'md');
 
@@ -109,7 +112,7 @@ export default function Header() {
             </Box>
             
             <Typography variant="h6" sx={{ mb: 2, px: 1 }}>
-              {t('navigation.menu')}
+              {menuText}
             </Typography>
 
             <Stack component="nav" spacing={1}>
@@ -143,7 +146,7 @@ export default function Header() {
                   justifyContent: 'center'
                 }}
               >
-                {t('navigation.contact')}
+                {contactText}
               </Button>
             </Stack>
           </Box>

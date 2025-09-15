@@ -11,6 +11,7 @@ import { alpha, styled, useTheme } from '@mui/material/styles';
 import useCompanyColors from 'src/hooks/use-company-colors';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useTranslation } from 'react-i18next';
+import { useStrapiHome } from 'src/hooks/use-strapi';
 
 import { HEADER } from 'src/layouts/config-layout';
 import { bgBlur, bgGradient } from 'src/theme/css';
@@ -141,6 +142,10 @@ const StyledPolygon = styled('div')(({ opacity = 1, anchor = 'left', theme }) =>
 export default function HomeHero() {
   const mdUp = useResponsive('up', 'md');
   const { t } = useTranslation();
+  
+  // Hook per dati Strapi
+  const { data: homeData, loading: strapiLoading } = useStrapiHome();
+  const heroComponent = homeData?.components?.home_hero;
 
   const theme = useTheme();
   const companyColors = useCompanyColors();
@@ -205,7 +210,7 @@ export default function HomeHero() {
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
           }}
         >
-          {t('home.hero.title')}
+          {heroComponent?.title || t('home.hero.title')}
         </Typography>
         <StyledTextGradient
           animate={{ backgroundPosition: '200% center' }}
@@ -221,7 +226,7 @@ export default function HomeHero() {
             textShadow: '3px 3px 6px rgba(0,0,0,0.7)',
           }}
         >
-          {t('home.hero.subtitle')}
+          {heroComponent?.subtitle || t('home.hero.subtitle')}
         </StyledTextGradient>
       </m.div>
     </Stack>

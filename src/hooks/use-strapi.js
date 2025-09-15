@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 
-const STRAPI_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+const STRAPI_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1338';
 const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 
 // Cache per le richieste API
@@ -129,188 +129,165 @@ export const useStrapi = (endpoint, options = {}) => {
 /**
  * Hook per ottenere contenuto di una pagina specifica
  * @param {string} slug - Slug della pagina
- * @param {string} locale - Locale (default: 'it')
  * @returns {Object} { data, loading, error }
  */
-export const useStrapiPage = (slug, locale = 'it') => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (!slug) return;
-
-    const fetchPage = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await strapiApi.get(`/page-contents/slug/${slug}`, {
-          params: { locale }
-        });
-
-        setData(response.data);
-      } catch (err) {
-        console.error('Errore fetch pagina Strapi:', err);
-        setError(err.response?.data?.message || err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPage();
-  }, [slug, locale]);
-
-  return { data, loading, error };
+export const useStrapiPage = (slug) => {
+  return useStrapi(`/pages?filters[slug][$eq]=${slug}`, {
+    transform: (result) => {
+      // In Strapi 5 prendi il primo risultato direttamente
+      const page = result?.data?.[0] || null;
+      return page;
+    },
+    dependencies: [slug],
+  });
 };
 
 /**
  * Hook per ottenere tutti i componenti della homepage
- * @param {string} locale - Locale (default: 'it')
  * @returns {Object} { data, loading, error }
  */
-export const useStrapiHome = (locale = 'it') => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchHomeComponents = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await strapiApi.get('/home-components/visible', {
-          params: { locale }
-        });
-
-        // Ordina per order_position
-        const sortedData = response.data.sort((a, b) => a.order_position - b.order_position);
-        setData(sortedData);
-      } catch (err) {
-        console.error('Errore fetch home components:', err);
-        setError(err.response?.data?.message || err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchHomeComponents();
-  }, [locale]);
-
-  return { data, loading, error };
+export const useStrapiHome = () => {
+  return useStrapi('/home-components?sort=order_position:asc', {
+    transform: (result) => {
+      // In Strapi 5 la struttura è diretta, non dentro attributes
+      const components = result?.data || [];
+      
+      // Converte i componenti in un oggetto per facile accesso
+      const componentsByType = {};
+      components.forEach(component => {
+        componentsByType[component.component_type] = component;
+      });
+      
+      return {
+        components: componentsByType,
+        list: components,
+        // Proprietà specifiche per ogni componente per facile accesso
+        heroComponent: componentsByType.home_hero,
+        aboutComponent: componentsByType.home_about,
+        pillarsComponent: componentsByType.home_pillars,
+        splitSectionComponent: componentsByType.home_split_section,
+        separatorBannerComponent: componentsByType.home_separator_banner,
+        contactComponent: componentsByType.home_contact,
+        standardsComponent: componentsByType.home_standards,
+      };
+    },
+  });
 };
 
 /**
  * Hook per ottenere componente home specifico per tipo
  * @param {string} componentType - Tipo componente
- * @param {string} locale - Locale (default: 'it')
  * @returns {Object} { data, loading, error }
  */
-export const useStrapiHomeComponent = (componentType, locale = 'it') => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (!componentType) return;
-
-    const fetchComponent = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await strapiApi.get(`/home-components/type/${componentType}`, {
-          params: { locale }
-        });
-
-        // Prendi il primo componente se ce ne sono più di uno
-        setData(response.data[0] || null);
-      } catch (err) {
-        console.error('Errore fetch home component:', err);
-        setError(err.response?.data?.message || err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchComponent();
-  }, [componentType, locale]);
-
-  return { data, loading, error };
+export const useStrapiHomeComponent = (componentType) => {
+  return useStrapi(`/home-components?filters[componentType][$eq]=${componentType}&populate=*`, {
+    transform: (result) => result?.data?.[0] || null,
+    dependencies: [componentType],
+  });
 };
 
 /**
  * Hook per ottenere media assets per categoria
  * @param {string} category - Categoria media
- * @param {string} locale - Locale (default: 'it')
  * @returns {Object} { data, loading, error }
  */
-export const useStrapiMedia = (category, locale = 'it') => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (!category) return;
-
-    const fetchMedia = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await strapiApi.get(`/media-assets/category/${category}`, {
-          params: { locale }
-        });
-
-        setData(response.data);
-      } catch (err) {
-        console.error('Errore fetch media assets:', err);
-        setError(err.response?.data?.message || err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMedia();
-  }, [category, locale]);
-
-  return { data, loading, error };
+export const useStrapiMedia = (category) => {
+  return useStrapi(`/media-assets?filters[category][$eq]=${category}&populate=*`, {
+    transform: (result) => result?.data || [],
+    dependencies: [category],
+    immediate: !!category,
+  });
 };
 
 /**
- * Hook per ottenere impostazioni globali del sito
- * @param {string} locale - Locale (default: 'it')
- * @returns {Object} { data, loading, error }
+ * Hook per ricerca globale
  */
-export const useStrapiGlobal = (locale = 'it') => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+export const useStrapiSearch = () => {
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const search = useCallback(async (query, collections = ['page-contents']) => {
+    if (!query?.trim()) {
+      setResults([]);
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const searchPromises = collections.map(collection =>
+        fetchStrapi(`/${collection}?filters[$or][0][title][$containsi]=${query}&filters[$or][1][content][$containsi]=${query}&populate=*`)
+      );
+
+      const responses = await Promise.all(searchPromises);
+      const allResults = responses.flatMap(response => response?.data || []);
+      
+      setResults(allResults);
+    } catch (err) {
+      setError(err);
+      setResults([]);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const clearResults = useCallback(() => {
+    setResults([]);
+    setError(null);
+  }, []);
+
+  return {
+    results,
+    loading,
+    error,
+    search,
+    clearResults,
+  };
+};
+
+/**
+ * Hook per gestione stato della connessione
+ */
+export const useStrapiConnection = () => {
+  const [isConnected, setIsConnected] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastCheck, setLastCheck] = useState(null);
+
+  const checkConnection = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${STRAPI_BASE_URL}/api/pages?pagination[limit]=1`, {
+        headers: {
+          ...(API_TOKEN && { 'Authorization': `Bearer ${API_TOKEN}` }),
+        },
+      });
+      setIsConnected(response.ok);
+      setLastCheck(new Date());
+    } catch (error) {
+      setIsConnected(false);
+      setLastCheck(new Date());
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
-    const fetchGlobal = async () => {
-      try {
-        setLoading(true);
-        setError(null);
+    checkConnection();
+    
+    // Controlla connessione ogni 30 secondi
+    const interval = setInterval(checkConnection, 30000);
+    
+    return () => clearInterval(interval);
+  }, [checkConnection]);
 
-        const response = await strapiApi.get('/global-setting', {
-          params: { locale }
-        });
-
-        setData(response.data);
-      } catch (err) {
-        console.error('Errore fetch global settings:', err);
-        setError(err.response?.data?.message || err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchGlobal();
-  }, [locale]);
-
-  return { data, loading, error };
+  return {
+    isConnected,
+    isLoading,
+    lastCheck,
+    checkConnection,
+  };
 };
 
 /**
@@ -344,6 +321,33 @@ export const getStrapiImageUrl = (imageData) => {
 };
 
 /**
+ * Utility per pulire la cache
+ */
+export const clearStrapiCache = () => {
+  cache.clear();
+};
+
+/**
+ * Hook per preload dei contenuti critici
+ */
+export const useStrapiPreload = (endpoints = []) => {
+  useEffect(() => {
+    // Preload in background
+    const preloadEndpoints = async () => {
+      const preloadPromises = endpoints.map(endpoint =>
+        fetchStrapi(endpoint).catch(console.warn)
+      );
+      
+      await Promise.allSettled(preloadPromises);
+    };
+
+    if (endpoints.length > 0) {
+      preloadEndpoints();
+    }
+  }, [endpoints]);
+};
+
+/**
  * Funzione helper per ottenere dati fallback in caso di errore API
  * @param {Object} fallbackData - Dati di fallback
  * @param {boolean} hasError - Se c'è un errore API
@@ -351,15 +355,19 @@ export const getStrapiImageUrl = (imageData) => {
  */
 export const useFallbackData = (fallbackData, hasError) => (hasError ? fallbackData : null);
 
-// Esportazioni per uso diretto delle API
-export { strapiApi };
+// Esportazioni per uso diretto
+export { fetchStrapi };
 export default {
+  useStrapi,
   useStrapiPage,
   useStrapiHome,
   useStrapiHomeComponent,
   useStrapiMedia,
-  useStrapiGlobal,
+  useStrapiSearch,
+  useStrapiConnection,
   getStrapiImageUrl,
+  clearStrapiCache,
+  useStrapiPreload,
   useFallbackData,
-  strapiApi
+  fetchStrapi
 };

@@ -21,6 +21,7 @@ import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
 import MainLayout from 'src/layouts/main';
+import { useStrapiPage } from 'src/hooks/use-strapi';
 
 // ----------------------------------------------------------------------
 
@@ -28,6 +29,9 @@ export default function ChiSiamoView() {
   const { t } = useTranslation();
   const theme = useTheme();
   const mdUp = useResponsive('up', 'md');
+  
+  // Hook per dati Strapi
+  const { data: pageData, loading: strapiLoading } = useStrapiPage('chi-siamo');
 
   // Hero section
   const renderHero = (
@@ -72,7 +76,7 @@ export default function ChiSiamoView() {
               lineHeight: { xs: 1.2, md: 1.1 }
             }}
           >
-            {t('about.page.hero.title')}
+            {pageData?.title || t('about.page.hero.title')}
           </Typography>
 
           <Typography
@@ -85,7 +89,7 @@ export default function ChiSiamoView() {
               maxWidth: { xs: '100%', md: '80%' }
             }}
           >
-            {t('about.page.hero.subtitle')}
+            {pageData?.description || t('about.page.hero.subtitle')}
           </Typography>
 
           <Stack

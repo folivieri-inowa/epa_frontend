@@ -20,6 +20,7 @@ import Iconify from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
 import useCompanyColors from 'src/hooks/use-company-colors';
 import HtmlText from 'src/components/html-text';
+import { useStrapiHome } from 'src/hooks/use-strapi';
 
 // ----------------------------------------------------------------------
 
@@ -27,6 +28,10 @@ export default function HomeAbout() {
   const { t } = useTranslation();
   const theme = useTheme();
   const companyColors = useCompanyColors();
+  
+  // Hook per dati Strapi
+  const { data: homeData, loading: strapiLoading } = useStrapiHome();
+  const aboutComponent = homeData?.components?.home_about;
   
   const lightMode = theme.palette.mode === 'light';
   
@@ -59,13 +64,13 @@ export default function HomeAbout() {
           <Stack spacing={3}>
             <m.div variants={varFade().inRight}>
               <Typography variant="h3" sx={{ mb: 3 }}>
-                {t('home.aboutSection.title')}              
+                {aboutComponent?.title || t('home.aboutSection.title')}              
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <HtmlText sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' } }}>
-                {t('home.aboutSection.description')}
+                {aboutComponent?.description || t('home.aboutSection.description')}
               </HtmlText>
             </m.div>
 

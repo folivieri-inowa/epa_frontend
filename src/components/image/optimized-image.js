@@ -125,7 +125,7 @@ const OptimizedImage = forwardRef(
         <Box
           component={LazyLoadImage}
           //
-          alt={alt || 'Oracle Executive Protection'}
+          alt={alt || 'Oracle Protection'}
           src={src}
           onLoad={handleLoadComplete}
           onError={handleError}

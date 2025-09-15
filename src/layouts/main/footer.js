@@ -11,24 +11,43 @@ import { alpha } from '@mui/material/styles';
 
 import {paths} from 'src/routes/paths';
 import {RouterLink} from 'src/routes/components';
+import { useFooterSettings, useContactSettings } from 'src/hooks/use-global-settings';
 
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const { description, copyright, links, socialLinks } = useFooterSettings();
+  const { email, phone } = useContactSettings();
 
-  const LINKS = [
+  // Usa i link da Global Settings o fallback
+  const LINKS = links?.length > 0 ? [
+    {
+      headline: t('footer.links.legal'),
+      children: links.map(link => ({
+        name: link.title,
+        href: link.url,
+        target: link.target
+      }))
+    }
+  ] : [
     {
       headline: t('footer.contact.headline'),
       children: [
-        { name: t('footer.contact.email'), href: 'mailto:info@oracleprotection.it' },
-        { name: t('footer.contact.phone'), href: 'tel:+393929264907'}
+        { name: email, href: `mailto:${email}` },
+        { name: phone, href: `tel:${phone.replace(/[^0-9+]/g, '')}`}
       ],
     },
   ];
 
-  const SOCIALS = [
+  // Usa i social da Global Settings o fallback
+  const SOCIALS = socialLinks?.length > 0 ? socialLinks.map(social => ({
+    name: social.title,
+    icon: social.icon || 'mdi:link',
+    color: social.color || '#000000',
+    href: social.url
+  })) : [
     {
       name: 'LinkedIn',
       icon: 'mdi:linkedin',
@@ -80,7 +99,7 @@ export default function Footer() {
                 mx: {xs: 'auto', md: 'unset'},
               }}
             >
-              {t('footer.description')}
+              {description || t('footer.description')}
             </Typography>
           </Grid>
 
@@ -193,7 +212,7 @@ export default function Footer() {
         </Grid>
 
         <Typography variant="body2" sx={{mt: 10, textAlign: 'center'}}>
-          <span>{t('footer.copyright')}</span>
+          <span>{copyright || t('footer.copyright')}</span>
         </Typography>
       </Container>
     </Box>

@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
+import { useStrapiHome } from 'src/hooks/use-strapi';
 import { varFade, MotionViewport } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
@@ -15,6 +16,12 @@ import { varFade, MotionViewport } from 'src/components/animate';
 export default function HomeSeparatorBanner() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const { separatorBannerComponent } = useStrapiHome();
+
+  // Utilizza i dati da Strapi con fallback alle traduzioni
+  const title = separatorBannerComponent?.title || t('home.separator_banner.title');
+  const description = separatorBannerComponent?.description || t('home.separator_banner.subtitle');
+  const backgroundImage = separatorBannerComponent?.background_image?.url || '/assets/images/pattern.png';
 
   return (
     <Box
@@ -23,11 +30,10 @@ export default function HomeSeparatorBanner() {
         py: { xs: 6, md: 8 },
         position: 'relative',
         bgcolor: 'rgba(147, 160, 167, 0.8)',
-        backgroundImage: 'url(/assets/images/pattern.png)',
+        backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-
         overflow: 'hidden',
         '&::before': {
           content: '""',
@@ -73,7 +79,7 @@ export default function HomeSeparatorBanner() {
                 textShadow: '2px 2px 4px rgba(0,0,0,0.3)', // Ombra per maggiore contrasto
               }}
             >
-              {t('home.separator_banner.title')}
+              {title}
             </Typography>
           </m.div>
 
@@ -90,7 +96,7 @@ export default function HomeSeparatorBanner() {
                 textShadow: '1px 1px 2px rgba(0,0,0,0.3)', // Ombra per maggiore contrasto
               }}
             >
-              {t('home.separator_banner.subtitle')}
+              {description}
             </Typography>
           </m.div>
 

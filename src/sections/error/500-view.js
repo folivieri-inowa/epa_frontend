@@ -1,6 +1,7 @@
 'use client';
 
 import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -15,18 +16,20 @@ import { varBounce, MotionContainer } from 'src/components/animate';
 // ----------------------------------------------------------------------
 
 export default function Page500() {
+  const { t } = useTranslation();
+
   return (
     <CompactLayout>
       <MotionContainer>
         <m.div variants={varBounce().in}>
           <Typography variant="h3" sx={{ mb: 2 }}>
-            500 Internal Server Error
+            {t('error.500.title', 'Errore interno del server')}
           </Typography>
         </m.div>
 
         <m.div variants={varBounce().in}>
           <Typography sx={{ color: 'text.secondary' }}>
-            There was an error, please try again later.
+            {t('error.500.description', 'Si è verificato un errore. Riprova più tardi.')}
           </Typography>
         </m.div>
 
@@ -35,7 +38,7 @@ export default function Page500() {
         </m.div>
 
         <Button component={RouterLink} href="/" size="large" variant="contained">
-          Go to Home
+          {t('error.500.button', 'Torna alla Home')}
         </Button>
       </MotionContainer>
     </CompactLayout>

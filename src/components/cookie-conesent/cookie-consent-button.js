@@ -1,6 +1,5 @@
 'use client'
 
-import "vanilla-cookieconsent/dist/cookieconsent.css";
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CookieIcon from '@mui/icons-material/Cookie';

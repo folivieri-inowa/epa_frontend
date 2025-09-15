@@ -1,11 +1,13 @@
 'use client';
 
 import { m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 import { RouterLink } from 'src/routes/components';
+import { useSiteSettings } from 'src/hooks/use-global-settings';
 
 import CompactLayout from 'src/layouts/compact';
 import { PageNotFoundIllustration } from 'src/assets/illustrations';
@@ -15,19 +17,21 @@ import { varBounce, MotionContainer } from 'src/components/animate';
 // ----------------------------------------------------------------------
 
 export default function NotFoundView() {
+  const { t } = useTranslation();
+  const { title } = useSiteSettings();
+
   return (
     <CompactLayout>
       <MotionContainer>
         <m.div variants={varBounce().in}>
           <Typography variant="h3" sx={{ mb: 2 }}>
-            Sorry, Page Not Found!
+            {t('error.404.title', 'Pagina non trovata!')}
           </Typography>
         </m.div>
 
         <m.div variants={varBounce().in}>
           <Typography sx={{ color: 'text.secondary' }}>
-            Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be
-            sure to check your spelling.
+            {t('error.404.description', 'Spiacente, non riusciamo a trovare la pagina che stai cercando. Forse hai digitato male l\'URL? Assicurati di controllare l\'ortografia.')}
           </Typography>
         </m.div>
 
@@ -41,7 +45,7 @@ export default function NotFoundView() {
         </m.div>
 
         <Button component={RouterLink} href="/" size="large" variant="contained">
-          Go to Home
+          {t('error.404.button', 'Torna alla Home')}
         </Button>
       </MotionContainer>
     </CompactLayout>

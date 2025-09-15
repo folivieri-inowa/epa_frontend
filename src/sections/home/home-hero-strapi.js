@@ -13,27 +13,28 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { RouterLink } from 'src/routes/components';
 import { varFade, MotionViewport } from 'src/components/animate';
 import Iconify from 'src/components/iconify';
+import DynamicHeroImage from 'src/components/dynamic-hero-image';
 import { getStrapiImageUrl, useStrapiHomeComponent } from 'src/hooks/use-strapi';
-
-// Dati di fallback in caso di problemi con Strapi
-const FALLBACK_DATA = {
-  title: 'ORACLE EXECUTIVE PROTECTION',
-  subtitle: 'Sicurezza d\'élite per un mondo complesso. Protezione predittiva, preventiva, proattiva e multilivello.',
-  description: 'Leader globale nella sicurezza esecutiva con oltre 30 anni di esperienza operativa d\'élite.',
-  cta_text: 'Scopri i nostri servizi',
-  cta_link: '/chi-siamo',
-  background_image: '/assets/images/hero-bg-default.jpg'
-};
+import { useSiteSettings } from 'src/hooks/use-global-settings';
 
 // ----------------------------------------------------------------------
 
 export default function HomeHeroStrapi() {
   const theme = useTheme();
+  const { title: siteTitle, description: siteDescription } = useSiteSettings();
 
   // Ottieni dati da Strapi per il componente hero della home
   const { data, loading, error } = useStrapiHomeComponent('home_hero');
 
-  // Usa i dati di fallback se c'è un errore
+  // Dati di fallback che utilizzano Global Settings
+  const FALLBACK_DATA = {
+    title: siteTitle || 'ORACLE EXECUTIVE PROTECTION',
+    subtitle: 'Sicurezza d\'élite per un mondo complesso. Protezione predittiva, preventiva, proattiva e multilivello.',
+    description: siteDescription || 'Leader globale nella sicurezza esecutiva con oltre 30 anni di esperienza operativa d\'élite.',
+    cta_text: 'Scopri i nostri servizi',
+    cta_link: '/chi-siamo',
+    background_image: null
+  };
   const heroData = error ? FALLBACK_DATA : data;
 
   // Loading state
@@ -58,7 +59,8 @@ export default function HomeHeroStrapi() {
     return null;
   }
 
-  const backgroundImageUrl = getStrapiImageUrl(heroData.background_image) || FALLBACK_DATA.background_image;
+  // Determina l'immagine da utilizzare - prima da Strapi, poi da Global Settings come fallback
+  const backgroundImageUrl = getStrapiImageUrl(heroData.background_image);
 
   const renderContent = (
     <Container component={MotionViewport} sx={{ height: 1, position: 'relative', zIndex: 9 }}>
@@ -161,23 +163,10 @@ export default function HomeHeroStrapi() {
   );
 
   return (
-    <Box
-      sx={{
-        height: '100vh',
-        minHeight: { xs: 600, md: 800 },
-        position: 'relative',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundImage: `url(${backgroundImageUrl})`,
-        '&:after': {
-          top: 0,
-          content: '""',
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          backgroundColor: alpha(theme.palette.grey[900], 0.6),
-        },
-      }}
+    <DynamicHeroImage 
+      customImageUrl={backgroundImageUrl}
+      overlayOpacity={0.6}
+      minHeight={{ xs: 600, md: 800 }}
     >
       {renderContent}
 
@@ -202,6 +191,6 @@ export default function HomeHeroStrapi() {
           </Typography>
         </Box>
       )}
-    </Box>
+    </DynamicHeroImage>
   );
 }
